@@ -90,7 +90,7 @@ img {
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    width: 100%;
+    flex: 1 1 300px;
     max-width: 340px;
     display: flex;
     flex-direction: column;
