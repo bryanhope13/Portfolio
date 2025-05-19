@@ -81,8 +81,8 @@ img {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
 }
 
 .project-card {
@@ -90,8 +90,8 @@ img {
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     overflow: hidden;
-    flex: 1 1 300px;
-    max-width: 340px;
+    flex: 0 1 300px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -138,13 +138,22 @@ img {
 /* === Responsive Project Cards === */
 @media (max-width: 1024px) {
     .project-card {
+        flex: 1 1 47%;
         max-width: 47%;
     }
 }
 
 @media (max-width: 600px) {
+    .projects {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
     .project-card {
-        max-width: 100%;
+        flex: 0 0 80%;
+        max-width: none;
     }
 }
 
@@ -165,19 +174,4 @@ img {
     padding: 2rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     margin-bottom: 2rem;
-}
-
-.project-link {
-    align-self: start;
-    background-color: #1c2a4e;
-    color: white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #314a89;
 }
