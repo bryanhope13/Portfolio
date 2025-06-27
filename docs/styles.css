@@ -175,3 +175,60 @@ img {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
     margin-bottom: 2rem;
 }
+
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+.skills-columns ul {
+    padding-left: 1rem;
+    list-style-type: disc;
+}
+
+.skills-columns strong {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+
+}
+
+
+.indented-list {
+    padding-left: 2rem;
+    /* controls how far you want to indent */
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.indented-list li {
+    margin-bottom: 0.4rem;
+}
+
+.about-section h3 {
+    margin-bottom: 1rem;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.about-text,
+.about-photo {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
