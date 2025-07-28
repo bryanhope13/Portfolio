@@ -273,14 +273,25 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin: 3rem auto;
+    /* more vertical breathing room */
+    padding: 1rem;
+    /* inner space */
+    max-width: 100%;
+    /* prevents overflow */
 }
 
 .image-pair img {
-    max-width: 350px;
     width: 100%;
+    max-width: 420px;
+    /* was 500px — now just a bit smaller for desktop */
+    height: auto;
     border-radius: 12px;
+    transition: all 0.3s ease-in-out;
 }
+
+
+
 
 
 
@@ -305,6 +316,14 @@ img {
         margin: 0 auto;
     }
 }
+
+@media (min-width: 1025px) {
+    .image-pair img {
+        max-width: 420px;
+    }
+}
+
+
 
 @media (max-width: 768px) {
     .image-pair {
