@@ -154,17 +154,20 @@ img {
 
 @media (max-width: 600px) {
     .projects {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        flex-direction: column;
+        align-items: center;
         gap: 1.5rem;
         padding-bottom: 1rem;
+        overflow-x: unset;
+        flex-wrap: wrap;
     }
 
     .project-card {
-        flex: 0 0 80%;
-        max-width: none;
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
+
 
 
 
@@ -247,12 +250,71 @@ img {
 .image-row {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 2rem 0;
+
 }
+
+.centered-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
 
 .image-row img {
     width: 200px;
     /* or 25% if you prefer a relative size */
     max-width: 100%;
     height: auto;
+}
+
+.image-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.image-pair img {
+    max-width: 350px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+
+/* Stack images on small screens */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .about-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text,
+    .about-photo {
+        max-width: 90%;
+    }
+
+    .profile-photo {
+        max-height: 400px;
+        width: auto;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-pair {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-pair img {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
 }
