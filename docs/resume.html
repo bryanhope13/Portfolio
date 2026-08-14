@@ -4,176 +4,188 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume – Bryan Hope</title>
+    <title>Resume — Bryan Hope</title>
+    <meta name="description" content="Resume for Bryan Hope, UX designer and HCI graduate student. Research, prototyping, accessibility, Figma." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Resume</h1>
-            <nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html" class="active">Resume</a></li>
+                    <li><a href="projects.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html" aria-current="page">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main>
-
-
-
-
-        <section class="container section-card">
-            <h3> Contact </h3>
-
-            <a href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a> |
-            <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a> |
-            (317) 654-5762
-
-        </section>
-
-        <!-- ===== Education ===== -->
-        <section class="container section-card">
-            <h3>Education</h3>
-            <p><strong>Indiana University Indianapolis</strong>, Luddy School of Informatics, Computing, and
-                Engineering,
-                Indianapolis, IN</strong>
-
-                <br>
-
-
-                <em> Master of Science in Human-Computer Interaction </em> (Expected May 2027)
-                <br> Cumulative GPA: 3.9/4.0
-            </p>
-            <br>
-
-            <p><strong>Indiana University</strong>, Luddy School of Informatics, Computing, and
-                Engineering, Bloomington, IN </strong><br>
-                <em> Bachelor of Science in Informatics </em> (August 2021 – May 2025) <br>
-                Minors in Web Development and Human-Centered Computing<br>
-
-            </p>
-
-        </section>
-
-        <!-- ===== Work Experience ===== -->
-        <section class="container section-card">
-            <h3>Experience</h3>
-
-            <p>
-                <strong>Vaccine Genie</strong> — <em>Mobile UX Design Intern</em><br>
-                January 2026 – Present
-            </p>
-            <ul class="indented-list">
-                <li>Design mobile wireframes, user flows, and interactive prototypes in Figma for iOS and Android
-                    platforms.</li>
-                <li>Conduct usability testing and user research to analyze interaction patterns and improve
-                    accessibility.</li>
-                <li>Contribute to a mobile design system aligned with Apple HIG and Material Design guidelines.</li>
-            </ul>
-
-            <br>
-
-            <p>
-                <strong>Altheros Capital</strong> — <em>UI/UX Design Intern</em><br>
-                September 2025 – December 2025
-            </p>
-            <ul class="indented-list">
-                <li>Collaborated with engineering and product teams to design patient-facing web and mobile interfaces.
-                </li>
-                <li>Improved usability across clinical workflows and behavioral health systems.</li>
-                <li>Created wireframes translating stakeholder requirements into user-centered solutions.</li>
-            </ul>
-
-            <br>
-
-            <p>
-                <strong>Chuy’s Tex-Mex</strong> — <em>Server</em><br>
-                July 2023 – Present
-            </p>
-            <ul class="indented-list">
-                <li>Used real-time customer feedback to improve service flow and reduce friction points.</li>
-                <li>Observed user behavior to identify breakdowns in service experiences.</li>
-                <li>Balanced speed, accuracy, and empathy in high-volume environments.</li>
-            </ul>
-
-            <br>
-
-            <p>
-                <strong>ATMI Indy</strong> — <em>Intern</em><br>
-                May 2022 – August 2022
-            </p>
-            <ul class="indented-list">
-                <li>Organized 2,000+ CAD assets to improve accessibility and workflow efficiency.</li>
-                <li>Supported data validation and consistency checks for project accuracy.</li>
-                <li>Communicated with office staff via email to coordinate blueprint printing and ensure
-                    timely updates
-                    on project revisions for production.</li>
-
-            </ul>
-        </section>
-
-
-
-
-        <!-- ===== Skills ===== -->
-        <section class="container section-card">
-            <h3>Technical Experience</h3>
-            <div class="skills-columns">
-                <div>
-                    <strong>Frontend</strong>
-                    <ul class="indented-list">
-                        <li>HTML/CSS</li>
-                        <li>Bootstrap 5.3</li>
-                        <li>Jinja</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Backend</strong>
-                    <ul class="indented-list">
-                        <li>Python</li>
-                        <li>Flask</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Databases</strong>
-                    <ul class="indented-list">
-                        <li>SQL</li>
-                        <li>MariaDB</li>
-                        <li>PyMySQL</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Design Tools</strong>
-                    <ul class="indented-list">
-                        <li>Figma</li>
-                        <li>Adobe XD</li>
-                    </ul>
-                </div>
-                <div>
-                    <strong>Version Control & Tools</strong>
-                    <ul class="indented-list">
-                        <li>GitHub</li>
-                        <li>VS Code</li>
-                    </ul>
-                </div>
+    <main id="main">
+        <section class="resume-top wrap">
+            <div>
+                <p class="eyebrow">Resume</p>
+                <h1 class="display">Bryan Hope</h1>
+                <p class="lede">UX designer · HCI graduate student. I research, prototype, and test products that need to stay usable under real-world pressure.</p>
             </div>
+            <p class="contact-line">
+                <a href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a><br />
+                <a href="https://linkedin.com/in/bryan-hope">linkedin.com/in/bryan-hope</a><br />
+                Indianapolis, IN · (317) 654-5762
+            </p>
         </section>
 
+        <div class="wrap">
+            <section class="resume-block">
+                <h2>Education</h2>
+                <div class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>Indiana University Indianapolis</h3>
+                            <p class="org">M.S. Human-Computer Interaction · Luddy School · GPA 3.9 / 4.0</p>
+                        </div>
+                        <p class="when">Expected May 2027</p>
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>Indiana University Bloomington</h3>
+                            <p class="org">B.S. Informatics · Minors in Web Development and Human-Centered Computing</p>
+                        </div>
+                        <p class="when">May 2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resume-block">
+                <h2>Experience</h2>
+
+                <article class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>Mobile UX Design Intern</h3>
+                            <p class="org">Vaccine Genie</p>
+                        </div>
+                        <p class="when">Jan 2026 – Present</p>
+                    </div>
+                    <ul>
+                        <li>Design mobile wireframes, user flows, and interactive Figma prototypes for iOS and Android.</li>
+                        <li>Run usability tests and research sessions to find interaction issues and accessibility gaps.</li>
+                        <li>Contribute to a mobile design system aligned with Apple HIG and Material Design.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>UI/UX Design Intern</h3>
+                            <p class="org">Altheros Capital</p>
+                        </div>
+                        <p class="when">Sep 2025 – Dec 2025</p>
+                    </div>
+                    <ul>
+                        <li>Designed patient-facing web and mobile interfaces with engineering and product partners.</li>
+                        <li>Improved usability across clinical workflows and behavioral health systems.</li>
+                        <li>Translated stakeholder requirements into user-centered wireframes and flows.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>Server</h3>
+                            <p class="org">Chuy’s Tex-Mex</p>
+                        </div>
+                        <p class="when">Jul 2023 – Present</p>
+                    </div>
+                    <ul>
+                        <li>Read live customer feedback to fix service-flow friction in a high-volume environment.</li>
+                        <li>Practiced the same skills I use in UX: noticing breakdowns, staying calm, and adapting fast.</li>
+                    </ul>
+                </article>
+
+                <article class="job">
+                    <div class="job-head">
+                        <div>
+                            <h3>Intern</h3>
+                            <p class="org">ATMI Indy</p>
+                        </div>
+                        <p class="when">May 2022 – Aug 2022</p>
+                    </div>
+                    <ul>
+                        <li>Organized 2,000+ CAD assets to make files easier to find and reuse.</li>
+                        <li>Supported data checks and coordinated print updates with office staff.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="resume-block">
+                <h2>Skills</h2>
+                <div class="skill-cols">
+                    <div>
+                        <h3>Research &amp; design</h3>
+                        <ul>
+                            <li>User interviews</li>
+                            <li>Usability testing</li>
+                            <li>Journey mapping</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                            <li>GitHub</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Technical fluency</h3>
+                        <ul>
+                            <li>HTML / CSS</li>
+                            <li>Bootstrap</li>
+                            <li>Python / Flask</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">If this looks like a fit, say hello.</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

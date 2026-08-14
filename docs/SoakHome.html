@@ -4,84 +4,144 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soak – UX Project | Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Soak — Bryan Hope</title>
+    <meta name="description" content="Soak case study: brand, product discovery, and checkout for a fictional bath bomb shop, from Visual Design for the Web at IU." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Bryan Hope</h1>
-            <nav class="nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container">
-        <section class="intro">
-            <h2>Soak</h2>
-            <p>
-                A UX e-commerce project focused on creating a seamless digital experience for a fictional bath bomb
-                brand. From branding to interactive product flows, my team designed a prototype that prioritized both
-                user delight and usability. This team project was done at Indiana University, during my senior year, in
-                the course Visual
-                Design For the Web.
-            </p>
-        </section>
-
-        <section class="section-card">
-            <!-- Image Row -->
-
-            <img src="SoakHome.png" alt="Screenshot of ParkSpotter app with interactive map"
-                style="border-radius: 12px; margin-bottom: 1.5rem;">
-
-
-
-            <h3>Project Overview</h3>
-            <p>
-                Soak is a modern bath bomb e-commerce concept designed to capture a relaxing yet playful brand identity.
-                Through user research, branding exploration, and interface design, my team built a high-fidelity
-                shopping
-                experience that simplifies product discovery and checkout.
-            </p>
-
-            <h3 style="margin-top: 2rem;">My Role</h3>
-            <ul class="indented-list">
-                <li>Led user flow mapping for the shopping and checkout experience</li>
-                <li>Contributed to visual branding, logo design, and packaging concepts</li>
-                <li>Built high-fidelity prototypes and led usability testing sessions</li>
-            </ul>
-
-            <h3 style="margin-top: 2rem;">Key Features</h3>
-            <ul class="indented-list">
-                <li>Interactive product cards with hover animations and scent descriptions</li>
-                <li>Streamlined checkout experience with limited user input steps</li>
-                <li>Consistent, mobile-friendly layout with visual brand storytelling</li>
-            </ul>
-
-            <div class="hero-buttons" style="margin-top: 2rem;">
-                <a href="https://www.figma.com/proto/kGCbl8edORVRnkhFp3YzUX/visual-design-p4?node-id=30-22&p=f&t=ybbXSOpSVgj3SD41-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=30%3A22"
-                    class="project-link" target="_blank" rel="noopener noreferrer">
-                    View Web Prototype
-                </a>
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Visual Design for the Web · IU</p>
+                <h1 class="display">Soak</h1>
+                <p class="lede">A fictional bath bomb brand with one job: feel like water and still get someone to checkout. I mapped the shopping journey, contributed to identity, and helped take the prototype through usability tests.</p>
             </div>
-        </section>
+        </header>
+
+        <figure class="figure">
+            <img src="Soak.png" alt="Soak logo over lavender bath water, with a hand holding a fizzing purple bath bomb." />
+            <figcaption>Identity — round type, a waterline in the O, nothing shouting.</figcaption>
+        </figure>
+
+        <dl class="meta wrap">
+            <div>
+                <dt>Role</dt>
+                <dd>Flows, branding, testing</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Collaborative course project</dd>
+            </div>
+            <div>
+                <dt>Platform</dt>
+                <dd>Responsive web</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma prototype</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>The brief</h2>
+            <p>Build a storefront that could sell a sensory product through a screen. Bath bombs are color, scent, and fizz — none of which a laptop has. The team’s answer was photography as the interface, type as the product name, and a shopping path that didn’t make you fill out your life story to buy soap.</p>
+        </article>
+
+        <figure class="figure">
+            <img src="SoakHome.png" alt="Soak homepage with a floating pill navigation, large bubble wordmark, and soapy black-and-white water photography." />
+            <figcaption>Home — navigation as a quiet pill, brand as the hero, texture doing the talking.</figcaption>
+        </figure>
+
+        <article class="prose">
+            <h2>My part</h2>
+            <ul>
+                <li>Mapped the shopping and checkout journey so discovery, product, and pay felt like one path.</li>
+                <li>Contributed to logo, color, and how the brand should sit on packaging and screen.</li>
+                <li>Built high-fidelity frames and ran usability sessions on findability and checkout length.</li>
+            </ul>
+
+            <h2>Choices that mattered</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Let the photo carry mood.</strong>
+                        <p>UI stays thin on purpose. If the chrome gets louder than the water, the brand collapses into a generic shop template.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Product cards should smell like something.</strong>
+                        <p>Hover states and scent copy are not decoration here — they’re the substitute for picking a bomb up in a store.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Shorten checkout.</strong>
+                        <p>Every extra field is a reason to abandon a low-cost impulse buy. We cut input until the path felt slightly too easy, then checked that it still felt trustworthy.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <h2>A note on contrast</h2>
+            <p>The floating nav is elegant and a little too light. In a later pass I would darken the link gray and add a real primary CTA on the hero — “Shop the bath” — so first-time visitors are not left admiring bubbles. Visual design class taught me atmosphere. UX work is making sure atmosphere still has a door.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/kGCbl8edORVRnkhFp3YzUX/visual-design-p4?node-id=30-22&amp;p=f&amp;t=ybbXSOpSVgj3SD41-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=0%3A1&amp;starting-point-node-id=30%3A22" target="_blank" rel="noopener noreferrer">View web prototype</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="IUGymPal.html"><span>Previous</span>← IU GymPal</a>
+            <a href="parkspotter.html"><span>Next</span>ParkSpotter →</a>
+        </nav>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Need a walkthrough of the Figma file?</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -4,87 +4,166 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ParkSpotter – UX Project | Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>ParkSpotter — Bryan Hope</title>
+    <meta name="description" content="ParkSpotter case study: a dual-sided reporting system for theme park guests and staff, designed for IU Informatics Capstone 2025." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Projects</h1>
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container">
-        <section class="intro">
-            <h2>ParkSpotter</h2>
-            <p>
-                A real-time reporting tool designed to improve visitor experiences in theme parks.
-                Guests can report maintenance or cleanliness issues using a live, interactive map
-                interface that notifies staff instantly.
-            </p>
-        </section>
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Informatics Capstone 2025</p>
+                <h1 class="display">ParkSpotter</h1>
+                <p class="lede">Guests notice trash, broken fixtures, and bottlenecks long before staff do — and they have no clean way to say so. ParkSpotter turns that moment into a map pin, a category, and a job in a staff queue.</p>
+            </div>
+        </header>
 
-        <section class="section-card">
-            <img src="disney.png" alt="Screenshot of ParkSpotter app with interactive map"
-                style="border-radius: 12px; margin-bottom: 1.5rem;">
+        <figure class="figure">
+            <img src="disney.png" alt="ParkSpotter guest home with four actions: report an issue, view reports, check rewards, and open the staff area." />
+            <figcaption>Guest landing — one question, four next steps, no extra chrome.</figcaption>
+        </figure>
 
+        <dl class="meta wrap">
+            <div>
+                <dt>Role</dt>
+                <dd>Research, UX, database</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>4 students · Team 52</dd>
+            </div>
+            <div>
+                <dt>Timeline</dt>
+                <dd>Senior capstone, 2024–25</dd>
+            </div>
+            <div>
+                <dt>Stack</dt>
+                <dd>Figma, PHP, SQL, maps</dd>
+            </div>
+        </dl>
 
+        <article class="prose">
+            <h2>The problem</h2>
+            <p>Theme parks sell atmosphere. Litter, a stalled fountain, or a safety issue quietly taxes that atmosphere until guests decide not to come back. Our capstone research kept returning to a blunt number: about 70% of guests are less likely to return to a park that feels poorly maintained.</p>
+            <p>The operational problem is not that staff don’t care. It’s that guests already have the information — “this bathroom is out of soap,” “this trash can is overflowing” — and the park has no lightweight channel for it. Phone numbers get ignored. Guest services means leaving the ride line. So the issue sits there.</p>
 
+            <h2>Who it had to serve</h2>
+            <p>This was never a single-user app. Guests needed to report in under a minute, on a phone, while standing in a crowded path. Cast members needed a queue they could filter by park area, pick up, and resolve — not a comment box dumped into email.</p>
+            <p>That dual-user constraint shaped every later decision. If a guest flow was delightful but the staff view was a spreadsheet with no status, the product would fail in operations. If the staff tools were powerful but reporting took six fields, guests would not bother.</p>
 
-            <h3>Project Overview</h3>
-            <p>
-                ParkSpotter is a mobile-first app prototype created as part of a senior year capstone project at Indiana
-                University.
-                The goal was to enhance communication between theme park visitors and staff by creating an easy-to-use
-                platform for reporting location-specific issues.
-            </p>
+            <h2>What I did</h2>
+            <p>I ran user research and stakeholder conversations, tested the flows with people who matched our guest and staff scenarios, and built the SQL structure that kept guest reports and employee actions in the same loop. I was not the only designer on the team — I was the person holding the research notes next to the data model so the interface and the backend told the same story.</p>
+        </article>
 
-            <h3 style="margin-top: 2rem;">My Role</h3>
-            <ul class="indented-list">
-                <li>Conducted user research and stakeholder interviews</li>
-                <li>Created a SQL database for a consistent flow of user/employee inputs </li>
-                <li>Tested usability with target users and iterated based on feedback</li>
-            </ul>
+        <figure class="figure">
+            <img src="Map.png" alt="Report an issue form with name, park selector, an interactive map for dropping a pin, area, description, and category." />
+            <figcaption>Reporting: location first, then category. The map is the input, not decoration.</figcaption>
+        </figure>
 
-            <h3 style="margin-top: 2rem;">Key Features</h3>
-            <ul class="indented-list">
-                <li>Live interactive park map with pin-drop functionality</li>
-                <li>Issue categorization (cleanliness, maintenance, safety, etc.)</li>
-                <li>Real-time notification to relevant park staff</li>
-            </ul>
+        <article class="prose">
+            <h2>Design decisions</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Pin the place, don’t describe it.</strong>
+                        <p>Free-text locations (“near the castle, by the popcorn cart”) are useless to a crew. A double-tap on a live map, plus an area dropdown, gave staff coordinates they could act on.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Categories over essays.</strong>
+                        <p>Guests can add a description, but they must pick a type — cleanliness, maintenance, lost &amp; found, safety. Routing starts at submit, not after a human reads a paragraph.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Give staff a working queue.</strong>
+                        <p>Open vs. in-progress, filter by park area, edit, and resolve. The employee view is a job board, not a guest-facing theme.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>04</b>
+                    <div>
+                        <strong>Reward the report.</strong>
+                        <p>A points loop (drink, ticket discount, VIP pass) made reporting feel like participation instead of complaining. We treated motivation as part of the service design, not a sticker at the end.</p>
+                    </div>
+                </li>
+            </ol>
+        </article>
 
-
-        </section>
-
-
-        <div class="hero-buttons" style="margin-top: 2rem;">
-            <a href="https://zion.luddy.indiana.edu/info-capstone-2025/parkspotter" class="project-link" target="_blank"
-                rel="noopener noreferrer">
-                View Capstone Project
-            </a>
+        <div class="figure-grid">
+            <figure>
+                <img src="Employee.png" alt="Cast member dashboard listing open reports with park, area, category, status, and resolve actions." />
+                <figcaption>Staff queue — filter, pick up, close the loop.</figcaption>
+            </figure>
+            <figure>
+                <img src="Rewards.png" alt="Rewards page showing current points and three redeemable perks: free drink, discounted ticket, and VIP pass." />
+                <figcaption>Guest rewards — a reason to report the next issue too.</figcaption>
+            </figure>
         </div>
 
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>A reporting product is a conversation between two roles. Designing only the guest side would have been easier — and incomplete. Sitting with the database also changed how I wireframe: if a status can’t exist in the model, it shouldn’t exist on the screen.</p>
+            <p>If I continued the work, I would tighten the guest landing (staff login does not belong beside guest tasks), replace the busy employee background so the table can breathe, and run task-timed tests on the map pin. Double-tap is learnable; it is not obvious.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://zion.luddy.indiana.edu/info-capstone-2025/parkspotter" target="_blank" rel="noopener noreferrer">View capstone page</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="projects.html"><span>All work</span>Index</a>
+            <a href="DataDignity.html"><span>Next</span>Data Dignity →</a>
+        </nav>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Questions about the research or the data model?</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>

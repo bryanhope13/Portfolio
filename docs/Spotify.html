@@ -4,103 +4,141 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify Social Features Redesign | Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Spotify Social Hub — Bryan Hope</title>
+    <meta name="description" content="Spotify Social Hub case study: a native sharing layer so recommending music does not require leaving the app." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Bryan Hope</h1>
-            <nav class="nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container">
-        <section class="intro">
-            <h2>Spotify Social Features Redesign</h2>
-            <p>
-                Spotify is one of the most popular music streaming platforms in the world,
-                but its social sharing features remain underdeveloped compared to its
-                personalized mixes and curated experiences. This redesign project explores
-                how adding a <strong>native social layer</strong> can make music sharing
-                more personal, integrated, and dynamic for users.
-            </p>
-        </section>
-
-        <!-- Image and Overview Section -->
-        <section class="section-card">
-            <div class="image-pair">
-                <img src="SocialHub.png" "Spotify Social Hub redesign mockup">
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Product redesign</p>
+                <h1 class="display">Spotify Social Hub</h1>
+                <p class="lede">Spotify is excellent at personal mixes and weak at sharing them. This study asks what happens if recommending a song stays inside the app — as a post, a comment, or a drop onto a friend’s playlist.</p>
             </div>
+        </header>
 
-            <h3>Project Overview</h3>
-            <p>
-                The current Spotify mobile experience forces users to share songs via
-                third-party apps, resulting in scattered, impersonal exchanges. The desktop
-                version includes a small friend activity feed, but mobile users lack an
-                equivalent. This redesign introduces a <strong>Social Sharing Hub</strong>
-                that brings social connection and real-time interaction directly into the
-                app—without relying on external platforms.
-            </p>
+        <figure class="figure phone">
+            <img src="SocialHub.png" alt="Social Hub feed with online followers, album shares, captions, likes, and a prompt to add a track to a gym playlist." />
+            <figcaption>A native feed for music, not a screenshot sent to iMessage.</figcaption>
+        </figure>
 
-            <h3 style="margin-top: 2rem;">My Role</h3>
-            <ul class="indented-list">
-                <li>Mapped user journeys and identified gaps in current sharing experience</li>
-                <li>Sketched and prototyped new interaction flows for the Social Hub</li>
-                <li>Created low-fidelity and high-fidelity wireframes for key screens</li>
-                <li>Refined interface through iterative user feedback and testing</li>
-            </ul>
-
-            <h3 style="margin-top: 2rem;">Key Features</h3>
-            <ul class="indented-list">
-                <li><strong>Social Hub Feed:</strong> Centralized space for sharing songs and posts</li>
-                <li><strong>Post Creation:</strong> Users can share a song, add a caption, and tag friends</li>
-                <li><strong>Collaborative Playlists:</strong> Add songs directly to a friend’s playlist via posts</li>
-                <li><strong>Comment & Like System:</strong> React to friends’ posts and reply in-thread</li>
-                <li><strong>Integrated Notifications:</strong> Real-time feedback on shared activity</li>
-            </ul>
-
-            <!-- 🧠 Methods Used Section -->
-            <h3 style="margin-top: 2rem;">Methods Used</h3>
-            <ul class="indented-list">
-                <li><strong>User Journey Mapping:</strong> Analyzed existing flow for sharing songs and identified
-                    friction points.</li>
-                <li><strong>Low-Fidelity Prototyping:</strong> Sketched new flows for Social Hub integration.</li>
-                <li><strong>Interactive Wireframes:</strong> Designed mobile interface screens showing posts, comments,
-                    and notifications.</li>
-                <li><strong>Comparative Analysis:</strong> Examined social features in other apps to inform interaction
-                    patterns.</li>
-                <li><strong>Usability Testing:</strong> Gathered feedback on discoverability and ease of sharing.</li>
-            </ul>
-
-            <div class="hero-buttons" style="margin-top: 2rem;">
-                <a href="https://www.figma.com/proto/b1pHg1nNtiaqxabIP0EUlR/Bryan-Hope---Spotify-Redesign?node-id=108-5069&t=xvfm7oVQ0wUEUedF-1&scaling=scale-down&content-scaling=fixed&page-id=108%3A3367"
-                    class="project-link" target="_blank" rel="noopener noreferrer">
-                    View Mobile Prototype
-                </a>
+        <dl class="meta wrap">
+            <div>
+                <dt>Role</dt>
+                <dd>Solo UX redesign</dd>
             </div>
-        </section>
+            <div>
+                <dt>Platform</dt>
+                <dd>Mobile</dd>
+            </div>
+            <div>
+                <dt>Methods</dt>
+                <dd>Journeys, comparative analysis, testing</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Lo-fi → interactive proto</dd>
+            </div>
+        </dl>
 
-        <!-- ===== Additional Visuals / Before & After ===== -->
+        <article class="prose">
+            <h2>The gap</h2>
+            <p>On mobile, sharing a track usually means leaving Spotify. The moment moves to Instagram, Messages, or a group chat, stripped of playback, context, and follow-up. Desktop has a modest friend-activity rail. Mobile does not have an equivalent that feels like a place.</p>
+            <p>I mapped the current share journey and marked every time the user is asked to become a courier for the product. Those handoffs were the brief.</p>
 
+            <h2>How I worked</h2>
+            <ul>
+                <li>Journey mapping of “I heard something and I want a specific person to hear it too.”</li>
+                <li>Comparative looks at how other social apps handle posts, reactions, and lightweight collaboration.</li>
+                <li>Low-fidelity flows for a Social Hub, then higher-fidelity screens for feed, post creation, comments, and notifications.</li>
+                <li>Usability passes focused on discoverability: can someone find sharing without hunting Settings?</li>
+            </ul>
+
+            <h2>The concept</h2>
+            <p>Social Hub is a fifth tab with a job: show what people you follow are listening to, let you post a song with a caption, react in-thread, and add a track to a playlist without a side quest. Presence (“4 followers online”) is there to make sharing feel timely, not performative.</p>
+        </article>
+
+        <article class="prose">
+            <h2>What I would push on in a review</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Don’t compete with listening.</strong>
+                        <p>The hub has to stay secondary to playback. If social becomes the home screen, the product identity slips. I’d keep Now Playing persistent and posting a sheet, not a destination you get lost in.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Playlist as a social object.</strong>
+                        <p>The gym-playlist prompt in the feed is the most product-y idea in the set: a post that does something in the library, not just a caption under art.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Privacy is the hidden requirement.</strong>
+                        <p>Friend activity is sensitive. A next iteration would need listening visibility controls before this could be real — not as a footnote, as a first-class setting.</p>
+                    </div>
+                </li>
+            </ol>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/b1pHg1nNtiaqxabIP0EUlR/Bryan-Hope---Spotify-Redesign?node-id=108-5069&amp;t=xvfm7oVQ0wUEUedF-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=108%3A3367" target="_blank" rel="noopener noreferrer">View mobile prototype</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="DataDignity.html"><span>Previous</span>← Data Dignity</a>
+            <a href="IUGymPal.html"><span>Next</span>IU GymPal →</a>
+        </nav>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">I like taking existing products apart carefully.</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Bryan Hope</title>
+    <meta name="description" content="About Bryan Hope, UX designer and HCI graduate student focused on research, accessibility, and clear product decisions." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html">Work</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="wrap about-band">
+                <img class="portrait" src="Bryan.jpg" alt="Portrait of Bryan Hope smiling, wearing a white shirt and dark tie." />
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h1 class="display">Curious, practical, and a little stubborn about clarity.</h1>
+                    <p class="lede">I came to UX through Informatics — a mix of people, systems, and making things that actually run. That mix still shapes how I work.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap-narrow">
+                <h2 class="display">How I got here</h2>
+                <p>I earned a B.S. in Informatics at IU Bloomington with minors in web development and human-centered computing. Along the way I learned I like the part of a project where you sit with someone’s frustration long enough to name it, then design something quieter than the problem.</p>
+                <p>I’m now pursuing an M.S. in Human-Computer Interaction at IU Indianapolis (expected May 2027). In parallel I intern in mobile UX at Vaccine Genie, designing flows and prototypes for iOS and Android, and I previously interned in UI/UX at Altheros Capital on patient-facing healthcare interfaces.</p>
+                <p>I still work a service job. It keeps me honest: people are tired, the line is long, and the “interface” is whatever reduces friction in the next ten seconds. I bring that same bias into screens.</p>
+            </div>
+        </section>
+
+        <section class="section tight">
+            <div class="wrap">
+                <p class="eyebrow">Process</p>
+                <h2 class="display">A simple loop I can defend</h2>
+                <ol class="process">
+                    <li>
+                        <span>01</span>
+                        <strong>Listen</strong>
+                        <p>Interviews, observation, and walking the current flow until the awkward parts are obvious.</p>
+                    </li>
+                    <li>
+                        <span>02</span>
+                        <strong>Frame</strong>
+                        <p>Who it’s for, what success looks like, and which constraints are real versus assumed.</p>
+                    </li>
+                    <li>
+                        <span>03</span>
+                        <strong>Make</strong>
+                        <p>Flows, wireframes, then higher fidelity only when the structure is holding.</p>
+                    </li>
+                    <li>
+                        <span>04</span>
+                        <strong>Test</strong>
+                        <p>Watch someone use it. Change the confusing parts. Repeat until it feels inevitable.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section tight">
+            <div class="wrap">
+                <p class="eyebrow">I care about</p>
+                <ul class="values">
+                    <li>
+                        <h3>Accessibility as a default</h3>
+                        <p>Contrast, hierarchy, language, and cognitive load are design decisions. I don’t treat them as a final polish pass.</p>
+                    </li>
+                    <li>
+                        <h3>Honest scope</h3>
+                        <p>I’d rather ship a clear flow than a decorated one. Especially early in my career, I want the thinking to be visible.</p>
+                    </li>
+                    <li>
+                        <h3>Working with builders</h3>
+                        <p>I prototype in Figma, and I’m comfortable in HTML/CSS and Git. I like sitting next to engineering, not throwing files over a wall.</p>
+                    </li>
+                    <li>
+                        <h3>Calm products</h3>
+                        <p>Healthcare, privacy, and public services already carry stress. The UI should not add more.</p>
+                    </li>
+                </ul>
+                <div class="btn-row">
+                    <a class="btn btn-primary" href="projects.html">See the work</a>
+                    <a class="btn btn-ghost" href="resume.html">Read the resume</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Currently in Indianapolis.</h2>
+                <p>Open to internships and junior UX roles — remote, hybrid, or on-site.</p>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
