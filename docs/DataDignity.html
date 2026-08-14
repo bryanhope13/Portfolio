@@ -4,119 +4,143 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Dignity – UX Project | Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Data Dignity — Bryan Hope</title>
+    <meta name="description" content="Data Dignity case study: an ADHD-friendly personal data hub that makes privacy controls calm, scannable, and actionable." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Using Poppins to match your Data Dignity design system -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Bryan Hope</h1>
-            <nav class="nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main class="container">
-        <section class="intro">
-            <h2>Data Dignity</h2>
-            <p>
-                A mobile privacy and data management concept that helps users understand where their data lives, who can
-                access it, and what actions to take—designed for quick scanning, reduced clutter, and calm
-                decision-making.
-            </p>
-        </section>
-
-        <section class="section-card">
-            <!-- Replace src with your real exported image file name -->
-            <!-- This page is based on your “Option A” dashboard layout -->
-            <div class="image-pair">
-                <img src="DataHome.png"
-                    alt="Data Dignity mobile dashboard showing Jordan’s data snapshot with storage breakdown, permissions, activity timeline, and data summaries." />
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Inclusive product concept</p>
+                <h1 class="display">Data Dignity</h1>
+                <p class="lede">Personal data is collected constantly and stored everywhere. This concept gives one person — Jordan, a teen who needs an ADHD-friendly view — a snapshot of where data lives, who can see it, and what to do next without panic.</p>
             </div>
+        </header>
 
-            <h3>Project Overview</h3>
-            <p>
-                Data Dignity explores a growing problem: personal data is collected constantly and stored across many
-                systems—school tools, apps, devices, and third-party services. This concept gives users a single hub to
-                see their data at a glance and take meaningful steps to reduce risk. The experience prioritizes clarity
-                and focus, using a “snapshot” dashboard that summarizes storage locations, permissions, and recent
-                changes
-                without overwhelming the user.
-            </p>
+        <figure class="figure phone">
+            <img src="DataHome.png" alt="Data Dignity mobile dashboard for Jordan, with a storage donut chart, permissions breakdown, activity list, and summary cards." />
+            <figcaption>Dashboard as a snapshot, not a settings dump.</figcaption>
+        </figure>
 
-            <h3 style="margin-top: 2rem;">Target User</h3>
-            <p>
-                The interface is tailored to Jordan, a teen who needs a simple, ADHD-friendly view of privacy controls.
-                The layout supports fast scanning with clear hierarchy, chunked content cards, and action-focused
-                messaging (what changed, what needs review, and what’s getting safer).
-            </p>
-
-            <h3 style="margin-top: 2rem;">My Role</h3>
-            <ul class="indented-list">
-                <li>Designed the mobile UI and dashboard structure using an 8-pt grid approach</li>
-                <li>Created an ADHD-friendly visual hierarchy (chunking, reduced clutter, consistent patterns)</li>
-                <li>Developed core feature concepts for Dashboard, Data Management, and Settings</li>
-            </ul>
-
-            <h3 style="margin-top: 2rem;">Key Features</h3>
-            <ul class="indented-list">
-                <li><strong>Data Snapshot Dashboard:</strong>
-                    a calm, card-based overview of storage breakdown, permissions, and recent
-                    activity
-                </li>
-                <li><strong> Permissions Insights: </strong>
-                    shows what’s public, shared with adults, or private, with clear next steps
-                </li>
-                <li><strong> Data Summaries: </strong></li>
-                quick metrics like exposure progress, app permissions review, trackers blocked, and
-                security alerts
-                </li>
-                <li> <strong> Data Management: </strong>
-                    organize, filter, compare categories, and manage streams/import sources
-                </li>
-                <li> <strong> Settings & Controls: </strong>
-                    export/download tools, app-level privacy preferences, and security toggles
-                </li>
-            </ul>
-
-            <h3 style="margin-top: 2rem;">Design Priorities</h3>
-            <ul class="indented-list">
-                <li> <strong> Clarity first:</strong> “what matters right now” is always visible</li>
-                <li> <strong> Low cognitive load: </strong>chunked cards, consistent spacing, predictable controls</li>
-                <li> <strong> Actionable guidance: </strong> gentle warnings (“review needed”) instead of alarmist
-                    language</li>
-                <li> <strong> Trust & calm: </strong> clean layout and readable typography to support confident
-                    decisions</li>
-            </ul>
-
-            <div class="hero-buttons" style="margin-top: 2rem;">
-                <!-- Replace with your real prototype link when ready -->
-                <a href="https://www.figma.com/deck/IztzpF8QP9XNrcQWcyAcMU/Data-Dignity-Application?node-id=1-42&p=f&t=dwlEoTcVKtsrceFT-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
-                    class="project-link" target="_blank" rel="noopener noreferrer">
-                    View Presentation
-                </a>
+        <dl class="meta wrap">
+            <div>
+                <dt>Role</dt>
+                <dd>Product design, UI</dd>
             </div>
-        </section>
+            <div>
+                <dt>Focus</dt>
+                <dd>ADHD-friendly privacy</dd>
+            </div>
+            <div>
+                <dt>Platform</dt>
+                <dd>Mobile</dd>
+            </div>
+            <div>
+                <dt>Methods</dt>
+                <dd>8-pt grid, chunking, IA</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>The problem</h2>
+            <p>Privacy products often fail in the same way: they show everything. Permissions lists, tracker logs, and security alerts compete until the user either ignores the app or feels worse than before they opened it. For someone with ADHD, that wall of equal-weight information is not just ugly — it is unusable.</p>
+            <p>Jordan still needs the truth: what is public, what is shared with adults, what changed this week, which high-risk permissions are still on. The job was to make that truth scannable in a few seconds, then point to one next action.</p>
+
+            <h2>Design priorities</h2>
+            <p>I treated cognitive load as the primary constraint, not a style preference. Cards are chunked. Spacing is consistent on an 8-point grid. Status language is specific (“review needed,” “getting safer”) instead of alarmist. The dashboard answers three questions in order: where is the data, who can see it, and what changed.</p>
+        </article>
+
+        <article class="prose">
+            <h2>Decisions I would defend in a critique</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Snapshot over settings.</strong>
+                        <p>The home view is an overview, not a control panel. Storage, permissions, and activity sit as separate cards so Jordan can finish one thought at a time.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Metrics that imply a next step.</strong>
+                        <p>“3 / 5 high-risk permissions still on” is more useful than a generic security score. The number is a prompt, not a grade.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Calm, not cute.</strong>
+                        <p>Rounded cards and a muted palette lower threat. Color is reserved for status. The lock mark is a promise of control, not a warning siren.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>04</b>
+                    <div>
+                        <strong>Three destinations, not a maze.</strong>
+                        <p>Dashboard, Data, Settings. If a privacy app needs a hamburger of twelve items, the information architecture is already lost.</p>
+                    </div>
+                </li>
+            </ol>
+
+            <h2>What I’d do next</h2>
+            <p>This is a concept, not a shipped product. The next honest step is testing with teens — including people who use ADHD accommodations — on two tasks: “What needs your attention today?” and “Turn off something that feels too public.” I would also design the empty and error states; privacy UIs are full of both.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/deck/IztzpF8QP9XNrcQWcyAcMU/Data-Dignity-Application?node-id=1-42&amp;p=f&amp;t=dwlEoTcVKtsrceFT-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer">View presentation</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="parkspotter.html"><span>Previous</span>← ParkSpotter</a>
+            <a href="Spotify.html"><span>Next</span>Spotify Social Hub →</a>
+        </nav>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Let’s talk inclusive IA and privacy UX.</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

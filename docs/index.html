@@ -4,137 +4,167 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UX Portfolio – Bryan Hope</title>
+    <title>Bryan Hope — UX Designer</title>
+    <meta name="description" content="Portfolio of Bryan Hope, a UX designer and HCI graduate student designing accessible, research-driven digital products." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo"> Bryan Hope </h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-    <main>
-
-        <!-- ===== Hero Section ===== -->
+    <main id="main">
         <section class="hero">
-            <div class="container hero-content">
+            <div class="wrap">
+                <p class="eyebrow">UX designer · Indianapolis</p>
+                <h1 class="display">I design products that stay clear when things get messy.</h1>
+                <p class="lede">
+                    I’m Bryan Hope, an HCI graduate student working on accessible, research-driven
+                    experiences. Right now I intern in mobile UX at Vaccine Genie, and I care most
+                    about making complex systems feel calm, honest, and usable.
+                </p>
+                <div class="btn-row">
+                    <a class="btn btn-primary" href="#work">See selected work</a>
+                    <a class="btn btn-ghost" href="mailto:bryananthonyhope@gmail.com">Email me</a>
+                </div>
+                <p class="hero-meta">
+                    <span>MS HCI, IU Indianapolis</span>
+                    <span>BS Informatics, IU Bloomington</span>
+                    <span>Figma, research, accessibility</span>
+                </p>
+            </div>
+        </section>
 
-                <section class="intro">
+        <hr class="rule wrap" />
 
-
-                    <h2>Designing Thoughtful Digital Experiences</h2>
-                    <p>
-
-                    </p>
-
-                </section>
-
-
-
-
-                <!-- About Me Section -->
-                <section class="about-section container">
-                    <h3> About Me </h3>
-                    <div class="about-wrapper">
-                        <!-- Text Card -->
-                        <div class="section-card about-text">
-                            <p>
-
-                            <p>
-                                I am Bryan Hope, an aspiring UX designer with a background in Informatics from Indiana
-                                University,
-                                where I
-                                also studied Web Design and Human-Centered Computing. I specialize in building
-                                accessible,
-                                research-driven digital experiences that make an impact. My design philosophy is
-                                grounded in
-                                empathy, clarity, and problem-solving.
-                            </p>
-                            <br>
-
-                            <p>
-                                Throughout my academic and project work, I’ve led initiatives that translate user
-                                insights
-                                into
-                                purposeful interfaces. I co-developed <strong>ParkSpotter</strong>, a mobile app
-                                that
-                                empowers
-                                theme park visitors to report cleanliness concerns through real-time, location-based
-                                alerts.
-                                For
-                                <strong>IU GymPal</strong>, I designed a fitness tracking prototype that motivates
-                                student
-                                wellness through a user-friendly interface and engaging features. And in my <strong>
-                                    Spotify
-                                    Redesign </strong>
-                                and <strong> Soak </strong> you will discover a blend of innovation, spirit, and
-                                creativity through design
-                                components.
-                            </p>
-
-
-                            <br>
-
-                            <p>
-                                I enjoy the process of creating solutions that serve diverse communities and adapt
-                                to
-                                real-world constraints. I’m always eager to learn, iterate, and collaborate with
-                                others to
-                                bring
-                                ideas to life through thoughtful design.
-                            </p>
-
-
-                            <br>
-
-                            <div class="hero-buttons">
-                                <a href="projects.html" class="project-link">View My Projects</a>
-                            </div>
-                        </div>
-
-                        <!-- Image Card -->
-                        <div class="section-card about-photo">
-                            <img src="Bryan.jpg" alt="Photo of Bryan Hope" class="profile-photo">
-                        </div>
+        <section class="section" id="work">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Selected work</p>
+                        <h2 class="display">Case studies</h2>
                     </div>
-                </section>
+                    <a class="section-link" href="projects.html">All projects →</a>
+                </div>
+
+                <div class="work-list">
+                    <a class="work-item" href="parkspotter.html">
+                        <div class="work-media">
+                            <img src="disney.png" alt="ParkSpotter guest home screen over a nighttime castle backdrop, with actions to report issues, view reports, and open rewards." />
+                        </div>
+                        <div class="work-copy">
+                            <div class="tags">
+                                <span class="tag">Capstone</span>
+                                <span class="tag">Research</span>
+                                <span class="tag">Service design</span>
+                            </div>
+                            <h3>ParkSpotter</h3>
+                            <p>A live reporting tool so theme park guests can flag cleanliness and maintenance issues on a map — and staff can act before the experience falls apart.</p>
+                            <span class="work-more">Read case study →</span>
+                        </div>
+                    </a>
+
+                    <a class="work-item" href="DataDignity.html">
+                        <div class="work-media">
+                            <img src="DataHome.png" alt="Data Dignity mobile dashboard showing a calm snapshot of storage, permissions, and recent activity." />
+                        </div>
+                        <div class="work-copy">
+                            <div class="tags">
+                                <span class="tag">Inclusive design</span>
+                                <span class="tag">Privacy</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                            <h3>Data Dignity</h3>
+                            <p>A personal data hub designed for a teen with ADHD: less clutter, clearer hierarchy, and privacy controls that feel possible instead of alarming.</p>
+                            <span class="work-more">Read case study →</span>
+                        </div>
+                    </a>
+
+                    <a class="work-item" href="Spotify.html">
+                        <div class="work-media">
+                            <img src="SocialHub.png" alt="Spotify Social Hub feed showing friends sharing songs, captions, and playlist prompts inside the app." />
+                        </div>
+                        <div class="work-copy">
+                            <div class="tags">
+                                <span class="tag">Product redesign</span>
+                                <span class="tag">Social UX</span>
+                                <span class="tag">Mobile</span>
+                            </div>
+                            <h3>Spotify Social Hub</h3>
+                            <p>A native sharing layer for Spotify, so recommending a song doesn’t mean leaving the app — or losing the moment.</p>
+                            <span class="work-more">Read case study →</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills container section-card">
-            <h3>Core Skills</h3>
-            <ul class="indented-list">
-                <li>User Research</li>
-                <li>Wireframing</li>
-                <li>Prototyping (Figma)</li>
+        <hr class="rule wrap" />
 
-                <li>Usability Testing</li>
-                <li>Accessibility Design</li>
-            </ul>
+        <section class="section">
+            <div class="wrap about-band">
+                <img class="portrait" src="Bryan.jpg" alt="Portrait of Bryan Hope in a white shirt and dark tie, smiling." />
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h2 class="display">I start with people, then I make the interface earn its place.</h2>
+                    <p>I studied Informatics at Indiana University with minors in web development and human-centered computing. I’m now in the MS HCI program at IU Indianapolis, where I’m sharpening how I research, prototype, and test.</p>
+                    <p>I like problems with real constraints: healthcare workflows, public spaces, privacy for people who are already overwhelmed. Pretty screens matter. Clear decisions matter more.</p>
+                    <div class="skill-pills">
+                        <span>User research</span>
+                        <span>Usability testing</span>
+                        <span>Wireframes &amp; flows</span>
+                        <span>Figma prototyping</span>
+                        <span>Accessibility</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <div class="btn-row">
+                        <a class="btn btn-ghost" href="about.html">More about me</a>
+                        <a class="btn btn-ghost" href="resume.html">View resume</a>
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <!-- Contact Section -->
-
-
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Let’s make something careful together.</h2>
+                <p>Open to internships and entry-level UX roles. I read every email.</p>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

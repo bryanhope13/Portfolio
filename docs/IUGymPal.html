@@ -4,85 +4,120 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IU GymPal – UX Project | Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>IU GymPal — Bryan Hope</title>
+    <meta name="description" content="IU GymPal case study: an AI-assisted fitness prototype for Indiana University students, based on interviews with 20+ students." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Bryan Hope</h1>
-            <nav class="nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- ===== Main Content ===== -->
-
-    <main class="container">
-        <section class="intro">
-            <h2>IU GymPal</h2>
-            <p>
-                A fitness app prototype created for Indiana University students, designed to make fitness accessible,
-                smart, and motivational through AI-driven suggestions and progress tracking.
-            </p>
-        </section>
-
-        <section class="section-card">
-
-            <div class="image-pair">
-                <img src="HomeScreen.png" alt="Screenshot of ParkSpotter app with interactive map" />
-
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Student wellness prototype</p>
+                <h1 class="display">IU GymPal</h1>
+                <p class="lede">Campus rec apps often assume you already know the machines. GymPal is an AI-assisted companion for IU students who want a plan, a form check, and a reason to come back tomorrow.</p>
             </div>
+        </header>
 
+        <div class="figure-grid">
+            <figure>
+                <img src="Home.png" alt="IU GymPal sign-in screen with IU branding and options to sign in with IU login, create an account, or continue with Apple." />
+                <figcaption>Entry — campus login as the default path.</figcaption>
+            </figure>
+            <figure>
+                <img src="HomeScreen.png" alt="GymPal home with today’s workout, past data, weekly calendar, and a streak-based motivation card." />
+                <figcaption>Home — today’s work first, history second.</figcaption>
+            </figure>
+        </div>
 
+        <dl class="meta wrap">
+            <div>
+                <dt>Role</dt>
+                <dd>Interface design, research</dd>
+            </div>
+            <div>
+                <dt>Research</dt>
+                <dd>20+ IU student interviews</dd>
+            </div>
+            <div>
+                <dt>Platform</dt>
+                <dd>Mobile prototype</dd>
+            </div>
+            <div>
+                <dt>Tools</dt>
+                <dd>Figma</dd>
+            </div>
+        </dl>
 
+        <article class="prose">
+            <h2>What students actually said</h2>
+            <p>I interviewed more than twenty IU students about working out on campus. The pattern was consistent: motivation is fragile, gyms feel intimidating if you don’t already belong there, and generic fitness apps don’t know SRSC hours, student schedules, or the fact that midterms will wreck a streak.</p>
+            <p>The product promise became: make the next session obvious, show form without shame, and treat consistency as the metric — not aesthetics.</p>
 
-
-            <h3>Project Overview</h3>
-            <p>
-                IU GymPal is an AI-powered appplication tailored to support students in developing healthy fitness
-                habits.
-                From guided workouts to form tutorials and progress visualizations, the app makes it easier for students
-                of all fitness levels to engage in personal wellness.
-            </p>
-
-            <h3 style="margin-top: 2rem;">My Role</h3>
-            <ul class="indented-list">
-                <li>Led interface design and prototyping in Figma</li>
-                <li>Conducted user interviews with over 20 Indiana University students</li>
-                <li>Designed intuitive navigation patterns for workout flow</li>
+            <h2>What I designed</h2>
+            <ul>
+                <li>A home that leads with today’s workout, past data, and the week — not a social feed.</li>
+                <li>Personalized recommendations (the “AI” layer) as a planner, not a chatbot occupying the screen.</li>
+                <li>Form tutorials as a support surface for people who would otherwise skip a movement they don’t know.</li>
+                <li>Streak and motivation copy that is direct. Students did not ask for a mascot. They asked not to lose the thread after a bad week.</li>
             </ul>
 
-            <h3 style="margin-top: 2rem;">Key Features</h3>
-            <ul class="indented-list">
-                <li>Personalized workout recommendations powered by AI</li>
-                <li>Step-by-step form demonstrations and tutorials</li>
-                <li>Tracking tools for workout consistency and progress</li>
-            </ul>
-
-            <div class="hero-buttons" style="margin-top: 2rem;">
-                <a href="https://www.figma.com/proto/ipfvW57RnEGC7KtGQFwhWh/IU-GymPal?node-id=393-6183&t=PpsfL48EiSCTln3D-1"
-                    class="project-link" target="_blank" rel="noopener noreferrer">
-                    View Mobile Prototype
-                </a>
+            <h2>What I would change</h2>
+            <p>Looking at this with a colder eye: the home list and the bottom navigation repeat each other, icon weights don’t match, and the motivational panel fights the content for contrast. Those are real critique notes, and I would fix them before calling this production-ready. The research insight still holds — students need a campus-specific on-ramp, not another generic tracker.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/ipfvW57RnEGC7KtGQFwhWh/IU-GymPal?node-id=393-6183&amp;t=PpsfL48EiSCTln3D-1" target="_blank" rel="noopener noreferrer">View mobile prototype</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
             </div>
-        </section>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="Spotify.html"><span>Previous</span>← Spotify Social Hub</a>
+            <a href="SoakHome.html"><span>Next</span>Soak →</a>
+        </nav>
     </main>
 
-    <!-- ===== Footer ===== -->
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">I still have the interview notes if you want to go deeper.</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -4,133 +4,132 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects – Bryan Hope</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Work — Bryan Hope</title>
+    <meta name="description" content="UX case studies by Bryan Hope: research, prototyping, and human-centered product design." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Projects</h1>
-            <nav class="nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html" class="active">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+    <a class="skip-link" href="#main">Skip to content</a>
 
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section class="intro">
-            <h2>UX Projects</h2>
-            <p>
-                Explore case studies and projects showcasing my experience with user research,
-                prototyping, and human-centered design.
-            </p>
+    <main id="main">
+        <section class="page-hero">
+            <div class="wrap">
+                <p class="eyebrow">Work</p>
+                <h1 class="display">Projects that start with a real friction point.</h1>
+                <p class="lede">Class work, capstone, and product studies. Each one is a story about who it was for, what I learned, and what I would do next.</p>
+            </div>
         </section>
 
-        <section class="projects">
+        <section class="section tight">
+            <div class="wrap work-grid">
+                <a class="work-card" href="parkspotter.html">
+                    <img src="disney.png" alt="ParkSpotter guest home with report, rewards, and staff entry points." />
+                    <div class="work-copy">
+                        <div class="tags">
+                            <span class="tag">Capstone</span>
+                            <span class="tag">Research</span>
+                        </div>
+                        <h3>ParkSpotter</h3>
+                        <p>Helping theme park guests report issues in the moment, and giving staff a queue they can actually work.</p>
+                        <span class="work-more">Read case study →</span>
+                    </div>
+                </a>
 
-            <!-- ParkSpotter Project -->
-            <article class="project-card">
-                <img src="disney.png" alt="Screenshot of ParkSpotter app with interactive map" />
-                <div class="project-content">
-                    <h3>ParkSpotter</h3>
-                    <p>
-                        Real-time reporting tool for theme parks. Visitors report cleanliness or
-                        maintenance issues directly to staff via a live, interactive map. Increases
-                        accountability and enhances guest satisfaction.
-                    </p>
-                    <a href="parkspotter.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                        Learn More
-                    </a>
-                </div>
-            </article>
+                <a class="work-card" href="DataDignity.html">
+                    <img src="DataHome.png" alt="Data Dignity dashboard summarizing storage, permissions, and activity." />
+                    <div class="work-copy">
+                        <div class="tags">
+                            <span class="tag">Inclusive design</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                        <h3>Data Dignity</h3>
+                        <p>A calm personal data hub for a teen who needs privacy controls without cognitive overload.</p>
+                        <span class="work-more">Read case study →</span>
+                    </div>
+                </a>
 
-            <!-- IU GymPal Project -->
-            <article class="project-card">
-                <img src="IUGymPal.png" alt="Screenshot of IU GymPal fitness app interface" />
-                <div class="project-content">
-                    <h3>IU GymPal</h3>
-                    <p>
-                        An AI-powered fitness prototype tailored for IU students. Provides workout
-                        routines, form tutorials, and progress tracking for users of all fitness levels.
-                    </p>
-                    <a href="IUGymPal.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                        Learn More
-                    </a>
-                </div>
-            </article>
+                <a class="work-card" href="Spotify.html">
+                    <img src="SocialHub.png" alt="Social Hub feed with shared albums and comments inside Spotify." />
+                    <div class="work-copy">
+                        <div class="tags">
+                            <span class="tag">Redesign</span>
+                            <span class="tag">Social UX</span>
+                        </div>
+                        <h3>Spotify Social Hub</h3>
+                        <p>Moving song sharing back into the product instead of outsourcing it to other apps.</p>
+                        <span class="work-more">Read case study →</span>
+                    </div>
+                </a>
 
+                <a class="work-card" href="IUGymPal.html">
+                    <img src="HomeScreen.png" alt="IU GymPal home screen with workout shortcuts and a daily motivation card." />
+                    <div class="work-copy">
+                        <div class="tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                        <h3>IU GymPal</h3>
+                        <p>An AI-assisted fitness companion for students who want structure without feeling talked down to.</p>
+                        <span class="work-more">Read case study →</span>
+                    </div>
+                </a>
 
-
-            <article class="project-card">
-                <img src="Soak.png" alt="Screenshot of Soak bath bomb e-commerce prototype" />
-                <div class="project-content">
-                    <h3>Soak</h3>
-                    <p>
-                        A collaborative UX project creating a bath bomb e‑commerce prototype.
-                        Iterated on logo concepts, brand identity, and marketing positioning while
-                        mapping the user journey for a seamless shopping experience.
-                    </p>
-                    <a href="SoakHome.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                        Learn More
-                    </a>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <img src="Spotify.png" alt="Screenshot of Soak bath bomb e-commerce prototype" />
-                <div class="project-content">
-                    <h3>Spotify™ Social Features Redesign
-
-                    </h3>
-                    <p>
-                        A UX redesign focused on strengthening community and discovery within Spotify. This project
-                        reimagines how users connect through music—introducing shared listening spaces, enhanced
-                        friend activity visibility, and simplified playlist collaboration to make Spotify feel more
-                        social and personalized.
-                    </p>
-                    <a href="Spotify.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                        Learn More
-                    </a>
-                </div>
-            </article>
-
-            <article class="project-card">
-                <!-- Replace with your thumbnail file name -->
-                <img src="HDicon.png" alt="Screenshot of Data Dignity dashboard showing a data snapshot" />
-                <div class="project-content">
-                    <h3>Data Dignity</h3>
-                    <p>
-                        A privacy-first personal data hub that helps users understand what data exists, where it’s
-                        stored,
-                        who can access it, and what changed over time—designed for calm clarity and quick control.
-                    </p>
-                    <!-- Match this to whatever you name the new project page file -->
-                    <a href="DataDignity.html" class="project-link" target="_blank" rel="noopener noreferrer">
-                        Learn More
-                    </a>
-                </div>
-            </article>
-
-
-
-
-
-
+                <a class="work-card" href="SoakHome.html">
+                    <img src="Soak.png" alt="Soak brand mark over lavender bath water and a fizzing bath bomb." />
+                    <div class="work-copy">
+                        <div class="tags">
+                            <span class="tag">Visual design</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                        <h3>Soak</h3>
+                        <p>Brand, product discovery, and a quieter checkout for a fictional bath bomb shop.</p>
+                        <span class="work-more">Read case study →</span>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Bryan Hope | UX Portfolio</p>
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Want the thinking behind a project?</h2>
+                <p>I’m happy to walk through Figma files, research notes, or a prototype live.</p>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
