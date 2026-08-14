@@ -497,6 +497,19 @@ p:last-child {
   flex: 1;
 }
 
+@media (min-width: 721px) {
+  .work-grid > .work-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .work-grid > .work-card:last-child:nth-child(odd) img {
+    height: 100%;
+    min-height: 16rem;
+  }
+}
+
 /* About band */
 
 .about-band {
