@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ParkSpotter — Bryan Hope</title>
-    <meta name="description" content="ParkSpotter case study: a dual-sided reporting system for theme park guests and staff, designed for IU Informatics Capstone 2025." />
+    <meta name="description" content="ParkSpotter case study: a year-long IU Informatics capstone. Guests pin cleanliness and safety issues on a map; staff work them from a live queue." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,9 +37,16 @@
         <header class="case-hero">
             <div class="wrap">
                 <a class="back" href="projects.html">← All work</a>
-                <p class="eyebrow">Informatics Capstone 2025</p>
+                <p class="eyebrow">Informatics Capstone 2024–25 · Team 52</p>
                 <h1 class="display">ParkSpotter</h1>
-                <p class="lede">Guests notice trash, broken fixtures, and bottlenecks long before staff do — and they have no clean way to say so. ParkSpotter turns that moment into a map pin, a category, and a job in a staff queue.</p>
+                <p class="lede">Guests already see the overflowing can and the broken stall. Staff are somewhere else in a park the size of a small town. ParkSpotter turns that gap into a map pin, a category, and a job in a cast-member queue.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
             </div>
         </header>
 
@@ -50,34 +57,127 @@
 
         <dl class="meta wrap">
             <div>
-                <dt>Role</dt>
-                <dd>Research, UX, database</dd>
+                <dt>My role</dt>
+                <dd>Research, UX, live map, safety fields</dd>
             </div>
             <div>
                 <dt>Team</dt>
-                <dd>4 students · Team 52</dd>
+                <dd>Hope, Laibe, Harms, Howe</dd>
             </div>
             <div>
                 <dt>Timeline</dt>
-                <dd>Senior capstone, 2024–25</dd>
+                <dd>Fall 2024 – Spring 2025</dd>
             </div>
             <div>
                 <dt>Stack</dt>
-                <dd>Figma, PHP, SQL, maps</dd>
+                <dd>Figma, PHP, SQL, HERE Maps</dd>
             </div>
         </dl>
 
-        <article class="prose">
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>Guests notice litter, broken fixtures, and neglected facilities long before a crew walks that path.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>There is no lightweight way to say so. The problem sits there, and the park experience quietly erodes.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>A shared system: guests pin the issue on a map; staff pick it up, update status, and close the loop.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
             <h2>The problem</h2>
-            <p>Theme parks sell atmosphere. Litter, a stalled fountain, or a safety issue quietly taxes that atmosphere until guests decide not to come back. Our capstone research kept returning to a blunt number: about 70% of guests are less likely to return to a park that feels poorly maintained.</p>
-            <p>The operational problem is not that staff don’t care. It’s that guests already have the information — “this bathroom is out of soap,” “this trash can is overflowing” — and the park has no lightweight channel for it. Phone numbers get ignored. Guest services means leaving the ride line. So the issue sits there.</p>
+            <p>Theme parks sell atmosphere. Litter, a stalled fountain, or a safety issue quietly taxes that atmosphere until guests decide not to come back. Our brief kept returning to a number we used as a design constraint: about 70% of guests are less likely to return to a park that feels poorly maintained.</p>
+            <p>The operational problem is not that staff don’t care. It’s that guests already have the information — “this bathroom is out of soap,” “this trash can is overflowing” — and the park has no channel that fits a day in the park. Phone numbers get ignored. Guest services means leaving the ride line. Asking the nearest cast member only works if you can find one, and if they are the right person.</p>
+            <p>We were Team 52 in IU’s Informatics Capstone, working in the themed-entertainment track. The year ran from a one-sentence ABT in the fall to a live PHP and SQL product, a fair demo, and a public booth in spring 2025.</p>
+        </article>
 
+        <article class="prose" id="research">
+            <h2>What we heard</h2>
+            <p>Before we drew screens, we interviewed five recent park-goers and ran the same questions as a survey so we could keep collecting. We also sat people in front of the Disney World and Kings Island apps and watched how they used the maps. The pattern was consistent enough to build on.</p>
+        </article>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>Nobody knows how to report.</strong>
+                    <p>Every person we asked said some version of “find an employee” — or admitted they would not know where to start. The path is informal, and it fails when the park is crowded.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Cleanliness is invisible until it isn’t.</strong>
+                    <p>Guests do not tour a park looking for trash. They notice restrooms, overflowing cans by food stalls, and walkways only when those things get in the way. Restrooms came up in all five interviews.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>Maps have to stay out of the way.</strong>
+                    <p>People wanted digital maps with satellite context and wait-time style clarity. Kings Island’s 3D layer and overlapping icons were called out as hard to use. If reporting lived on a map, the map could not become a toy.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="quote-grid">
+            <blockquote>
+                <p>“Not sure. Maybe talk to the nearest cast member?”</p>
+                <footer>On how they would report an issue today</footer>
+            </blockquote>
+            <blockquote>
+                <p>“It would have to be easily accessible and not get in the way of the experience.”</p>
+                <footer>On whether they would actually use a reporter</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I wouldn’t know where to go. It would be nice to have a place to report these issues.”</p>
+                <footer>First-time visitor, after a Holiday World trip</footer>
+            </blockquote>
+        </div>
+
+        <article class="prose">
             <h2>Who it had to serve</h2>
-            <p>This was never a single-user app. Guests needed to report in under a minute, on a phone, while standing in a crowded path. Cast members needed a queue they could filter by park area, pick up, and resolve — not a comment box dumped into email.</p>
-            <p>That dual-user constraint shaped every later decision. If a guest flow was delightful but the staff view was a spreadsheet with no status, the product would fail in operations. If the staff tools were powerful but reporting took six fields, guests would not bother.</p>
+            <p>Research gave us four personas we designed against: a first-time visitor in a rush, a season-ticket holder who wants proof their reports get handled, a parent who will only use something fast and non-tracking, and an employee who needs a queue — not a comment box dumped into email.</p>
+            <p>This was never a single-user app. Guests needed to report in under a minute, on a phone, while standing in a crowded path. Cast members needed to filter by park area, pick a job up, and resolve it. If a guest flow was delightful but the staff view was a spreadsheet with no status, the product would fail in operations. If the staff tools were powerful but reporting took six fields, guests would not bother.</p>
+        </article>
 
-            <h2>What I did</h2>
-            <p>I ran user research and stakeholder conversations, tested the flows with people who matched our guest and staff scenarios, and built the SQL structure that kept guest reports and employee actions in the same loop. I was not the only designer on the team — I was the person holding the research notes next to the data model so the interface and the backend told the same story.</p>
+        <ul class="persona-grid">
+            <li>
+                <span>Guest</span>
+                <strong>First-time visitor</strong>
+                <p>Does not know the park, does not know staff, will abandon a form that feels like homework.</p>
+            </li>
+            <li>
+                <span>Guest</span>
+                <strong>Season ticket holder</strong>
+                <p>Comes back often. Wants a list of their reports and a status they can check after the visit.</p>
+            </li>
+            <li>
+                <span>Guest</span>
+                <strong>Parent</strong>
+                <p>Will report a safety issue or a filthy walkway if it takes seconds. Will not accept an app that tracks the family.</p>
+            </li>
+            <li>
+                <span>Staff</span>
+                <strong>Cast member</strong>
+                <p>Needs location, category, and a way to mark work in progress or done. Accountability only works if the queue is real.</p>
+            </li>
+        </ul>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>I ran guest interviews and the map walkthroughs, sat with the SQL so guest reports and employee actions lived in the same loop, and shipped two of the final epics: safety fields on the report, and the live issue map that lets someone drop a pin instead of writing “near the castle, by the popcorn cart.”</p>
+            <p>Matthew Laibe built report creation and the QR rewards scanner. Ethan Harms built the points system and the guest’s own report list. Jacob Howe built employee login and the staff queue. I was not the only designer — I was the person holding the research notes next to the data model so the interface and the backend told the same story.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>The home screen asks one question — what do you want to do? — and offers four answers. That structure survived every revision because it matched the research: do not make a guest hunt through a park app to be helpful.</p>
         </article>
 
         <figure class="figure">
@@ -86,56 +186,140 @@
         </figure>
 
         <article class="prose">
+            <h3>Report an issue</h3>
+            <p>Name, email, park, a double-tap on a live map, an area dropdown, a short description, and a required category — cleanliness, maintenance, lost &amp; found, or safety. Routing starts at submit. The email is how the guest later finds their own reports; we did not invent a login just to file a mess.</p>
+
+            <h3>See your reports</h3>
+            <p>Using that same email, a guest opens a table of their submissions: park, area, category, status, and actions to edit or delete. Season-ticket holders asked for this explicitly. Status is the product. Without it, reporting feels like shouting into a well.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="Rewards.png" alt="Rewards page showing current points and three redeemable perks: free drink, discounted ticket, and VIP pass." />
+                <figcaption>Guest rewards — a reason to report the next issue too.</figcaption>
+            </figure>
+            <figure>
+                <img src="Employee.png" alt="Cast member dashboard listing open reports with park, area, category, status, and resolve actions." />
+                <figcaption>Staff queue — filter, pick up, close the loop.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Rewards</h3>
+            <p>Points land when staff complete a report. Guests redeem them for a drink, a ticket discount, or a VIP pass, and staff can scan a QR code at the window. We treated motivation as service design. First-time visitors told us they would not report “if that isn’t my job” unless there was a reason — and they might never see the physical result.</p>
+
+            <h3>Cast member hub</h3>
+            <p>A separate login opens a working queue: open versus in progress, filter by park area, edit, delete, resolve. There is also the scanner for redemptions. The employee view is a job board, not a guest-facing theme. The data model underneath is the same <code>REPORT</code> row the guest created, joined to park, area, and category.</p>
+        </article>
+
+        <article class="prose">
             <h2>Design decisions</h2>
             <ol class="insights">
                 <li>
                     <b>01</b>
                     <div>
                         <strong>Pin the place, don’t describe it.</strong>
-                        <p>Free-text locations (“near the castle, by the popcorn cart”) are useless to a crew. A double-tap on a live map, plus an area dropdown, gave staff coordinates they could act on.</p>
+                        <p>Free-text locations are useless to a crew. A double-tap on a live map, plus an area dropdown, gave staff coordinates they could act on. That was my live-map epic, and the hardest join in the project: the pin had to match the report in real time.</p>
                     </div>
                 </li>
                 <li>
                     <b>02</b>
                     <div>
                         <strong>Categories over essays.</strong>
-                        <p>Guests can add a description, but they must pick a type — cleanliness, maintenance, lost &amp; found, safety. Routing starts at submit, not after a human reads a paragraph.</p>
+                        <p>Guests can add a description, but they must pick a type. Safety was a field I fought to keep after we cut a broader “accessibility overlay” idea — it let a parent flag something urgent without turning the product into a second park map.</p>
                     </div>
                 </li>
                 <li>
                     <b>03</b>
                     <div>
                         <strong>Give staff a working queue.</strong>
-                        <p>Open vs. in-progress, filter by park area, edit, and resolve. The employee view is a job board, not a guest-facing theme.</p>
+                        <p>Open vs. in-progress, filter by park area, edit, and resolve. If the staff tool failed, guest delight would not matter. We rebuilt the database mid-year so guest records and employee actions were not fighting the same tables.</p>
                     </div>
                 </li>
                 <li>
                     <b>04</b>
                     <div>
                         <strong>Reward the report.</strong>
-                        <p>A points loop (drink, ticket discount, VIP pass) made reporting feel like participation instead of complaining. We treated motivation as part of the service design, not a sticker at the end.</p>
+                        <p>A points loop made reporting feel like participation instead of complaining. QR redemption kept the perk in the park, not as a screenshot of a score.</p>
                     </div>
                 </li>
             </ol>
         </article>
 
-        <div class="figure-grid">
-            <figure>
-                <img src="Employee.png" alt="Cast member dashboard listing open reports with park, area, category, status, and resolve actions." />
-                <figcaption>Staff queue — filter, pick up, close the loop.</figcaption>
-            </figure>
-            <figure>
-                <img src="Rewards.png" alt="Rewards page showing current points and three redeemable perks: free drink, discounted ticket, and VIP pass." />
-                <figcaption>Guest rewards — a reason to report the next issue too.</figcaption>
-            </figure>
-        </div>
+        <article class="prose" id="process">
+            <h2>How the plan changed</h2>
+            <p>The first-semester epics were too broad. I originally owned an accessibility overlay (ramps, wheelchair rentals, ride filters) and a live-notification feed for wait times and closures. Both sounded useful. Both fought the actual product: one map that exists to place a report.</p>
+            <p>We cut the accessibility map when it started colliding with the report pin. We cut a privacy settings epic when it turned out to be a policy page pretending to be a feature. In their place we shipped a tighter pair: safety as a first-class report field, and a live issue map that stayed 2D and readable — the opposite of the 3D clutter people rejected in testing.</p>
+            <p>We built in vertical slices: one working feature at a time, database to screen, then peer-tested it. Function first, Bootstrap and a shared visual language after we knew which fields were real. Late sprints were mobile layout, contrast, and “test early, fix fast” after classroom demos.</p>
+        </article>
+
+        <ol class="process wrap">
+            <li>
+                <span>Fall</span>
+                <strong>Frame</strong>
+                <p>ABT, interviews, personas, wireframes, and an ERD around reports, parks, areas, and categories.</p>
+            </li>
+            <li>
+                <span>Winter</span>
+                <strong>Slice</strong>
+                <p>Database, then report → queue → rewards as complete loops instead of a frontend piled on later.</p>
+            </li>
+            <li>
+                <span>Pivot</span>
+                <strong>Cut</strong>
+                <p>Dropped the extra map and the privacy epic. Kept safety fields and the pin that staff can trust.</p>
+            </li>
+            <li>
+                <span>Spring</span>
+                <strong>Polish</strong>
+                <p>Peer tests, mobile passes, fair demo. All eight final epics closed before the last sprint.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What shipped</h2>
+            <p>By the capstone fair we had a working dual-sided site: guests could file, track, and redeem; staff could log in, triage, and scan. Forms blocked empty or junk submissions. Status changes wrote back to the database live. We tested on iPhone and Android, walked classmates through it without coaching, and used those sessions to simplify pages that had gotten clever.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Year</dt>
+                <dd>2 semesters, Team 52</dd>
+            </div>
+            <div>
+                <dt>Research</dt>
+                <dd>5 interviews + surveys</dd>
+            </div>
+            <div>
+                <dt>Epics</dt>
+                <dd>8 shipped, 2 original ones cut</dd>
+            </div>
+            <div>
+                <dt>Users</dt>
+                <dd>Guests and cast members</dd>
+            </div>
+        </dl>
+
+        <figure class="figure">
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/vhJFSaWsMDo"
+                    title="ParkSpotter demo, Informatics Capstone 2025"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+            </div>
+            <figcaption>Capstone demo — report flow, rewards, and the staff queue.</figcaption>
+        </figure>
 
         <article class="prose">
             <h2>What I learned</h2>
             <p>A reporting product is a conversation between two roles. Designing only the guest side would have been easier — and incomplete. Sitting with the database also changed how I wireframe: if a status can’t exist in the model, it shouldn’t exist on the screen.</p>
-            <p>If I continued the work, I would tighten the guest landing (staff login does not belong beside guest tasks), replace the busy employee background so the table can breathe, and run task-timed tests on the map pin. Double-tap is learnable; it is not obvious.</p>
+            <p>Scope was the other lesson. The accessibility map and the notification feed were good ideas for a different product. Cutting them was the design decision that let the real one finish.</p>
+            <p>If I continued the work, I would move staff login off the guest landing, quiet the employee background so the table can breathe, and run task-timed tests on the map pin. Double-tap is learnable; it is not obvious. I would also start structured usability earlier than we did — we found the important friction, just later than I would like.</p>
             <div class="btn-row">
-                <a class="btn btn-primary" href="https://zion.luddy.indiana.edu/info-capstone-2025/parkspotter" target="_blank" rel="noopener noreferrer">View capstone page</a>
+                <a class="btn btn-primary" href="https://cgi.luddy.indiana.edu/~team52/home.php" target="_blank" rel="noopener noreferrer">Open the live app</a>
+                <a class="btn btn-ghost" href="https://zion.luddy.indiana.edu/info-capstone-2025/parkspotter" target="_blank" rel="noopener noreferrer">IU capstone booth</a>
                 <a class="btn btn-ghost" href="projects.html">Back to work</a>
             </div>
         </article>
@@ -150,6 +334,7 @@
         <div class="wrap">
             <div class="footer-cta">
                 <h2 class="display">Questions about the research or the data model?</h2>
+                <p>Built with Matthew Laibe, Ethan Harms, and Jacob Howe. I still have the interview notes.</p>
                 <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
             </div>
             <div class="footer-bottom">
