@@ -721,52 +721,6 @@ p:last-child {
   text-align: center;
 }
 
-/* Zoom the product UI inside full-desktop screenshots without growing the frame. */
-.shot {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: var(--bg-2);
-  box-shadow: var(--shadow);
-  aspect-ratio: 16 / 9;
-}
-
-.figure .shot img,
-.figure-grid .shot img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  object-fit: cover;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent;
-}
-
-.shot-landing img {
-  transform: scale(1.42);
-  transform-origin: center 46%;
-}
-
-.shot-report img {
-  transform: scale(2.05);
-  transform-origin: center 10%;
-}
-
-.shot-rewards img {
-  transform: scale(2.15);
-  transform-origin: center 8%;
-}
-
-.shot-staff img {
-  transform: scale(1.9);
-  transform-origin: center 14%;
-}
-
 .insights {
   display: grid;
   gap: 0.85rem;
