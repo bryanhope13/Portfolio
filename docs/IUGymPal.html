@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IU GymPal — Bryan Hope</title>
-    <meta name="description" content="IU GymPal case study: an AI-assisted fitness prototype for Indiana University students, based on interviews with 20+ students." />
+    <meta name="description" content="IU GymPal case study: an AI-assisted fitness prototype for IU students. I300 Group 5 — interviews, personas, and a hi-fi Figma app for today’s workout, form, and past data." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,9 +37,16 @@
         <header class="case-hero">
             <div class="wrap">
                 <a class="back" href="projects.html">← All work</a>
-                <p class="eyebrow">Student wellness prototype</p>
+                <p class="eyebrow">I300 Human-Computer Interaction · Group 5</p>
                 <h1 class="display">IU GymPal</h1>
                 <p class="lede">Campus rec apps often assume you already know the machines. GymPal is an AI-assisted companion for IU students who want a plan, a form check, and a reason to come back tomorrow.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
             </div>
         </header>
 
@@ -56,38 +63,260 @@
 
         <dl class="meta wrap">
             <div>
-                <dt>Role</dt>
-                <dd>Interface design, research</dd>
+                <dt>My role</dt>
+                <dd>Past workout data, research, UI</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Delgado, Hope, Loucks, Shelley</dd>
             </div>
             <div>
                 <dt>Research</dt>
                 <dd>20+ IU student interviews</dd>
             </div>
             <div>
-                <dt>Platform</dt>
-                <dd>Mobile prototype</dd>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma prototype</dd>
+            </div>
+        </dl>
+
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>IU students already have gyms, dining halls, and fitness goals. Most of them work out some weeks. They do not need another lecture about health.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>Generic trackers do not know SRSC or a midterm week. Logging feels like homework. The floor is intimidating if you do not already know the machines.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>A campus companion: today’s plan, a form check without shame, and a history that shows what you did — not a form you have to fill in first.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>How do you help IU students keep track of exercise — and, if they want it, food — without dumping them into one more overloaded health app? That was the brief for I300 Group 5: Emanuel Delgado, Zach Loucks, Burk Shelley, and me.</p>
+            <p>Secondary research was blunt. People are drowning in fitness apps. Students pick them for ease of use and trust, not for a feature list. The ones that stick use goals, feedback, and a little social proof — not a blank log.</p>
+            <p>We started even broader: a diet tracker tied to IU dining, a calorie day-total, a strength log. Interviews pulled us in. Most students were not diet-tracking at all. They kept a mental note, or the Notes app. What they wanted was a plan for today, and not to type their life in before they could lift.</p>
+        </article>
+
+        <article class="prose" id="research">
+            <h2>What students actually said</h2>
+            <p>I interviewed IU students alongside the team — more than twenty in total — about gyms, food, and whatever they already used. The affinity map kept returning to the same pile: goals exist, dedicated apps mostly do not, and recommendations come from TikTok or a roommate, not the App Store charts.</p>
+        </article>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>Do not make them enter everything.</strong>
+                    <p>People who do not already live in MyFitnessPal will not start. If the first screen is a form, they leave. Automation and a short path beat a complete profile.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Give them today, not a dashboard.</strong>
+                    <p>They asked for a workout for this day, and — if we went there — what to eat and where on campus to get it. Preferences and goals, yes. A social feed, no.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>Notes is the competitor.</strong>
+                    <p>Most did not have a fitness app. They scribbled muscle groups in Notes and could not tell, at the end of the day, whether it added up. That is the job: make the log useful without making it a second job.</p>
+                </div>
+            </li>
+        </ol>
+
+        <div class="quote-grid">
+            <blockquote>
+                <p>“I would not like it if I have to put all the information.”</p>
+                <footer>19-year-old IU student, on why they skip fitness apps</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I’d expect to see a workout plan for each day and exactly what to eat and where to go to get it.”</p>
+                <footer>On what a campus app would have to do</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I track my exercise because it lets me know which day I did what… it keeps me encouraged.”</p>
+                <footer>Karina’s job-to-be-done, currently living in Notes</footer>
+            </blockquote>
+        </div>
+
+        <article class="prose">
+            <h2>Who it had to serve</h2>
+            <p>Two people kept us honest. Karina already works out almost every day and writes it down. She will not open a new app unless a friend or TikTok vouches for it, and she cannot turn her notes into anything like progress. Henry cares about feeling good and is not dedicated to a daily split. Dining halls do the cooking. A tracker that nags him about macros is a delete.</p>
+            <p>We also named four product ideas: GymPal, NutriPal, IU Fitness, IU Fresh. GymPal won because equipment, form, and progressive overload were the actual gap — not another meal plan for people who were not tracking meals.</p>
+        </article>
+
+        <ul class="persona-grid cols-2">
+            <li>
+                <span>20 · business · IU</span>
+                <strong>Karina</strong>
+                <p>Exercises almost daily. Tracks muscle groups in Notes, not diet. Wants to see what she did without fighting a form. Only tries apps friends or TikTok praise.</p>
+            </li>
+            <li>
+                <span>19 · psychology · IU</span>
+                <strong>Henry</strong>
+                <p>Not on a program. Does not stick with health apps. Needs to see completed work and a tutorial more than a calorie budget. The dining hall is already decided.</p>
+            </li>
+        </ul>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>The app split four ways. Burk took today’s workout. Emanuel took the weekly calendar. Zach took settings — campus, devices, profile. I took past workout data: the list of days, the drill-down into a session, the set / rep / weight table, and a way to open form help from history so Henry could see what he had already done without pretending he already knew the lift.</p>
+            <p>I also sat in the interviews and sketched the home-to-history flow on paper before we had a UI kit — stars for a finished day, a highlighted tap target on the date, less empty space. The hi-fi screens are the team’s. The history path is the part I kept pulling back to the notes.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>Sign in with IU login if you can. Home is not a feed. It is three doors — today’s workout, past data, weekly calendar — and a streak card so Karina’s “it keeps me encouraged” has somewhere to live. The AI layer is a planner: preferences in, a split out. It does not occupy the screen as a chatbot.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="gympal-workout.png" alt="Today’s Workout screen listing a leg day at IUB SRSC, with sets, reps, and toggles for each lift." />
+                <figcaption>Today — Leg day @ IUB SRSC, not a generic template.</figcaption>
+            </figure>
+            <figure>
+                <img src="gympal-form.png" alt="Hip Thrusts screen with a form video and five numbered workout tips." />
+                <figcaption>Form — a video and five cues, for the lift you would otherwise skip.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Today’s workout</h3>
+            <p>A named session at a named gym: Hip Thrusts, calf raises, the rest of a leg day at the SRSC. Each row has sets and reps. An info control opens the tutorial. The campus part is the point. A generic “leg day” could live in any app. “Leg day @ IUB SRSC” is why a student would open this instead of Notes.</p>
+
+            <h3>Form without shame</h3>
+            <p>Hip thrust, play button, five cues: chin tucked, don’t arch, lower slowly. We treated tutorials as a support surface, not a course. If you don’t know the movement, you should not have to leave the workout to YouTube and lose the set.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="gympal-history.png" alt="Past workouts list for March, with dates, muscle groups, and star ratings." />
+                <figcaption>History — the list Karina was already trying to keep in Notes.</figcaption>
+            </figure>
+            <figure>
+                <img src="gympal-sets.png" alt="Hip thrust log showing four sets with reps and weight climbing from 120 to 210." />
+                <figcaption>The session — set, reps, weight. Progressive overload as a table, not a vibe.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Past workout data</h3>
+            <p>March, a date, a split, stars. Tap the day and you get the session at the SRSC. Tap the lift and you get the table: 12×120, 12×150, 10×180, 8×210. That is the page I owned. It is also the page testers could not find when the date was only a dark chip with no arrow. We had to make the target obvious after we watched people miss it.</p>
+
+            <h3>Calendar and settings</h3>
+            <p>The week is a list of dates and body parts, with an edit path after heuristic evaluation showed you could not change what you wanted to train. Settings hold campus, devices, and accessibility — including a campus switch so the same student can be at Bloomington or Indy without a second account.</p>
+        </article>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Campus in the copy, not a footer.</strong>
+                        <p>SRSC and BGF in the workout name. IU login on the first screen. A campus picker in settings. If you can swap the logo and it still works, it is not a campus app.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>History as the product for Karina.</strong>
+                        <p>She already writes the work down. The job is inference: which day, which group, did the weight go up. Stars and a set table are that inference. A social graph is not.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Form is a support surface.</strong>
+                        <p>Henry will skip a lift he does not know. A video and five cues on the exercise page is cheaper than a “beginner program” he will not open.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>04</b>
+                    <div>
+                        <strong>Stop using toggles for things that are not on/off.</strong>
+                        <p>Testing made this unavoidable. Completing a set, picking an age, picking a campus — testers treated those as mystery switches. Checkboxes and single-select replaced them in the final pass.</p>
+                    </div>
+                </li>
+            </ol>
+        </article>
+
+        <article class="prose" id="process">
+            <h2>How the plan changed</h2>
+            <p>Paper first. My 1.0 sketches were a different home. 2.0 adopted the shared GymPal layout, then I drew the path into past data: a finished day marked, the date as the tap, a session list with weight jumps, a form box for the squat. Heuristic evaluation said you still could not customize which body part to train — so the calendar got an edit control.</p>
+            <p>An outside critique of the early hi-fi was fair: it still looked like a wireframe, too much text, no fixed bottom navigation, red used as a button color, leftover white space. We added the tab bar, leaned on icons, and kept IU crimson as atmosphere instead of as every control.</p>
+            <p>Four usability sessions on prototype 3.5. People liked the purpose and called it clean. They still failed the tasks that lived on my screens and the complete-workout control: they could not tell the date chip was a button, and the toggle for “done” did not read as done. Version 4.0 added a checkbox for complete, a white arrow on the date, and selection instead of toggles for age, weight, and campus.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="gympal-sketch-home.png" alt="Pencil sketch of the GymPal home screen with today’s workout, past data, weekly calendar, and a Be strong quote." />
+                <figcaption>My 2.0 home — four doors and a quote, before the UI kit.</figcaption>
+            </figure>
+            <figure>
+                <img src="gympal-sketch-session.png" alt="Pencil sketch of a Monday session log with barbell squat, hip thrust, and leg press, each with sets, reps, and an info mark." />
+                <figcaption>Session sketch — weight jumps and an info mark on each lift.</figcaption>
+            </figure>
+        </div>
+
+        <ol class="process wrap">
+            <li>
+                <span>Research</span>
+                <strong>Listen</strong>
+                <p>Secondary sources plus 20+ student interviews. Notes beat MyFitnessPal. Nobody asked for more fields.</p>
+            </li>
+            <li>
+                <span>Frame</span>
+                <strong>Choose</strong>
+                <p>Karina and Henry. GymPal over a dining-hall meal planner. Four screens, four owners.</p>
+            </li>
+            <li>
+                <span>Build</span>
+                <strong>Raise fidelity</strong>
+                <p>Paper, wireframes, heuristic pass, then a hi-fi that still looked like boxes until we added a tab bar.</p>
+            </li>
+            <li>
+                <span>Test</span>
+                <strong>Fix the tap</strong>
+                <p>Four sessions. Date chips and toggles failed. Checkboxes, arrows, single-select in 4.0.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What we made</h2>
+            <p>A hi-fi mobile prototype: IU sign-in, a home that leads with today, a campus-named workout, form tips, a history with real numbers, a week view, and settings that know there is more than one IU campus. There is no live store listing — the Figma file is what we shipped for class.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Team</dt>
+                <dd>4 people, I300 Group 5</dd>
             </div>
             <div>
-                <dt>Tools</dt>
-                <dd>Figma</dd>
+                <dt>Research</dt>
+                <dd>20+ student interviews</dd>
+            </div>
+            <div>
+                <dt>Test</dt>
+                <dd>4 sessions, then a 4.0 pass</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Hi-fi iOS prototype</dd>
             </div>
         </dl>
 
         <article class="prose">
-            <h2>What students actually said</h2>
-            <p>I interviewed more than twenty IU students about working out on campus. The pattern was consistent: motivation is fragile, gyms feel intimidating if you don’t already belong there, and generic fitness apps don’t know SRSC hours, student schedules, or the fact that midterms will wreck a streak.</p>
-            <p>The product promise became: make the next session obvious, show form without shame, and treat consistency as the metric — not aesthetics.</p>
-
-            <h2>What I designed</h2>
-            <ul>
-                <li>A home that leads with today’s workout, past data, and the week — not a social feed.</li>
-                <li>Personalized recommendations (the “AI” layer) as a planner, not a chatbot occupying the screen.</li>
-                <li>Form tutorials as a support surface for people who would otherwise skip a movement they don’t know.</li>
-                <li>Streak and motivation copy that is direct. Students did not ask for a mascot. They asked not to lose the thread after a bad week.</li>
-            </ul>
-
-            <h2>What I would change</h2>
-            <p>Looking at this with a colder eye: the home list and the bottom navigation repeat each other, icon weights don’t match, and the motivational panel fights the content for contrast. Those are real critique notes, and I would fix them before calling this production-ready. The research insight still holds — students need a campus-specific on-ramp, not another generic tracker.</p>
+            <h2>What I learned</h2>
+            <p>Looking at this with a colder eye: the home list and the bottom navigation still repeat each other, icon weights don’t match, and the motivational panel fights the content for contrast. Those are real notes, and I would fix them before calling this production-ready. The research insight still holds — students need a campus-specific on-ramp, not another generic tracker.</p>
+            <p>Testing was the other lesson. I had highlighted the date on paper and still shipped a chip people did not recognize as a button. Watching four people miss the same control is more persuasive than another critique slide. If I continued the work, I would timed-task the history path first, then quiet the home so today’s workout is the only primary action.</p>
             <div class="btn-row">
                 <a class="btn btn-primary" href="https://www.figma.com/proto/ipfvW57RnEGC7KtGQFwhWh/IU-GymPal?node-id=393-6183&amp;t=PpsfL48EiSCTln3D-1" target="_blank" rel="noopener noreferrer">View mobile prototype</a>
                 <a class="btn btn-ghost" href="projects.html">Back to work</a>
@@ -104,6 +333,7 @@
         <div class="wrap">
             <div class="footer-cta">
                 <h2 class="display">I still have the interview notes if you want to go deeper.</h2>
+                <p>Built with Emanuel Delgado, Zach Loucks, and Burk Shelley.</p>
                 <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
             </div>
             <div class="footer-bottom">
