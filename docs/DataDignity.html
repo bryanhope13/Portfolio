@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Dignity — Bryan Hope</title>
-    <meta name="description" content="Data Dignity case study: an ADHD-friendly personal data hub that makes privacy controls calm, scannable, and actionable." />
+    <meta name="description" content="Data Dignity case study: a solo inclusive product for Jordan, a teen with ADHD. A calm personal data hub — dashboard, streams, and accessibility — so privacy feels possible instead of alarming." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,47 +37,184 @@
         <header class="case-hero">
             <div class="wrap">
                 <a class="back" href="projects.html">← All work</a>
-                <p class="eyebrow">Inclusive product concept</p>
+                <p class="eyebrow">HER-V500 · Fall 2025 · Inclusive product</p>
                 <h1 class="display">Data Dignity</h1>
-                <p class="lede">Personal data is collected constantly and stored everywhere. This concept gives one person — Jordan, a teen who needs an ADHD-friendly view — a snapshot of where data lives, who can see it, and what to do next without panic.</p>
+                <p class="lede">Personal data is collected constantly and stored everywhere. Ownership on paper is not the same as control in a Tuesday afternoon. This concept gives one person — Jordan, a teen who needs an ADHD-friendly view — a snapshot of where data lives, who can see it, and what to do next without panic.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
             </div>
         </header>
 
-        <figure class="figure phone">
-            <img src="DataHome.png" alt="Data Dignity mobile dashboard for Jordan, with a storage donut chart, permissions breakdown, activity list, and summary cards." />
-            <figcaption>Dashboard as a snapshot, not a settings dump.</figcaption>
-        </figure>
+        <div class="figure-grid">
+            <figure>
+                <img src="dignity-dash.png" alt="Data Dignity dashboard for Jordan with a storage donut, who-can-see-what bar, activity list, and status cards." />
+                <figcaption>Dashboard — what’s happening, before any toggle.</figcaption>
+            </figure>
+            <figure>
+                <img src="dignity-data.png" alt="Streams and sources screen with filters for school, health, social, and devices, plus toggles for Canvas, TikTok, and Life360." />
+                <figcaption>Data — one stream at a time, not a settings dump.</figcaption>
+            </figure>
+        </div>
 
         <dl class="meta wrap">
             <div>
                 <dt>Role</dt>
-                <dd>Product design, UI</dd>
+                <dd>Solo product design</dd>
             </div>
             <div>
-                <dt>Focus</dt>
-                <dd>ADHD-friendly privacy</dd>
+                <dt>Persona</dt>
+                <dd>Jordan, 15, ADHD</dd>
             </div>
             <div>
                 <dt>Platform</dt>
                 <dd>Mobile</dd>
             </div>
             <div>
-                <dt>Methods</dt>
-                <dd>8-pt grid, chunking, IA</dd>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma prototype</dd>
             </div>
         </dl>
 
-        <article class="prose">
-            <h2>The problem</h2>
-            <p>Privacy products often fail in the same way: they show everything. Permissions lists, tracker logs, and security alerts compete until the user either ignores the app or feels worse than before they opened it. For someone with ADHD, that wall of equal-weight information is not just ugly — it is unusable.</p>
-            <p>Jordan still needs the truth: what is public, what is shared with adults, what changed this week, which high-risk permissions are still on. The job was to make that truth scannable in a few seconds, then point to one next action.</p>
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>In a digital-dignity world, people legally own their data. Jordan already lives across school, health, and social apps every day.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>Ownership is not understanding. Data hides behind technical language. Privacy screens show everything at once and raise the alarm.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>A calm hub: look first, act second. Three spaces — dashboard, data, settings — and one goal on the screen you are on.</p>
+            </article>
+        </section>
 
-            <h2>Design priorities</h2>
-            <p>I treated cognitive load as the primary constraint, not a style preference. Cards are chunked. Spacing is consistent on an 8-point grid. Status language is specific (“review needed,” “getting safer”) instead of alarmist. The dashboard answers three questions in order: where is the data, who can see it, and what changed.</p>
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>How might we return data control to individuals without overwhelming them? The legal story says you own the file. The interface still asks you to parse a tracker log, a permissions tree, and a red banner before breakfast. For younger users especially, managing privacy feels like a test they are already failing.</p>
+            <p>Privacy products often fail in the same way: they show everything. For someone with ADHD, a wall of equal-weight information is not just ugly — it is unusable. Jordan still needs the truth: what is public, what is shared with adults, what changed this week, which high-risk permissions are still on. The job was to make that truth scannable in a few seconds, then point to one next action.</p>
+        </article>
+
+        <article class="prose" id="research">
+            <h2>Who it had to serve</h2>
+            <p>I designed for Jordan: fifteen, diagnosed ADHD, moving through school apps, wearables, and social feeds. They want independence. They lose the thread when a screen asks for twelve decisions. The use case I wrote was blunt — manage personal data in a structured way so they can stay focused, feel a little accomplished, and worry less about what they forgot.</p>
+            <p>Two sources kept the work honest. Bakken’s work on ADHD-friendly digital tools asked for fewer distractions, more structure, and praise that is not a carnival. Wollberg’s review of inclusive ADHD research in HCI added the rest: one goal per section, no open-ended prompts that spike anxiety, autonomy over how loud the system is allowed to be.</p>
+        </article>
+
+        <ul class="persona-grid cols-2">
+            <li>
+                <span>15 · ADHD · school, health, social</span>
+                <strong>Jordan</strong>
+                <p>Wants control without a lecture. Needs systems that are predictable, easy to scan, and willing to wait. A 2-minute task beats a privacy course.</p>
+            </li>
+            <li>
+                <span>Goals, not a feature list</span>
+                <strong>What has to be true</strong>
+                <p>See where data lives. Know who can see it. Make one small, safe change. Dense menus, vague permissions, and alerts without context are the failure mode.</p>
+            </li>
+        </ul>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>Minimize distractions.</strong>
+                    <p>Clean cards. Low-saturation color. The same nav on every screen. No animated background competing with the snapshot.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>One goal per section.</strong>
+                    <p>Breadcrumbs and a single primary action. If Jordan has to guess what this screen is for, the IA already lost.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>Control over volume.</strong>
+                    <p>Custom layout, notification frequency, calm mode. Autonomy lowers anxiety more than another “you should review this” toast.</p>
+                </div>
+            </li>
+            <li>
+                <b>04</b>
+                <div>
+                    <strong>Motivation without a siren.</strong>
+                    <p>Streaks and “getting safer” are gentle. Burnt sienna marks risk. Color is never the only signal — an icon or a label travels with it.</p>
+                </div>
+            </li>
+        </ol>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>This was a solo inclusive-product brief: persona and research notes, a mood board, a color system, custom icons, and a hi-fi mobile prototype covering onboarding, dashboard, data streams, revoke, settings, and notifications. I did not invent a live vault. The Figma file is the artifact.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>Three spaces, on purpose. Dashboard is “understand what’s happening.” Data is “organize and control sources.” Settings is “change how the system behaves.” Observe first, act second. That split is the information architecture.</p>
+        </article>
+
+        <figure class="figure">
+            <img src="dignity-icons.png" alt="Data Dignity icon set: lock mark, four-square dashboard grid, inbound and outbound shields, and a fingerprint-like settings mark." />
+            <figcaption>App, dashboard, inbound, outbound, settings — simple enough to stay recognizable at a glance.</figcaption>
+        </figure>
+
+        <article class="prose">
+            <h3>A snapshot, not a control panel</h3>
+            <p>Home answers three questions in order: where is the data, who can see it, what changed. A donut for storage. A bar for public / shared with adults / private. A short activity list. Then four cards that imply a next step — “3 / 5 high-risk permissions still on” is a prompt, not a grade. Quick actions stay at two minutes: review one toggle, log how it felt.</p>
         </article>
 
         <article class="prose">
-            <h2>Decisions I would defend in a critique</h2>
+            <h3>Streams you can pause</h3>
+            <p>Data is filtered — All, School, Health, Social, Devices — so Jordan can look at one pile. Canvas is active. TikTok is paused. Life360 is flagged. Importing a source is a form, not a hunt through Settings. Revoking access is a separate, slower flow: what stops now, what happens to history, are you sure. Accidental revoke should be hard. Trust is the point.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="dignity-settings.png" alt="Settings home titled Make it feel like you, with accessibility, notifications, and privacy groups." />
+                <figcaption>Settings — personalization first, then privacy. The system adapts.</figcaption>
+            </figure>
+            <figure>
+                <img src="dignity-a11y.png" alt="Accessibility settings with text size chips, high contrast, calm mode, and reduced animation toggles." />
+                <figcaption>Calm mode and reduced motion are on by default in this pass — high-distraction days are expected.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Make it feel like you</h3>
+            <p>Settings is not a junk drawer. Text size has a preview. High contrast and calm mode sit together. Reduced animation is a toggle, not a buried iOS setting. Notifications match attention: a daily focus reminder can be on; a weekly wrap-up can be off. The in-app copy says “Tap when ready — no rush.” That sentence is a design decision.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="dignity-notify.png" alt="Notifications and alerts settings with focus routines, data activity alerts, security alerts, and channel chips." />
+                <figcaption>Alerts are optional and labeled. Suspicious sign-in stays loud; wrap-ups can stay quiet.</figcaption>
+            </figure>
+            <figure>
+                <img src="dignity-onboard-3.png" alt="Onboarding screen Start small, keep progress visible, with Get Started as the primary action." />
+                <figcaption>Onboarding ends on a 2-minute first step, not a permissions manifesto.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Three screens, then a small start</h3>
+            <p>Onboarding has to pass a three-second skim: what this is, how you use it, what to do first. “Own your data” is the purpose. “Turn confusion into control” is the method. “Get started” is review one risky permission. Progress indicators come after the first win, not before.</p>
+        </article>
+
+        <figure class="figure phone">
+            <img src="dignity-onboard-1.png" alt="Onboarding screen Turn confusion into control, with quick actions and gentle nudges." />
+            <figcaption>How you use it — two-minute actions and nudges Jordan can ignore.</figcaption>
+        </figure>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
             <ol class="insights">
                 <li>
                     <b>01</b>
@@ -97,21 +234,83 @@
                     <b>03</b>
                     <div>
                         <strong>Calm, not cute.</strong>
-                        <p>Rounded cards and a muted palette lower threat. Color is reserved for status. The lock mark is a promise of control, not a warning siren.</p>
+                        <p>Cerulean for ownership. Asparagus for safer. Burnt sienna for risk — never a pure alarm red. Dual encoding so color is never the only message. Poppins on the screens because it stays friendly at small sizes; the portfolio stays in its own type.</p>
                     </div>
                 </li>
                 <li>
                     <b>04</b>
                     <div>
                         <strong>Three destinations, not a maze.</strong>
-                        <p>Dashboard, Data, Settings. If a privacy app needs a hamburger of twelve items, the information architecture is already lost.</p>
+                        <p>Dashboard, Data, Settings. Cards, toggles, chips, bottom sheets. Repeat the pattern so the next screen does not have to be relearned.</p>
                     </div>
                 </li>
             </ol>
+        </article>
 
-            <h2>What I’d do next</h2>
-            <p>This is a concept, not a shipped product. The next honest step is testing with teens — including people who use ADHD accommodations — on two tasks: “What needs your attention today?” and “Turn off something that feels too public.” I would also design the empty and error states; privacy UIs are full of both.</p>
+        <article class="prose" id="process">
+            <h2>How I got there</h2>
+            <p>The mood board was Control, Dignity, Visualize — lock, handshake, charts that do not shout. I looked at data-manager and deletion tools and kept the ones that felt approachable. Then a palette written for Jordan: soft neutrals as ground, cerulean reserved for the thing you can tap, burnt sienna for urgency without panic.</p>
+            <p>The dashboard sits on an 8-point grid. Text is sized for a phone, targets are large enough to hit, the layout reads top to bottom for a screen reader. Interaction patterns stay boring on purpose: a card, a toggle, a sheet. Revoke is the one place I slowed the user down on purpose.</p>
+        </article>
+
+        <figure class="figure">
+            <img src="dignity-mood.png" alt="Mood board for Data Dignity with the words Control, Dignity, and Visualize, color swatches, type samples, and reference dashboards." />
+            <figcaption>Mood — privacy that looks like a tool you would actually open.</figcaption>
+        </figure>
+
+        <ol class="process wrap">
+            <li>
+                <span>Frame</span>
+                <strong>Pick Jordan</strong>
+                <p>Teen, ADHD, scattered apps. The brief was agency without a second job.</p>
+            </li>
+            <li>
+                <span>Read</span>
+                <strong>Structure first</strong>
+                <p>Bakken and Wollberg: fewer distractions, one goal, user-controlled volume.</p>
+            </li>
+            <li>
+                <span>System</span>
+                <strong>Calm language</strong>
+                <p>Palette, icons, 8-pt grid, Poppins. Color always travels with a label.</p>
+            </li>
+            <li>
+                <span>Build</span>
+                <strong>Three spaces</strong>
+                <p>Onboarding, dashboard, streams, settings. Look first, act second.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What I made</h2>
+            <p>A hi-fi mobile prototype of a personal data hub: a calm snapshot, a stream list you can pause or revoke, accessibility that is not an afterthought, and notifications that explain the next step. It can scale toward families and caregivers. It is not a shipped vault — the prototype is what I have to show.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Scope</dt>
+                <dd>Solo inclusive product</dd>
+            </div>
+            <div>
+                <dt>Persona</dt>
+                <dd>Jordan, teen, ADHD</dd>
+            </div>
+            <div>
+                <dt>Spaces</dt>
+                <dd>Dashboard, Data, Settings</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Interactive Figma proto</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>Accessibility is not a later coat of contrast. If calm mode, text size, and reduced motion live in Settings from the start, the rest of the UI can stay quiet. The other lesson is sequential: a dashboard that asks for a decision on load will lose Jordan. Show the picture. Offer a two-minute action. Let revoke be slow.</p>
+            <p>What I would do next is the honest gap. This has not been tested with teens who use ADHD accommodations. I would sit someone with two tasks — “What needs your attention today?” and “Turn off something that feels too public” — and I would design the empty and error states. Privacy UIs are full of both.</p>
             <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/n9lq4F0HwpF75RuCL5217U/Data-Dignity---Template-Bryan-Hope?node-id=10916-11611&amp;t=moFw60t62cLXdeBS-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=10659%3A1984&amp;starting-point-node-id=10916%3A11611&amp;show-proto-sidebar=1" target="_blank" rel="noopener noreferrer">View mobile prototype</a>
                 <a class="btn btn-primary" href="https://www.figma.com/deck/IztzpF8QP9XNrcQWcyAcMU/Data-Dignity-Application?node-id=1-42&amp;p=f&amp;t=dwlEoTcVKtsrceFT-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;page-id=0%3A1" target="_blank" rel="noopener noreferrer">View presentation</a>
                 <a class="btn btn-ghost" href="projects.html">Back to work</a>
             </div>
