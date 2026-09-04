@@ -860,8 +860,8 @@ p:last-child {
   gap: 1rem;
 }
 
-.persona-grid.cols-3 {
-  grid-template-columns: repeat(3, 1fr);
+.persona-grid.cols-2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .persona-grid li {
@@ -1236,7 +1236,7 @@ p:last-child {
   .abt,
   .quote-grid,
   .persona-grid,
-  .persona-grid.cols-3,
+  .persona-grid.cols-2,
   .outcome-stats {
     grid-template-columns: 1fr;
   }
