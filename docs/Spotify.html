@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Social Hub — Bryan Hope</title>
-    <meta name="description" content="Spotify Social Hub case study: a native sharing layer so recommending music does not require leaving the app." />
+    <meta name="description" content="Spotify Social Hub case study: a solo mobile redesign that keeps song sharing inside the app — as a post, a comment, or a drop onto a friend’s playlist." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,16 +37,28 @@
         <header class="case-hero">
             <div class="wrap">
                 <a class="back" href="projects.html">← All work</a>
-                <p class="eyebrow">Product redesign</p>
+                <p class="eyebrow">Product redesign · Solo</p>
                 <h1 class="display">Spotify Social Hub</h1>
                 <p class="lede">Spotify is excellent at personal mixes and weak at sharing them. This study asks what happens if recommending a song stays inside the app — as a post, a comment, or a drop onto a friend’s playlist.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
             </div>
         </header>
 
-        <figure class="figure phone">
-            <img src="SocialHub.png" alt="Social Hub feed with online followers, album shares, captions, likes, and a prompt to add a track to a gym playlist." />
-            <figcaption>A native feed for music, not a screenshot sent to iMessage.</figcaption>
-        </figure>
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-hub-hero.png" alt="Social Hub feed with four followers online, a Beatles post from Breanna Hope, and Bryan Hope’s gym playlist prompt." />
+                <figcaption>Social Hub — a fifth tab for what people you follow are playing.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-posted.png" alt="Spotify home after posting, with a green Your Post Is Shared toast and a five-tab bar including Social Hub." />
+                <figcaption>Home after posting — a quiet toast, and a new place to go.</figcaption>
+            </figure>
+        </div>
 
         <dl class="meta wrap">
             <div>
@@ -59,56 +71,252 @@
             </div>
             <div>
                 <dt>Methods</dt>
-                <dd>Journeys, comparative analysis, testing</dd>
+                <dd>Journeys, sketches, testing</dd>
             </div>
             <div>
                 <dt>Output</dt>
-                <dd>Lo-fi → interactive proto</dd>
+                <dd>Hi-fi Figma prototype</dd>
             </div>
         </dl>
 
-        <article class="prose">
-            <h2>The gap</h2>
-            <p>On mobile, sharing a track usually means leaving Spotify. The moment moves to Instagram, Messages, or a group chat, stripped of playback, context, and follow-up. Desktop has a modest friend-activity rail. Mobile does not have an equivalent that feels like a place.</p>
-            <p>I mapped the current share journey and marked every time the user is asked to become a courier for the product. Those handoffs were the brief.</p>
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>Spotify already knows how to make a mix feel like yours. Desktop even has a friend-activity rail if you know to click the tiny person.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>On mobile, sharing a track usually means leaving. Copy link, Messages, TikTok. The moment moves, and the conversation does not come back.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>A native Social Hub: post a song with a caption, react in-thread, and add a track to someone’s playlist without a side quest.</p>
+            </article>
+        </section>
 
-            <h2>How I worked</h2>
-            <ul>
-                <li>Journey mapping of “I heard something and I want a specific person to hear it too.”</li>
-                <li>Comparative looks at how other social apps handle posts, reactions, and lightweight collaboration.</li>
-                <li>Low-fidelity flows for a Social Hub, then higher-fidelity screens for feed, post creation, comments, and notifications.</li>
-                <li>Usability passes focused on discoverability: can someone find sharing without hunting Settings?</li>
-            </ul>
-
-            <h2>The concept</h2>
-            <p>Social Hub is a fifth tab with a job: show what people you follow are listening to, let you post a song with a caption, react in-thread, and add a track to a playlist without a side quest. Presence (“4 followers online”) is there to make sharing feel timely, not performative.</p>
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>I use Spotify daily. Curated mixes, AI radio, a home that feels like a living room — and then a share path that asks you to become a courier. Mobile users copy a link or hand the song to Instagram, iMessage, or TikTok, where it gets buried. The recipient often lands outside the app. The interaction ends.</p>
+            <p>Desktop can show what friends are listening to. Mobile mostly shows their playlists. In-app Messages already exists, but it lives behind the track ellipsis or a profile tap. It behaves like a forgotten feature, not a place.</p>
+            <p>The brief I wrote for myself: stop making the user leave in order to recommend music. Keep playback, context, and follow-up in the same house.</p>
         </article>
 
+        <ul class="persona-grid cols-2">
+            <li>
+                <span>Current journey</span>
+                <strong>Leave the app</strong>
+                <p>Find a song → Now Playing → ⋯ → Share → Spotify Messages, copy link, or a third-party app. The recipient gets a link. Discussion, if it happens, happens somewhere else.</p>
+            </li>
+            <li>
+                <span>Redesigned journey</span>
+                <strong>Share in Spotify</strong>
+                <p>Same start. Share opens with Social Hub first. Compose a caption, post, get a quiet toast, open the hub, comment, or drop the track onto a playlist. Messages stay, but they are no longer the only native path.</p>
+            </li>
+        </ul>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-share-before.png" alt="Current Spotify share sheet with a song card, Share with Spotify Messages, and icons for Copy link, Messages, TikTok, and Messenger." />
+                <figcaption>Before — Messages is there, but the sheet still points you out of the app.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-share-after.png" alt="Redesigned share screen with Beatles album art and Social Hub as the first destination, ahead of Messages and copy link." />
+                <figcaption>After — Social Hub is the first chip, not a buried row.</figcaption>
+            </figure>
+        </div>
+
         <article class="prose">
-            <h2>What I would push on in a review</h2>
+            <h2>What I owned</h2>
+            <p>This was a solo redesign. I mapped the current share journey, sketched the Social Hub with an action / goal / emotion note on every frame, and took the flow to a hi-fi Figma prototype: compose, feed, comments, add-to-playlist, and a Create sheet that surfaces listening rooms instead of hiding Jam.</p>
+            <p>I did not invent a live product, and I did not pretend Messages was missing. The work is about making sharing a first-class place — a fifth tab — without turning Spotify into a social network that competes with listening.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>Social Hub sits in the center of a five-tab bar. Home still looks like Home. After you post, a toast says “Your Post Is Shared / View Now.” Presence — “4 followers online” — is there so sharing feels timely, not performative.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-home-before.png" alt="Current Spotify home with four-tab navigation and When The Bass Is Too Loud playing." />
+                <figcaption>Home before — four tabs. Sharing is not a destination.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-home-after.png" alt="Redesigned Spotify home with five tabs and Social Hub in the center." />
+                <figcaption>Home after — Social Hub in the middle, listening still on top.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Compose, then post</h3>
+            <p>Share to Social Hub is a sheet, not a new app. The song card is already there — Beatles, <em>From Me to You</em> — with a caption field and a Post control. Type “This Song Is So Good! #Beatles.” You are still in playback. The keyboard is the only extra surface.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-compose.png" alt="Share to Social Hub compose screen with Beatles album art, a Write a caption field, and an iOS keyboard." />
+                <figcaption>Compose — the track is the post. Caption is optional, not a form.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-caption.png" alt="Share to Social Hub with the caption This Song Is So Good! #Beatles ready to post." />
+                <figcaption>Caption — enough to sound like a person, short enough to stay in the feed.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>A feed that does something</h3>
+            <p>The hub is not a screenshot dump. Breanna’s Beatles post can be liked and commented. Bryan’s gym playlist asks you to add heat — #EDM #Drake — so a post can write into a library. Fisher and Dom Dolla’s live mix has Tune In, which is Jam / Listening Room pulled onto the same surface instead of living in a menu nobody opens.</p>
+        </article>
+
+        <figure class="figure phone">
+            <img src="spotify-hub.png" alt="Social Hub feed showing a Beatles post, a gym playlist prompt, a live mix with Tune In, Now Playing, and the Social Hub tab selected." />
+            <figcaption>The feed — posts, a playlist that wants tracks, and a room you can join.</figcaption>
+        </figure>
+
+        <article class="prose">
+            <h3>Comments stay on the song</h3>
+            <p>Open likes and comments and the album stays on screen. Fisher writes “How we feeling baby!” Breanna replies “Groovy.” Like and delete live on the thread. You do not have to jump to Instagram to finish the sentence.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-comments.png" alt="Comments on Breanna Hope’s Beatles post, with Fisher’s comment and a Write a comment field above the keyboard." />
+                <figcaption>Reply — the song stays visible while you type.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-reply.png" alt="Comment thread with Fisher’s How we feeling baby and Breanna’s Groovy reply, including like and delete." />
+                <figcaption>Thread — a short reply is enough. No new destination.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Playlist as a social object</h3>
+            <p>From a post you can add the track to a playlist. Done writes “Successfully Added Song” on Bryan’s collaborative Lifting Playlist. Collaborator avatars sit on the rows so you can see who dropped Miracle Maker. That is the most product-y idea in the set: a caption that changes the library.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-playlist.png" alt="Add to Playlist screen with Liked Songs, Miracle Maker selected, and a green Done button." />
+                <figcaption>Add — pick the list, not another share sheet.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-add.png" alt="Lifting Playlist after adding a song, with a Successfully Added Song toast and collaborator avatars on tracks." />
+                <figcaption>Confirm — the toast is quiet. The playlist is the proof.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Create without hunting</h3>
+            <p>The plus tab opens one sheet: playlist, collaborative playlist, Mix / Listening Room, or create a post. Listening Room is Jam with a public face — queue together, hosted on the feed. I also sketched a Shared with Me library in the rationale; the hi-fi spends its pixels on the feed and the create sheet first.</p>
+        </article>
+
+        <figure class="figure phone">
+            <img src="spotify-create.png" alt="Create sheet over Social Hub with options for playlist, collaborative playlist, mix or listening room, and create a post." />
+            <figcaption>Create — post, playlist, collab, or a room. One sheet, four jobs.</figcaption>
+        </figure>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
             <ol class="insights">
                 <li>
                     <b>01</b>
                     <div>
                         <strong>Don’t compete with listening.</strong>
-                        <p>The hub has to stay secondary to playback. If social becomes the home screen, the product identity slips. I’d keep Now Playing persistent and posting a sheet, not a destination you get lost in.</p>
+                        <p>The hub is a tab, posting is a sheet, Now Playing stays put. If social becomes the home screen, the product identity slips. Spotify should still feel like a stereo that happens to have friends in the room.</p>
                     </div>
                 </li>
                 <li>
                     <b>02</b>
                     <div>
-                        <strong>Playlist as a social object.</strong>
-                        <p>The gym-playlist prompt in the feed is the most product-y idea in the set: a post that does something in the library, not just a caption under art.</p>
+                        <strong>Make Share in Spotify the default path.</strong>
+                        <p>Copy link and TikTok can stay. They should not be the first thing the sheet teaches you. Social Hub first, then Messages, then the exits.</p>
                     </div>
                 </li>
                 <li>
                     <b>03</b>
                     <div>
-                        <strong>Privacy is the hidden requirement.</strong>
-                        <p>Friend activity is sensitive. A next iteration would need listening visibility controls before this could be real — not as a footnote, as a first-class setting.</p>
+                        <strong>Playlist as a social object.</strong>
+                        <p>A gym-playlist prompt that other people can add to is more useful than another caption under art. The feed should be able to change the library.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>04</b>
+                    <div>
+                        <strong>Notifications that respect attention.</strong>
+                        <p>“Your Post Is Shared” is a toast, not a takeover. I wanted confirmation without training people to swipe away noise. Privacy is the hidden requirement sitting under all of this — listening visibility has to be a first-class setting before a hub like this could ship.</p>
                     </div>
                 </li>
             </ol>
+        </article>
+
+        <article class="prose" id="process">
+            <h2>How I got there</h2>
+            <p>I started with the current mobile journey — ten taps from Home to a forgotten Messages thread — and marked every time the product asked me to leave. Then I redrew the same job with Social Hub as a place: Home, Now Playing, Share to Social Hub, compose “This song is so good!!”, the feed, an ellipsis for Repost / Message / Like, and a DM to Bailey that still carries the song card.</p>
+            <p>Each sketch frame got an action, a goal, and an emotion. That kept the hi-fi honest when it was tempting to add another row of icons. Typography stayed on Spotify’s type scale so the hub would read as part of the app, not a skin. Color marks state and priority — the green toast, the selected chip — instead of decorating the feed.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="spotify-sketch-post.png" alt="Notebook page of four pencil sketches: Home, Now Playing for Pump Up The Jam, Share to Social Hub, and a compose screen with the caption This song is so good." />
+                <figcaption>Posting flow — Pump Up The Jam, from Home to a caption.</figcaption>
+            </figure>
+            <figure>
+                <img src="spotify-sketch-hub.png" alt="Notebook page of four pencil sketches: post confirmation, Social Hub feed, repost and message actions, and a DM to Bailey that says Check this out." />
+                <figcaption>Hub flow — toast, feed, actions, then a message that still has the track.</figcaption>
+            </figure>
+        </div>
+
+        <ol class="process wrap">
+            <li>
+                <span>Map</span>
+                <strong>Current share</strong>
+                <p>Home → player → ⋯ → Share → leave. Messages exists and still feels hidden.</p>
+            </li>
+            <li>
+                <span>Sketch</span>
+                <strong>A place, not a link</strong>
+                <p>Action / goal / emotion on every frame so the hub had a job besides looking social.</p>
+            </li>
+            <li>
+                <span>Build</span>
+                <strong>Raise fidelity</strong>
+                <p>Compose, toast, feed, comments, add-to-playlist, Create — in Spotify’s own type and dark UI.</p>
+            </li>
+            <li>
+                <span>Check</span>
+                <strong>Can they find it?</strong>
+                <p>Usability passes on discoverability: sharing should not live in Settings, or behind a profile you never open.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What I made</h2>
+            <p>A hi-fi mobile prototype of a native sharing layer: a fifth tab, a compose sheet, a feed that can comment and write into playlists, and a Create menu that puts listening rooms on the same surface. There is no live Spotify feature to open — the Figma file is the artifact.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Scope</dt>
+                <dd>Solo product redesign</dd>
+            </div>
+            <div>
+                <dt>From</dt>
+                <dd>Current share journey</dd>
+            </div>
+            <div>
+                <dt>Through</dt>
+                <dd>Annotated lo-fi flows</dd>
+            </div>
+            <div>
+                <dt>To</dt>
+                <dd>Interactive mobile proto</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>Familiar patterns — tab bars, toasts, comment threads — do the heavy lifting. The work was deciding what <em>not</em> to add. A hub that shouts will lose to the Now Playing bar. A hub that only captions will lose to iMessage. The useful middle is a post that can become a playlist row, and a notification that confirms without taxing attention.</p>
+            <p>If I continued, I would design listening visibility before another feed widget: who can see that you are online, what “Shared with Me” keeps, and how a Listening Room dies when the night is over. Accessibility is not a later pass here — contrast and type size are why the hub can sit on a dark gradient and still be readable in a bright room.</p>
             <div class="btn-row">
                 <a class="btn btn-primary" href="https://www.figma.com/proto/b1pHg1nNtiaqxabIP0EUlR/Bryan-Hope---Spotify-Redesign?node-id=108-5069&amp;t=xvfm7oVQ0wUEUedF-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=108%3A3367" target="_blank" rel="noopener noreferrer">View mobile prototype</a>
                 <a class="btn btn-ghost" href="projects.html">Back to work</a>
