@@ -721,6 +721,50 @@ p:last-child {
   text-align: center;
 }
 
+/* Zoom the product UI inside full-desktop screenshots without growing the frame. */
+.shot {
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  box-shadow: var(--shadow);
+  aspect-ratio: 16 / 9;
+}
+
+.figure .shot img,
+.figure-grid .shot img {
+  display: block;
+  width: 140%;
+  max-width: none;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.shot-landing img {
+  width: 128%;
+}
+
+.shot-report img {
+  width: 172%;
+  top: -6%;
+}
+
+.shot-rewards img {
+  width: 178%;
+  top: -8%;
+}
+
+.shot-staff img {
+  width: 158%;
+  top: -4%;
+}
+
 .insights {
   display: grid;
   gap: 0.85rem;
