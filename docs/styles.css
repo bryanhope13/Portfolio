@@ -723,6 +723,7 @@ p:last-child {
 
 /* Zoom the product UI inside full-desktop screenshots without growing the frame. */
 .shot {
+  position: relative;
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--line);
@@ -733,36 +734,37 @@ p:last-child {
 
 .figure .shot img,
 .figure-grid .shot img {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: 140%;
+  width: 100%;
   max-width: none;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border: 0;
   border-radius: 0;
   box-shadow: none;
   background: transparent;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .shot-landing img {
-  width: 128%;
+  transform: scale(1.42);
+  transform-origin: center 46%;
 }
 
 .shot-report img {
-  width: 172%;
-  top: -6%;
+  transform: scale(2.05);
+  transform-origin: center 10%;
 }
 
 .shot-rewards img {
-  width: 178%;
-  top: -8%;
+  transform: scale(2.15);
+  transform-origin: center 8%;
 }
 
 .shot-staff img {
-  width: 158%;
-  top: -4%;
+  transform: scale(1.9);
+  transform-origin: center 14%;
 }
 
 .insights {
