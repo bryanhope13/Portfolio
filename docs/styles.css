@@ -687,6 +687,17 @@ p:last-child {
   width: min(100% - 2rem, 22rem);
 }
 
+.figure.tall {
+  width: min(100% - 2rem, 32rem);
+}
+
+.figure-grid.marks img {
+  background: #fff;
+  object-fit: contain;
+  aspect-ratio: 2.4 / 1;
+  padding: 1.25rem 1.5rem;
+}
+
 .figure figcaption {
   margin-top: 0.7rem;
   color: var(--muted);
@@ -1172,6 +1183,7 @@ p:last-child {
   .abt,
   .quote-grid,
   .persona-grid,
+  .persona-grid.cols-3,
   .outcome-stats {
     grid-template-columns: 1fr 1fr;
   }
