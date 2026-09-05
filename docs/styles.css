@@ -493,6 +493,29 @@ p:last-child {
   background: var(--bg-2);
 }
 
+.work-card--parkspotter img {
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.work-card--spotify img {
+  object-fit: cover;
+  object-position: center;
+  background: #080808;
+}
+
+.work-card--dignity img {
+  object-fit: cover;
+  object-position: center;
+  background: #3a7ca5;
+}
+
+.work-card--gympal img {
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+}
+
 .work-card .work-copy {
   flex: 1;
 }
