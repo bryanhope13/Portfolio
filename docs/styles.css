@@ -687,10 +687,6 @@ p:last-child {
   width: min(100% - 2rem, 22rem);
 }
 
-.figure.phone img {
-  border-radius: 2.35rem;
-}
-
 .figure.tall {
   width: min(100% - 2rem, 32rem);
 }
@@ -723,7 +719,7 @@ p:last-child {
 
 .figure-grid img {
   width: 100%;
-  border-radius: 1.75rem;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
   background: var(--bg-2);
   box-shadow: var(--shadow);
