@@ -495,8 +495,8 @@ p:last-child {
 
 .work-card--parkspotter img {
   height: 16.5rem;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: center 12%;
   background: #1a3354;
 }
 
