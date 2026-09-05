@@ -500,6 +500,13 @@ p:last-child {
   background: #1a3354;
 }
 
+@media (max-width: 720px) {
+  .work-card--parkspotter img {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
 .work-card--spotify img {
   object-fit: cover;
   object-position: center;
