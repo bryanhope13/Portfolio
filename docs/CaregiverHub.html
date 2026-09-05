@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caregiver Hub — Bryan Hope</title>
+    <meta name="description" content="Caregiver Hub case study: a Group 8 Interaction Design Practice prototype for family care coordination. One care board for tasks, the team, privacy, and a little encouragement — instead of texts, portals, and sticky notes." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Interaction Design Practice · Fall 2025 · Group 8</p>
+                <h1 class="display">Caregiver Hub</h1>
+                <p class="lede">Families already do the work. They do it in group texts, MyChart, Notion, and a note on the fridge. Caregiver Hub is a shared care board — today’s tasks, who is free, who can see the health record, and a place to say you are not doing this alone.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="caregiver-hub-home.png" alt="Mom’s CareHub home for John, with a week strip, today’s overview cards, and daily tasks including an unassigned dinner." />
+                <figcaption>Home — today first, then who owns the next hour.</figcaption>
+            </figure>
+            <figure>
+                <img src="caregiver-hub-tasks.png" alt="All Tasks list with filters and five care tasks tagged by category, priority, time, and assignee." />
+                <figcaption>All tasks — one list instead of three threads and a spreadsheet.</figcaption>
+            </figure>
+        </div>
+
+        <dl class="meta wrap">
+            <div>
+                <dt>My role</dt>
+                <dd>IA, assign flow, privacy, chat</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Hope, Neish, Willis</dd>
+            </div>
+            <div>
+                <dt>Research</dt>
+                <dd>4 interviews · 3 usability tests</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma prototype</dd>
+            </div>
+        </dl>
+
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>About 53 million adults in the U.S. already give unpaid care. Siblings, spouses, and self-managing adults keep meds, rides, and appointments in their heads.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>The tools are scattered. A text here, a portal there, a Google Doc for symptoms. Tasks get duplicated. The person who remembers becomes the person who burns out.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>One mobile board. Assign the dinner. See who is already busy. Keep health records behind a permission, and leave room for a note that is not a task.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>How do you coordinate care when the people who love someone live in different zip codes, and the systems that hold the record do not talk to each other? That was the brief for Group 8 in Interaction Design Practice: David Neish, Kellie Willis, and me.</p>
+            <p>Feinberg and Levine call the backdrop “fragmented silos of healthcare and social services.” Our interviews made it smaller and meaner. A foster-care supervisor tracking appointments in a spreadsheet, then texting a parent, then forgetting to enter the date. A self-managing adult with several chronic conditions who can keep a Notion database — until a flare week, when “keeping track of things is impossible.” An RN whose team lives in WhatsApp and paper because the official tool goes down mid-case.</p>
+            <p>Existing products solve a slice. CaringBridge is a journal. Lotsa Helping Hands is a meal train. CareZone holds a med list. None of them join long-horizon routines, a fair split of work, privacy that can differ by sister and by doctor, and a little social reinforcement in one place. We were not building an EHR. We were building the layer families invent anyway, badly.</p>
+        </article>
+
+        <article class="prose" id="research">
+            <h2>What we heard</h2>
+            <p>We interviewed four people on purpose: two adults managing their own complex care, a foster-care supervisor, and an outpatient RN. Different roles. Same friction. They did not lack apps. They lacked one place that held the task, the record, and the other human.</p>
+            <p>Goals lined up. Centralized visibility. A way to talk across a team that does not share a clinic. Symptom and appointment traces you can actually find later. The barriers lined up too: fragmented channels, cognitive fatigue in high-frequency weeks, and records that vanish when someone else was supposed to write them down.</p>
+        </article>
+
+        <div class="quote-grid">
+            <blockquote>
+                <p>“Everything. The health system is not set up for complex medical care.”</p>
+                <footer>On coordinating specialists who do not share a record</footer>
+            </blockquote>
+            <blockquote>
+                <p>“I get overwhelmed and keeping track of things is impossible.”</p>
+                <footer>On flare weeks, when Notion stops being enough</footer>
+            </blockquote>
+            <blockquote>
+                <p>“If they lose track, I have to track it down myself.”</p>
+                <footer>On being the person who remembers for everyone else</footer>
+            </blockquote>
+        </div>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>One board, or it is another database.</strong>
+                    <p>People will not add a seventh tool. Home has to show today, the open task, and a door to the team without a tour.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Assignment needs a workload, not a name list.</strong>
+                    <p>Paper testers refused to pile dinner on Sarah when she already had the 2:30 appointment. Busy and available had to be visible.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>Privacy is a role, not a toggle named “share.”</strong>
+                    <p>A sister who coordinates is not the same as a brother who should not see the chart, or a doctor who should not assign household tasks.</p>
+                </div>
+            </li>
+            <li>
+                <b>04</b>
+                <div>
+                    <strong>Encouragement is not decoration.</strong>
+                    <p>Caregivers asked for gratitude and a check-in, not only a queue. Support sits in the tab bar on purpose.</p>
+                </div>
+            </li>
+        </ol>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>The product is the team’s. My slice was the structure and the coordination path. I drafted the first problem-space write-up, helped draw the information architecture, and designed the low-fidelity wireframe for “assign pick up a medication, then mark it done.” On paper I wrote the intro and ran the second validation — find an unassigned task and give it to someone else. In the hi-fi file I took View Tasks, Care Chat, Privacy &amp; Access, and the calendar strip. Kellie carried the visual system forward from paper. David built Health, Expenses, Settings, and the vitals and money screens.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>The in-app board is Mom’s CareHub. John opens Tuesday and sees the week, four counts, and three tasks. Lisinopril is his. Dr. Chen is Sarah’s. Dinner is still a hole — “Assign this task” — because an empty owner is the failure mode we kept hearing. Two doors sit beside the list: all tasks, and the care team. The heart in the tab bar is home. Health, Support, Access, and Settings are one tap away, not a buried hamburger.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="caregiver-hub-delegate.png" alt="Delegate Task screen for prepare dinner, with Sarah Martinez selected as available and Michael marked busy with two tasks." />
+                <figcaption>Delegate — available versus busy, before you pile on another name.</figcaption>
+            </figure>
+            <figure>
+                <img src="caregiver-hub-team.png" alt="Care Team screen with member counts, quick actions, and cards for John Doe and Sarah Mitchell with message and view-tasks actions." />
+                <figcaption>Care team — who is here, what they can do, how to reach them.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Assign without guessing</h3>
+            <p>Prepare dinner (low-sodium). Three people. John is available. Sarah is available. Michael is busy with two tasks today. Testers on paper asked for exactly that signal. The note field is optional. The notify line is not a surprise — the selected person hears about it. Cancel stays a text link. Assign Task is the only filled button.</p>
+
+            <h3>The team is a place, not a settings footnote</h3>
+            <p>Four members, three active tasks, a message-the-team action, and manage access. John’s card says primary caregiver and you. Sarah’s says coordinator and sister. Phone and email are on the card because a tester asked for them. Invite is a real control, not a dead end.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="caregiver-hub-access.png" alt="Privacy and Access screen listing Sarah, Michael, and Dr. Chen with checkmarks and hidden-eye icons for health records, tasks, and messages." />
+                <figcaption>Access — Sarah sees the chart. Michael does not. Dr. Chen does not assign dinner.</figcaption>
+            </figure>
+            <figure>
+                <img src="caregiver-hub-support.png" alt="Support and Communication with Care Circle chat, messages from Sarah and Michael, and a recent encouragement note." />
+                <figcaption>Support — the ride, the dinner, and a note that is allowed to be kind.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Privacy as four permissions</h3>
+            <p>This is the screen I cared about most. View health records, view tasks, assign tasks, view messages. Sarah has all four. Michael can work the board and cannot open the record. Dr. Chen can see health and messages and cannot run the household list. Edit permissions is on every card. The yellow banner is a promise, not a legal PDF: you decide who sees what, and you can tighten it later.</p>
+
+            <h3>Care circle chat</h3>
+            <p>Usability testers found encouragement without a hunt. Care Circle, Encouragement, and Expenses share a header so communication is not a second app. Sarah can take Mom tomorrow. Michael will cook. The pink card underneath is yesterday’s “you’re doing an amazing job” — the social reinforcement the research said caregivers were missing when the only channel was a task.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="caregiver-hub-health.png" alt="Health Log with weekly entry counts, a quick-log grid, recent medication and symptom cards, and a lab results file." />
+                <figcaption>Health log — meds, a symptom, a PDF. Not another portal login.</figcaption>
+            </figure>
+            <figure>
+                <img src="caregiver-hub-vitals.png" alt="Vitals screen with heart rate, a blood pressure trend marked high, and a call primary physician action." />
+                <figcaption>Vitals — Friday is high. The next step is a call, not a chart to decode.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Health and money sit with the board</h3>
+            <p>David’s screens keep the same outlined cards so the hub does not change personality when you leave home. Health Log is a week of entries, a 2×2 quick log, and the file you would otherwise hunt in email. Vitals shows 145/90 with a HIGH tag and a black button: Call Primary Physician Now. We renamed Log Vitals to View Vitals after a tester missed the meaning. Expenses puts deductible and out-of-pocket on one card because testers went there first and stayed on the leftover budget.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="caregiver-hub-expenses.png" alt="Expenses screen with uncategorized items, budget remaining, deductible and out-of-pocket bars, and three recent care transactions." />
+                <figcaption>Expenses — the receipt pile, with a number you can argue about.</figcaption>
+            </figure>
+            <figure>
+                <img src="caregiver-hub-settings.png" alt="Settings for Care Hub with a data-security banner, notification toggles, a Medicare card visibility switch, and caregiver access actions." />
+                <figcaption>Settings — notify me, show the card to the circle, invite the next person.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Today’s overview is a count, not a feed.</strong>
+                        <p>One appointment, one med, one meal. Testers used those tiles to find the work. A social feed would have hidden Tuesday.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Unassigned is a first-class state.</strong>
+                        <p>“Assign this task” is louder than a blank checkbox. Paper testers could not tell if a check completed the work or opened delegate. We split those actions.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Five tabs, one heart.</strong>
+                        <p>Home, health, support, access, settings. The IA we drew after interviews. If a caregiver has to remember whether the board is a hub, we already lost.</p>
+                    </div>
+                </li>
+            </ol>
+        </article>
+
+        <article class="prose" id="process">
+            <h2>How we got there</h2>
+            <p>We started with a problem space, not a palette. Interviews first. Then an IA around five areas: home, tasks, health log, communication, privacy. The first user flow was stubbornly small — pick up a medication, assign it, mark it done — because if that path was muddy, a vitals graph would not save us.</p>
+            <p>Paper made the fights cheap. One tester wanted the care recipient on every task. Another asked whether the checkbox was complete or delegate, and whether Sarah was already booked. We took that into the hi-fi assign list. The dynamic file is still a class prototype: clickable enough to test, not a shipped product.</p>
+        </article>
+
+        <figure class="figure">
+            <img src="caregiver-hub-wireframes.png" alt="Four grayscale wireframes: Mom’s CareHub home, an assign-to dropdown, Sarah selected, and a task assigned confirmation." />
+            <figcaption>Wireflow — home, pick a person, confirm. The same dinner, before color.</figcaption>
+        </figure>
+
+        <ol class="process wrap">
+            <li>
+                <span>Frame</span>
+                <strong>Name the silos</strong>
+                <p>Family care and self-management, not a hospital EHR. Texts and portals as the competition.</p>
+            </li>
+            <li>
+                <span>Hear</span>
+                <strong>Four interviews</strong>
+                <p>Foster care, two chronic-illness adults, an RN. Same wish: one board, less hunting.</p>
+            </li>
+            <li>
+                <span>Paper</span>
+                <strong>Assign, then done</strong>
+                <p>Two flows. The cousin who caregivers told us Sarah was already busy.</p>
+            </li>
+            <li>
+                <span>Test</span>
+                <strong>Three caregivers</strong>
+                <p>Ages 27, 55, 60. Hub versus board. Checkboxes. Then we fixed the labels we could.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What we made</h2>
+            <p>A hi-fi mobile prototype of a family care board: today, a task list, delegate with availability, a team directory, role-based access, circle chat, a health log, vitals with a call path, expenses, and settings. There is no live app. The Figma file is the artifact — and the interviews and the three usability sessions are why the file looks like this and not like another calendar.</p>
+            <p>The test was honest. Daily tasks: 1.5 of 3 clean. Assign: 2 of 3. Encouragement, care team, and expenses: 3 of 3. People still tripped on whether Care Hub and Care Board were the same place. The checkbox still read as complete to some. One appointment detail link was simply broken. We would not ship those names without another pass.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Studio</dt>
+                <dd>Group 8 · Fall 2025</dd>
+            </div>
+            <div>
+                <dt>Interviews</dt>
+                <dd>4 care / clinical roles</dd>
+            </div>
+            <div>
+                <dt>Usability</dt>
+                <dd>3 family caregivers</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>IA, paper, hi-fi proto</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>Coordination products fail on nouns. Hub, board, view tasks, overview — we used all of them, and testers spent their first minute translating. If I ran this again I would pick one word for the home list and print it on the tab, the header, and the empty state.</p>
+            <p>The other lesson is workload as interface. A dropdown of names is how we first drew assign. A busy badge is what the paper session demanded. Privacy as four verbs is the same idea: do not ask people to invent a policy. Give them the rows they already argue about at the kitchen table.</p>
+            <p>What I would do next is sit with a caregiver for a real Tuesday. Two tasks: “Who has dinner?” and “Can Michael see the lab PDF?” I would add undo on complete, step-by-step detail on the appointment card, and I would stop calling the same surface two names.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/design/rUIvu2POxzTXUNJOfdzcSs/Dynamic-Prototype?node-id=0-1&amp;t=socjAbWxvIu5VTkI-1" target="_blank" rel="noopener noreferrer">View Figma file</a>
+                <a class="btn btn-primary" href="https://www.figma.com/design/1wK6CCTkQoIEACkajvVLMe/Remote-Care-Coordination-Hub-Project-2?node-id=1-3&amp;t=rt59U1giW9snRVzj-1" target="_blank" rel="noopener noreferrer">View wireframes &amp; IA</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="SoakHome.html"><span>Previous</span>← Soak</a>
+            <a href="parkspotter.html"><span>Next</span>ParkSpotter →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Want to walk the care board in Figma?</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
