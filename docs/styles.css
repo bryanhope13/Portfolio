@@ -493,6 +493,10 @@ p:last-child {
   background: var(--bg-2);
 }
 
+.work-card--caregiver img {
+  object-position: top;
+}
+
 .work-card--parkspotter img {
   height: 16.5rem;
   object-fit: cover;
