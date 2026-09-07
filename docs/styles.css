@@ -535,7 +535,7 @@ p:last-child {
 }
 
 .work-card--gympal img {
-  background: var(--bg);
+  background: #fff;
 }
 
 .work-card .work-copy {
