@@ -534,6 +534,10 @@ p:last-child {
   background: #3a7ca5;
 }
 
+.work-card--gympal {
+  background: #fff;
+}
+
 .work-card--gympal img {
   background: #fff;
 }
