@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-hidden="true">
+  <rect width="1600" height="1000" fill="#080808"/>
+  <defs>
+    <clipPath id="badge">
+      <circle cx="800" cy="500" r="268"/>
+    </clipPath>
+  </defs>
+  <circle cx="800" cy="500" r="268" fill="#1ed760"/>
+  <g clip-path="url(#badge)">
+    <ellipse cx="800" cy="668" rx="168" ry="108" fill="#fff"/>
+    <circle cx="800" cy="472" r="92" fill="#fff"/>
+  </g>
+  <path d="M 702 464 A 104 92 0 0 1 898 464" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="704" cy="478" r="20" fill="#111"/>
+  <circle cx="896" cy="478" r="20" fill="#111"/>
+  <path d="M 758 438 Q 800 454 842 438" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 748 464 Q 800 482 852 464" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 762 488 Q 800 504 838 488" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+</svg>
