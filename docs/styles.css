@@ -547,6 +547,11 @@ p:last-child {
   background: #1a3e59;
 }
 
+.work-card--armask img {
+  object-position: center;
+  background: #f3f1ec;
+}
+
 .work-card .work-copy {
   flex: 1;
 }
