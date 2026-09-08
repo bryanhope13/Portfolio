@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firefighter AR Mask — Bryan Hope</title>
+    <meta name="description" content="Firefighter AR Mask case study: a Spring 2026 Prototyping Interactive Systems project. An AR visor HUD for thermal overlays, victim and teammate status, and an exit path when visibility is near zero." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">SP26 · Prototyping Interactive Systems</p>
+                <h1 class="display">Firefighter AR Mask</h1>
+                <p class="lede">Smoke hides victims, exits, and the floor that is about to fail. The mask is a visor HUD — thermal overlays, pulse and oxygen, a color for each kind of object — so a firefighter is not navigating by feel alone.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="ar-mask-hud.png" alt="Final AR HUD for Room 1 in Rescue mode, with fire at 1200 degrees, a green exit, a weak floor avoid zone, a teammate at 67 bpm, and a person at 70 bpm." />
+                <figcaption>Hi-fi HUD — fire, floor, teammate, person, and exit, each with a color that does not need a paragraph.</figcaption>
+            </figure>
+            <figure>
+                <img src="ar-mask-exit.png" alt="Mid-fi exit floor map showing a path from Room 1 through Room 2 to the exit, an avoid zone in Room 3, and 34 meters estimated at 28 seconds." />
+                <figcaption>Exit map — you are here, avoid Room 3, 34 meters. The floor plan was the screen that never quite earned the visor.</figcaption>
+            </figure>
+        </div>
+
+        <dl class="meta wrap">
+            <div>
+                <dt>My role</dt>
+                <dd>Concepts, floor maps, HUD</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Hope, Chia</dd>
+            </div>
+            <div>
+                <dt>Research</dt>
+                <dd>Paper eval · 3 think-alouds</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma + goggles WoZ</dd>
+            </div>
+        </dl>
+
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>The gear already protects the body. Helmet, tank, radio. Instinct and experience fill the gaps when the room is black.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>Thick smoke hides the victim two meters off the search line. Floors fail without a warning. Radios drop. The visor is still a window onto nothing.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>One HUD in the mask. Thermal and IoT on the overlay. Tap for a modal. Emergency mode for the green path. Onboard sensors if the drone goes quiet.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>Firefighters walk into burning structures with near-zero visibility, unpredictable structure, and communication that fragments under heat and noise. Life-or-death decisions land in seconds. Protective gear shields the body and offers almost no real-time picture of the room.</p>
+            <p>Pei Wei Chia (Michelle) and I took that as the brief for Prototyping Interactive Systems in spring 2026. The architecture we wrote down was not a prettier helmet camera. External thermal drones map heat from above. Building sensors watch stress, temperature gradients, and smoke density. Computer vision classifies victims, teammates, and hazards on the thermal feed. Onboard sensors are the graceful fallback when the mesh drops. Live AR is for rescue. The same hardware was supposed to flip into VR for firehouse training — a concept we named and never built.</p>
+        </article>
+
+        <article class="prose" id="research">
+            <h2>What we kept from the 10×10</h2>
+            <p>We sketched independently first, then compared. Breadth before the obvious visor. My ten included a thermal overlay, an O₂ HUD, structural integrity from building sensors, a teammate minimap, VR training, voice control, AI victim boxes, a live floorplan, radio captions, and a least-smoke exit path. Michelle’s ten overlapped on thermal, air quality, wayfinding, victim status, voice, team O₂, a commander feed, and an emergency escape mode.</p>
+            <p>The overlap was the validation. We anchored depth on thermal vision because it could carry ten genuine variations and because it attacked the actual problem — you cannot see — harder than any other single idea. The 10-in-1 pass became the HUD grammar: a status bar, fire with extinguish time, weak floor with a map, victim with pulse and a rescue clock, teammate with remaining oxygen, a panic control for the exit path, smoke past a threshold that draws the same path without waiting for a tap.</p>
+        </article>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>Ambient on the visor. Detail on tap.</strong>
+                    <p>The main view shows color, a label, and one number. Modals hold extinguish time, direction, toxic bars. No tester said the main screen showed too little — across three rounds.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Color is the first sort.</strong>
+                    <p>Fire red, victim orange, teammate blue, hazard brown, exit green. All three mid-fi testers found fire first without a prompt. Paper had asked for colored labels. We kept them.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>PANIC is a bad noun for a path.</strong>
+                    <p>None of the three knew when to use it. Hi-fi renamed it Activate Emergency Mode, faded the rest, and drew a green AR exit. Hands still are not free. Voice is the next control, not another button.</p>
+                </div>
+            </li>
+            <li>
+                <b>04</b>
+                <div>
+                    <strong>The wearer’s own numbers belong on the visor.</strong>
+                    <p>Two of three could not find their O₂. We put smoke and oxygen in the header. Hi-fi still left a Stable badge fighting a red CO bar. That is a life-safety bug, not a polish note.</p>
+                </div>
+            </li>
+        </ol>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>The product is both of ours. I generated the ten independent directions, including the VR training mode we never prototyped, and I drew the mid-fi floor maps. Michelle took the main HUD and the person, teammate, and fire modals. We both sat in the paper evaluation, the goggles Wizard of Oz, and the hi-fi pass. The storyboard of arriving blind, searching the wrong way, and losing the radio is the current-state we kept walking testers through.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="ar-mask-storyboard.png" alt="Five-panel hand-drawn storyboard of a firefighter arriving with no interior data, searching in smoke, missing a victim, approaching a weak floor, and losing radio contact." />
+                <figcaption>Current state — no interior data, navigation by feel, a victim off the line, a floor with no warning, a radio that dies.</figcaption>
+            </figure>
+            <figure>
+                <img src="ar-mask-paper.png" alt="Paper prototype of the rescue HUD with fire at 1200 degrees, an exit door, a panic control, a person at 70 bpm, a teammate at 67 bpm, and a floor-weak avoid zone." />
+                <figcaption>Paper — the same objects, still in pencil. Panic already sits in the corner.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>Room 1, Rescue, an hour and twelve minutes in. The visor marks fire at 1200°F, a weak floor you are told to avoid, a teammate with a pulse, a person on the ground, and a door labeled exit. Tap fire and you get overall severe, call backup, time to extinguish, water needed, spread rate and direction, time to structural failure. Tap the person and you get minutes remaining, distance, northeast. Tap the teammate and you get an overall badge and bars for the gases. Tap the floor or the exit and the floorplan comes up — that flow was a hi-fi revision so two labels did not invent two maps.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="ar-mask-midfi.png" alt="Mid-fidelity main HUD with a rescue header, panic control, and color-coded boxes for fire, exit, weak floor, teammate, and person." />
+                <figcaption>Mid-fi main — PANIC still in the corner. Testers could read the room. They could not tell when to hit the red word.</figcaption>
+            </figure>
+            <figure>
+                <img src="ar-mask-person.png" alt="Person status modal over the HUD showing ten minutes to rescue, ten feet northeast, and alive at 70 bpm." />
+                <figcaption>Person status — time, distance, direction, alive. Paper had asked for the arrow. Mid-fi put it in the modal.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Modals for the thing you can wait a second to know</h3>
+            <p>Fire status carries Call Backup because the paper tester wanted an action, not only a temperature. Direction: West sits next to spread rate for the same reason. Teammate overall Stable was the badge all three mid-fi people read first. We added color bars so 680 ppm CO is not a raw number in a list. The floor map highlights only part of Room 3 as avoid — paper had made the whole room look condemned — and draws the corridor to Room 4 so it does not look like a hole.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="ar-mask-fire.png" alt="Fire status modal with overall severe, a call backup action, five minutes to extinguish, 150 gallons per minute, spread west at two feet per minute, and ten minutes to structural failure." />
+                <figcaption>Fire status — severe, backup, west. 150 gal/min still belongs more to command than to the person carrying a victim.</figcaption>
+            </figure>
+            <figure>
+                <img src="ar-mask-goggles.png" alt="Clear safety goggles with a black strap, held up as the physical stand-in for an AR mask." />
+                <figcaption>Physical stand-in — goggles for field of view, iPhone for the Figma file. We were testing the HUD, not molding a helmet.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Wizard of Oz before a custom mask</h3>
+            <p>A real AR housing would have been the wrong fidelity. Safety goggles mimic the restricted view and the peripheral blind spots. A facilitator held a phone with the Figma prototype at viewing distance in front of the lens. That is a standard HCI move, and it is why mid-fi caught sidebar widgets that a flat laptop session would have treated as fine. We kept the goggles for the final physical pass instead of bolting on extra hardware. Input, when we specified it, is voice confirmation — because gloves and a victim do not leave a spare hand for Activate Emergency Mode.</p>
+        </article>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>Header is segments, not a sentence.</strong>
+                        <p>Paper said the top bar was a pile. We split mode, elapsed time, O₂, and a colored smoke indicator. Hi-fi labeled smoke in words, not only obs/m.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Exit is a solid border. Objects are dashed.</strong>
+                        <p>A dashed box around EXIT looked tappable, like fire. Solid for the door. A legend along the bottom so the colors have names.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>One timer popup, ordered by urgency.</strong>
+                        <p>Rescue, structural, and evacuation clocks had been arguing across screens. Hi-fi put them in one list. Fire at six minutes unlabeled next to a “most critical” ten-minute rescue is still a conflict a firefighter would have to settle for us.</p>
+                    </div>
+                </li>
+            </ol>
+        </article>
+
+        <article class="prose" id="process">
+            <h2>How we got there</h2>
+            <p>Independent 10×10s, then thermal as the depth concept, then three storyboards: current state, future AR, and error recovery — cluttered boxes, a stale drone, a hot pipe tagged as a victim. Paper on the HUD. One informal evaluation with a 29-year-old software engineer, thinking aloud through hazards, victims, and exits. Then mid-fi in Figma with the paper notes applied, three think-alouds (Bailey, Yadira, Kyle), then hi-fi and the same goggles.</p>
+            <p>What paper changed: colored labels, a smoke indicator that is not only a number, Call Backup, flame direction, a partial avoid zone, a corridor, victim direction, teammate bars, a solid EXIT. What mid-fi still owed hi-fi: panic as a mode, a compass, a timer stack, wearer O₂ in the header, a legend, fewer abbreviations, floorplan from both weak floor and exit.</p>
+        </article>
+
+        <ol class="process wrap">
+            <li>
+                <span>Sketch</span>
+                <strong>20 directions, one anchor</strong>
+                <p>Thermal overlay survived the compare. VR training did not make it into the file.</p>
+            </li>
+            <li>
+                <span>Paper</span>
+                <strong>One engineer, think aloud</strong>
+                <p>Hierarchy held. Labels, smoke, and the avoid-zone noun did not.</p>
+            </li>
+            <li>
+                <span>Mid-fi</span>
+                <strong>Three sessions, goggles</strong>
+                <p>Fire first. Stable badge first. Panic opaque. Floor map spatially mushy.</p>
+            </li>
+            <li>
+                <span>Hi-fi</span>
+                <strong>Mode, not panic</strong>
+                <p>Emergency path, compass, legend — and new bugs only the later file could show.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What we made</h2>
+            <p>A click-through Figma HUD and a pair of goggles. There is no live mask. All three mid-fi testers said they would feel safer wearing it. All three pulled the right conclusions from fire, victim, and teammate screens. Hi-fi then surfaced issues the earlier file could not: a Stable label against a red CO bar (all three flagged it), no status strip once Emergency Mode fades the annotations, a person icon that reads as a navigation arrow, 150 gal/min that a wearer cannot act on.</p>
+            <p>The next iteration we wrote down is domain validation — one session with someone who has actually been in a structure fire — then a third prototype with wearer self-status, better teammate labels, and emergency workflows that do not erase the people you were just looking at. Voice for Emergency Mode. Dynamic routing instead of a floor map we never fundamentally rethought.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Studio</dt>
+                <dd>SP26 · Hope, Chia</dd>
+            </div>
+            <div>
+                <dt>Ideation</dt>
+                <dd>20 concepts · thermal depth</dd>
+            </div>
+            <div>
+                <dt>Usability</dt>
+                <dd>1 paper · 3 mid-fi</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Goggles WoZ + hi-fi proto</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>Ambient versus on-demand held. Nobody asked the main visor to show more. The failures were contradictions and missing self. A badge that says Stable while CO is in the red is worse than a sparse HUD. A floor map we polished three times without changing the idea stayed weak three times. Wizard of Oz with goggles found peripheral problems; we then skipped the goggles in hi-fi, which is exactly the gap we listed under what did not work.</p>
+            <p>I would put a firefighter in the goggles before another Figma pass. Two tasks: “There is a person on the floor and the clock on the fire is six minutes — what do you do?” and “You cannot use your hands. Get out.” I would specify the IoT failure modes next to the overlay, not after it. And I would finally prototype the VR training mode or stop claiming the hardware does two jobs.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/fCQNUVRV2JECGCUVOR55bM/Final-Project---Prototyping-Interactive-Systems?node-id=47-25&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=47-25&amp;page-id=11-513" target="_blank" rel="noopener noreferrer">View prototype</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="KitchenHub.html"><span>Previous</span>← Kitchen Hub</a>
+            <a href="parkspotter.html"><span>Next</span>ParkSpotter →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Want to walk the visor HUD in Figma?</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
