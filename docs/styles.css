@@ -429,7 +429,7 @@ p:last-child {
 }
 
 .work-item--mark img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -506,16 +506,20 @@ p:last-child {
 }
 
 .work-card img {
+  display: block;
+  align-self: stretch;
   width: 100%;
+  max-width: none;
   aspect-ratio: 8 / 5;
   height: auto;
+  flex-shrink: 0;
   object-fit: cover;
   object-position: center;
   background: var(--bg-2);
 }
 
 .work-card--mark img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .work-card--parkspotter img {
