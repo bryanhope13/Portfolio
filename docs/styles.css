@@ -438,7 +438,7 @@ p:last-child {
 }
 
 .work-item--spotify .work-media {
-  background: #080808;
+  background: #fff;
 }
 
 .work-copy {
@@ -531,7 +531,7 @@ p:last-child {
 }
 
 .work-card--spotify img {
-  background: #080808;
+  background: #fff;
 }
 
 .work-card--dignity img {
