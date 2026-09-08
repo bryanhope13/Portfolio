@@ -542,6 +542,11 @@ p:last-child {
   background: #fff;
 }
 
+.work-card--kitchen img {
+  object-position: center;
+  background: #1a3e59;
+}
+
 .work-card .work-copy {
   flex: 1;
 }
