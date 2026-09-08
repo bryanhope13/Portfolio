@@ -106,17 +106,29 @@ a:hover {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(16px);
+  background: transparent;
   border-bottom: 1px solid var(--line);
 }
 
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(16px);
+  pointer-events: none;
+}
+
 .site-header .wrap {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   width: min(100% - 1.5rem, var(--wide));
+  height: 100%;
 }
 
 .wordmark {
@@ -1256,19 +1268,41 @@ p:last-child {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .wordmark {
+    position: relative;
+    z-index: 2;
   }
 
   .nav-panel {
     display: none;
-    position: fixed;
-    inset: var(--header-h) 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: calc(100vh - var(--header-h));
+    height: calc(100svh - var(--header-h));
+    z-index: 0;
     background: var(--bg);
     padding: 1.5rem;
     border-top: 1px solid var(--line);
+    overflow: auto;
   }
 
   .nav-panel.is-open {
     display: block;
+  }
+
+  body.nav-open .site-header {
+    background: var(--bg);
+  }
+
+  body.nav-open .site-header::before {
+    background: var(--bg);
+    backdrop-filter: none;
   }
 
   .nav-links {
