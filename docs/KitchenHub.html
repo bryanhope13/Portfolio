@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitchen Hub — Bryan Hope</title>
+    <meta name="description" content="Kitchen Hub case study: a Scenario 4 emerging-displays prototype for a zone-based in-home hub. One kitchen dashboard for weather, calendar, oven control, and a context-aware alert — instead of a pile of apps." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">Scenario 4 · Emerging Displays</p>
+                <h1 class="display">Kitchen Hub</h1>
+                <p class="lede">Homes fill with screens that do not talk to each other. Kitchen Hub is a zone display — weather, the day’s calendar, oven controls, and an alert when the oven has been on too long — so you are not hopping apps while dinner is on the stove.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="kitchen-hub-dashboard.png" alt="Kitchen dashboard with Indianapolis weather, a Halloween calendar, oven control at 350 degrees, and a dismiss-alert confirmation over an oven-on-too-long warning." />
+                <figcaption>Kitchen — glanceable weather and calendar, then the oven, then the alert you can still ignore.</figcaption>
+            </figure>
+            <figure>
+                <img src="kitchen-hub-camera.png" alt="Kitchen zone with a live camera feed of a kitchen, steam on the stove, and the same left-rail navigation." />
+                <figcaption>Camera — glance into the room from the same rail, then collapse it.</figcaption>
+            </figure>
+        </div>
+
+        <dl class="meta wrap">
+            <div>
+                <dt>My role</dt>
+                <dd>IA, personas, home screen</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Fehl, Hope, Neish</dd>
+            </div>
+            <div>
+                <dt>Research</dt>
+                <dd>3 interviews · 3 usability tests</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Hi-fi Figma prototype</dd>
+            </div>
+        </dl>
+
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>Families already own the gadgets. A kitchen display, a speaker, a camera, a phone that started as the remote for all of it.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>Each device is a silo. Different apps, different labels, a guest who will not touch anything for fear of breaking it. The oven stays on because nobody wanted another popup.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>One hub, one left rail, rooms as zones. Context-aware alerts that you can turn off, dismiss, or snooze — and a kitchen dashboard that still shows the weather underneath.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>Scenario 4 asked for novel experiences with emerging displays. The brief was not a prettier thermostat. It was the gap between what a “smart home” promises and what a household actually does: a TV for watching, a speaker for listening, a kitchen panel for recipes, a phone as the manual integrator for all of it.</p>
+            <p>Becca Fehl, David Neish, and I framed the problem as agency. Homes are full of disconnected devices, each with its own setup, maintenance, privacy, and security. Parents shuffle calendars. Children argue over who has the remote. Guests avoid the display because it looks like it belongs to someone else. Literature we used in the problem space — Phan on compatibility, Chanda on the knowledge tax of a device pile, Saqib and Prange on bystander privacy and the fear of “breaking” a host’s setup — said the same thing our interviews later confirmed: people are not missing another gadget. They are missing one place that behaves the same in the kitchen as it does in the living room.</p>
+            <p>Usability goals we wrote down early stayed with the file: unified visibility, consistent patterns across rooms, less cognitive load, fewer app hops, safer defaults. Experience goals sat next to them. The display should feel like a household companion, not a second remote you have to remember.</p>
+        </article>
+
+        <article class="prose" id="research">
+            <h2>What we heard</h2>
+            <p>We interviewed three U.S. homeowners, all 26–35, all living with a partner, each of us facilitating one session. I interviewed User 1. Two of them already treated Alexa as a hub for lighting and security. The third barely used smart devices and mostly wanted Google Home for hands-free calling. None of them were actively anxious about privacy in the devices they already owned. All of them were inexperienced at troubleshooting. When something broke, they wanted a plain explanation, not a forum thread.</p>
+            <p>The wish underneath the gadgets was convenience with context. Switching devices currently meant manuals and extra interfaces. They wanted the system to notice time of day — lower the volume at night — and to cut clicks when their hands were already busy. They liked the control they had. They did not like being the glue.</p>
+        </article>
+
+        <div class="quote-grid">
+            <blockquote>
+                <p>“I feel like it could be helpful and sometimes people have a fear of leaving the oven on, so it can bring peace of mind.”</p>
+                <footer>Usability tester, on the oven-on-too-long alert</footer>
+            </blockquote>
+            <blockquote>
+                <p>“Color and icon size page was confusing and non-intuitive. Didn’t understand what was a title and what was a button.”</p>
+                <footer>Usability tester, on zone style — the one screen all three people tripped on</footer>
+            </blockquote>
+            <blockquote>
+                <p>“It has a familiar layout… I don’t think it would fit into my home, but maybe someone else’s.”</p>
+                <footer>On aesthetics: the chrome reads as a product, not as their kitchen</footer>
+            </blockquote>
+        </div>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>A zone is a room, not a settings folder.</strong>
+                    <p>Kitchen, living room, bedroom. The dashboard shows what that room needs. Configuration is a walkthrough, not a dump of every device in the house.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Alerts have to leave the weather visible.</strong>
+                    <p>Paper and sketch testers did not want popups to own the display. Turn off, dismiss, snooze — and a path back if you tapped the wrong one.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>Guests and technicians are users too.</strong>
+                    <p>A visitor should not have to join Wi-Fi to share photos. An installer should not leave three remotes on the coffee table. Those personas kept the hub from becoming a homeowner-only toy.</p>
+                </div>
+            </li>
+            <li>
+                <b>04</b>
+                <div>
+                    <strong>Restrictions need a reason, not a dead slider.</strong>
+                    <p>Volume stops at 10. Testers understood why. Color chips that do not look clickable do not count as control.</p>
+                </div>
+            </li>
+        </ol>
+
+        <article class="prose">
+            <h2>What I owned</h2>
+            <p>The product is the team’s. My slice was the structure and two of the people we designed for. I outlined the final problem statement, interviewed User 1, and wrote the Guest and Technician personas and scenarios — including the visit where sharing photos does not require joining the house Wi-Fi, and the install where three remotes is already a failure. I drew the information architecture, helped refine the product goals, and contributed to the user-flow diagrams. On paper I helped both sketch passes and wrote how the requirements showed up in the second iteration. In the hi-fi file I helped the home screen and the prototype interactions. Each of us ran one of the three usability sessions; I worked the analysis and insights after.</p>
+            <p>Becca held the dashboard, the left rail, and the alert popups, and she kept the visual system consistent. David originated zones on paper, built the zone-configuration flow and the live camera, and added the slider and scan micro-interactions.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>The in-home display is a kitchen first. A left rail holds Dashboard, My Devices, Automations, Notification History, and Zone Configuration, with the time sitting above it so the panel still reads as a room object. The kitchen view is weather in Indianapolis, Friday 31 October, Halloween, work until 17:00, dinner, trick-or-treat — and a large oven card at 350°, On, with Bake, Broil, Clean, and Oven Light. When the oven has been on too long, an alert lands on the right. Dismiss is not a silent tap. It asks if you are sure, and it lets you say you do not want that question again.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="kitchen-hub-zones.png" alt="Zone Configuration grid with cards for New zone, Kitchen, Living Room, Bedroom, Guest Room, and Basement, each with a Configure button." />
+                <figcaption>Zones — rooms as cards. Kitchen is one of six, not a buried preference.</figcaption>
+            </figure>
+            <figure>
+                <img src="kitchen-hub-devices.png" alt="Kitchen zone after a scan, with Scan Complete, a green check, and a list of devices including Smart Oven, Smart Light, Speaker, Device Camera, Home Security, and Baby Monitor." />
+                <figcaption>Scan complete — pick Speaker and Device Camera, then confirm. The row, not only the checkbox, should have been the hit target.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>Configure a room, not a mesh</h3>
+            <p>Zone Configuration is a grid: new zone, kitchen, living room, bedroom, guest room, basement. Select Kitchen, scan the network, choose which devices belong on this dashboard, then finish. The list in the prototype is Smart Oven, Smart Light, Speaker, Device Camera, Home Security, Baby Monitor. Testers understood the intent. Two of three still clicked the device name instead of the checkbox. That is a hit-target problem, not a comprehension problem.</p>
+
+            <h3>Style is where the prototype went quiet</h3>
+            <p>After devices, the kitchen asks for a color palette and an icon size. The screen is the one all three testers marked as difficulty. Titles looked like buttons. The slider looked like it might grow the whole tile, not the icon. We had labeled it a non-interactive stretch of the file and still watched people stall. Affordances failed before the feature did.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="kitchen-hub-style.png" alt="Kitchen zone style setup with a Color Picker control, three muted swatches, an Icon Size slider, and Cancel and Finish Setup actions." />
+                <figcaption>Style — the screen testers could not tell how to use. Hover, borders, and a live preview were the fix we wrote down.</figcaption>
+            </figure>
+            <figure>
+                <img src="kitchen-hub-dashboard.png" alt="Kitchen dashboard with the oven-on alert and a confirmation asking whether to dismiss it." />
+                <figcaption>Forgiving — dismiss asks twice. Snooze parks the alert. Dashboard in the rail resets the prototype so you can try the other path.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose">
+            <h3>The oven alert is the product, not a toast</h3>
+            <p>Amy is in the kitchen checking the evening calendar. The system notices the oven has been on longer than usual and asks if she wants it off. Turn off, dismiss, or snooze. Testers found weather and calendar with no issues. They turned the oven off from the notification. They dismissed without turning it off. They snoozed, found the bell, and came back. Volume would not go to 12 — it stops at 10 — and they could say why. Full-screen kitchen camera opened and closed. The alert did not block the weather. That was a requirement we wrote on purpose: popups should be casual enough to ignore.</p>
+
+            <h3>A live feed without leaving the hub</h3>
+            <p>David added the kitchen camera so a parent could glance at the room — or, in the write-up, a bedroom feed for a newborn — from the same interface as the oven. Collapse is a control, not a dead end. Testers did not find the full-screen transition obtrusive. One person still wanted a louder badge on the bell when something was snoozed.</p>
+        </article>
+
+        <article class="prose">
+            <h2>Design decisions</h2>
+            <ol class="insights">
+                <li>
+                    <b>01</b>
+                    <div>
+                        <strong>One rail, every zone.</strong>
+                        <p>Dashboard, devices, automations, notification history, zone configuration. We cut content that made the system try to do too much. Navigability beat a flatter pile of features.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>02</b>
+                    <div>
+                        <strong>Information cards and action cards have to look different.</strong>
+                        <p>A sketch tester mixed up weather with oven control. The second pass put section boundaries and icons on the containers so glanceable facts and things you can press are not the same rectangle.</p>
+                    </div>
+                </li>
+                <li>
+                    <b>03</b>
+                    <div>
+                        <strong>Snooze is a requirement, not a nicety.</strong>
+                        <p>The first sketches worried people about popup takeover. We added a queue and snooze before hi-fi. Usability still asked for a recently-dismissed trail so a guest does not think they broke the house.</p>
+                    </div>
+                </li>
+            </ol>
+        </article>
+
+        <article class="prose" id="process">
+            <h2>How we got there</h2>
+            <p>Problem space first, then interviews, then personas. I wrote Guest and Technician; David wrote Amy pulling into the driveway mid-call; the mother who wants a nursery feed while dinner is on; the gamer who cannot drop out of flow to cast. Requirements followed: multi-surface access, gesture or voice to place a display, plain-language repair, no projecting onto an oven, call handoff in seconds, consistent labels, visible restrictions, undo, unobtrusive updates, hardware that can live with the cabinets.</p>
+            <p>The IA started as a list of user goals and shrank. Completing a quick task, managing devices, setting automations, reviewing notifications, adjusting settings. The example flow is Amy shutting the bedroom lights; the system notices the front door is unlocked; she locks it from the alert or dismisses it. Yes and no both have to be reachable. That same shape became the oven alert in the kitchen.</p>
+            <p>Two sketch rounds. Large buttons, a left rail, kitchen as the default landing, a notification that does not demand a hunt. Feedback: widgets felt familiar; scan-for-devices needed a sentence of explanation; snooze got added. Hi-fi in Figma is still a class prototype — clickable enough to test Dashboard and Zone Configuration, not a shipped product.</p>
+        </article>
+
+        <ol class="process wrap">
+            <li>
+                <span>Frame</span>
+                <strong>Name the silos</strong>
+                <p>Emerging displays, not another single-use kitchen panel. Families as the manual integrator.</p>
+            </li>
+            <li>
+                <span>Hear</span>
+                <strong>Three homeowners</strong>
+                <p>Alexa as a hub, Google Home for calling, and a shared wish for context without another manual.</p>
+            </li>
+            <li>
+                <span>Paper</span>
+                <strong>Kitchen, then zones</strong>
+                <p>Two sketch passes. Snooze, breadcrumbs, information versus action cards.</p>
+            </li>
+            <li>
+                <span>Test</span>
+                <strong>Three sessions</strong>
+                <p>Laptop in a kitchen, a dining table, a shared room. Style was the miss. The oven path held.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What we made</h2>
+            <p>A hi-fi prototype of an in-home hub: a kitchen dashboard with weather, calendar, and oven control; an oven-on-too-long alert with turn off, dismiss, and snooze; zone cards; a device scan; a style step; a live kitchen camera. There is no live product. The Figma file is the artifact — and the interviews and the three usability sessions are why the file looks like this and not like another smart-home app grid.</p>
+            <p>The test was mostly clean. Weather, calendar, oven off, dismiss, snooze-and-return, zone navigation, scan, confirm, volume cap, camera: no issues for the people who ran them. Task 7 — color and icon size — was difficulty for all three. Users 1 and 3 clicked device names instead of checkboxes. User 2 looked in My Devices for zone settings. User 3 wanted a louder count on the bell. We would not ship the style screen without hover, borders, a preview, and a label that says what is selectable.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Studio</dt>
+                <dd>Scenario 4 · Fehl, Hope, Neish</dd>
+            </div>
+            <div>
+                <dt>Interviews</dt>
+                <dd>3 homeowners</dd>
+            </div>
+            <div>
+                <dt>Usability</dt>
+                <dd>3 task-based sessions</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>IA, sketches, hi-fi proto</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>A hub fails in the seams. We unified the oven and the weather and still created a small fork: notification versus dashboard card. Testers could use both. They should not have to wonder which one is “the” control after they choose. Guest anxiety is the same idea in another key. If dismissed alerts vanish, someone who does not live there thinks they broke the house.</p>
+            <p>The other lesson is signifiers. Volume that stops at 10 taught the restriction without a paragraph. Color chips without a hover taught nothing. I would rather ship fewer style options that look pressable than a palette that reads as decoration.</p>
+            <p>What I would do next is sit with a real kitchen for a Tuesday dinner. Two tasks: “The oven has been on too long — what do you do without abandoning the calendar?” and “Put the speaker and the camera on this zone.” I would make whole device rows clickable, preview style on the dashboard tile, and keep a recently-dismissed list so snooze is not a trap.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://www.figma.com/proto/kAe1ZaQXLKLt758IeK7L5X/Information-Architecture?node-id=118-3405&amp;p=f&amp;t=LWxRniAfsM1udWmU-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=118%3A23&amp;starting-point-node-id=118%3A3405" target="_blank" rel="noopener noreferrer">View prototype</a>
+                <a class="btn btn-ghost" href="projects.html">Back to work</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="CaregiverHub.html"><span>Previous</span>← Caregiver Hub</a>
+            <a href="parkspotter.html"><span>Next</span>ParkSpotter →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Want to walk the kitchen hub in Figma?</h2>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
