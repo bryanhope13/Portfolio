@@ -507,7 +507,9 @@ p:last-child {
 
 .work-card img {
   display: block;
+  align-self: stretch;
   width: 100%;
+  max-width: none;
   aspect-ratio: 8 / 5;
   height: auto;
   flex-shrink: 0;
