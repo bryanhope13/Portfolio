@@ -429,7 +429,7 @@ p:last-child {
 }
 
 .work-item--mark img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -515,7 +515,7 @@ p:last-child {
 }
 
 .work-card--mark img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .work-card--parkspotter img {
