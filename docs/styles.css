@@ -15,7 +15,7 @@
   --shadow: 0 18px 40px rgba(28, 25, 21, 0.08);
   --radius: 18px;
   --radius-sm: 12px;
-  --header-h: 4.5rem;
+  --header-h: 4rem;
   --measure: 40rem;
   --wide: 72rem;
   --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -115,8 +115,8 @@ a:hover {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  backdrop-filter: blur(12px);
   pointer-events: none;
 }
 
@@ -126,32 +126,37 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  width: min(100% - 1.5rem, var(--wide));
+  gap: 1.5rem;
+  width: min(100% - 2rem, var(--wide));
   height: 100%;
 }
 
 .wordmark {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--ink);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
 }
 
 .wordmark em {
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
+}
+
+.wordmark:hover {
+  color: var(--ink);
+  opacity: 0.7;
 }
 
 .nav-toggle {
   display: none;
-  width: 2.6rem;
-  height: 2.6rem;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: var(--surface);
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   cursor: pointer;
   padding: 0;
 }
@@ -172,11 +177,12 @@ a:hover {
 .nav-toggle-bars::before,
 .nav-toggle-bars::after {
   display: block;
-  width: 1.05rem;
-  height: 2px;
+  width: 1.1rem;
+  height: 1px;
   background: var(--ink);
   position: relative;
   margin: 0 auto;
+  transition: transform var(--ease), top var(--ease), background var(--ease);
 }
 
 .nav-toggle-bars::before,
@@ -194,20 +200,35 @@ a:hover {
   top: 6px;
 }
 
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars {
+  background: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.75rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .nav-links a {
-  color: var(--ink-2);
+  color: var(--muted);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
 }
 
 .nav-links a:hover,
@@ -216,19 +237,22 @@ a:hover {
 }
 
 .nav-links a[aria-current="page"] {
-  box-shadow: inset 0 -2px 0 var(--accent);
+  box-shadow: inset 0 -1px 0 var(--ink);
 }
 
 .nav-cta {
-  color: var(--bg) !important;
-  background: var(--ink);
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
+  color: var(--muted);
+  background: none;
+  padding: 0 0 0 1.4rem;
+  margin-left: 0.15rem;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
   box-shadow: none !important;
 }
 
 .nav-cta:hover {
-  background: var(--accent);
+  color: var(--ink);
+  background: none;
 }
 
 /* Type */
@@ -1308,11 +1332,18 @@ p:last-child {
   .nav-links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.1rem;
+    gap: 1.25rem;
   }
 
   .nav-links a {
-    font-size: 1.35rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-cta {
+    padding: 0;
+    margin-left: 0;
+    border-left: 0;
   }
 
   .hero {
