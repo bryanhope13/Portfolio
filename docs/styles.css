@@ -1197,6 +1197,18 @@ p:last-child {
   color: var(--accent);
 }
 
+.signature {
+  display: block;
+  width: min(12rem, 100%);
+  height: auto;
+  margin-top: 1.35rem;
+}
+
+.page-hero .signature {
+  width: min(13.5rem, 100%);
+  margin-top: 1.1rem;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;
