@@ -16,7 +16,15 @@
   });
 
   panel.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => setOpen(false));
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href") || "";
+      // Hiding the panel in the same tick can cancel mailto: navigation.
+      if (href.startsWith("mailto:")) {
+        window.setTimeout(() => setOpen(false), 300);
+        return;
+      }
+      setOpen(false);
+    });
   });
 
   document.addEventListener("keydown", (event) => {
