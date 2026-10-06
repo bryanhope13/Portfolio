@@ -1148,7 +1148,7 @@ p:last-child {
 .skill-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  gap: 1.4rem 1.25rem;
 }
 
 .skill-cols h3 {
