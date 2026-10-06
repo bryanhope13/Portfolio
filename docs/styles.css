@@ -1,26 +1,26 @@
 /* Bryan Hope — UX portfolio
-   Warm editorial system: paper, ink, one accent. */
+   Quiet studio: cool stone, ink, one sage note. */
 
 :root {
-  --bg: #f6f1e8;
-  --bg-2: #efe8dc;
-  --surface: #fffaf2;
-  --ink: #1c1915;
-  --ink-2: #3f3a34;
-  --muted: #6f685f;
-  --line: #e4ddd2;
-  --accent: #b5471d;
-  --accent-hover: #8f3918;
-  --accent-soft: #f4e4d6;
-  --shadow: 0 18px 40px rgba(28, 25, 21, 0.08);
-  --radius: 18px;
-  --radius-sm: 12px;
+  --bg: #f3f2ee;
+  --bg-2: #e9e7e1;
+  --surface: #fbfaf7;
+  --ink: #1b2328;
+  --ink-2: #3e484e;
+  --muted: #667178;
+  --line: #d4d2cb;
+  --accent: #2c6a62;
+  --accent-hover: #1f514b;
+  --accent-soft: #e4eeeb;
+  --shadow: none;
+  --radius: 3px;
+  --radius-sm: 2px;
   --header-h: 4rem;
   --measure: 40rem;
   --wide: 72rem;
-  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
-  --font-sans: "Figtree", "Segoe UI", sans-serif;
-  --ease: 180ms ease;
+  --font-serif: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
+  --ease: 160ms ease;
 }
 
 *,
@@ -80,7 +80,7 @@ a:hover {
   background: var(--ink);
   color: var(--bg);
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
 }
 
 .skip-link:focus {
@@ -106,18 +106,12 @@ a:hover {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  background: transparent;
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 
 .site-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: color-mix(in srgb, var(--bg) 96%, transparent);
-  backdrop-filter: blur(12px);
-  pointer-events: none;
+  content: none;
 }
 
 .site-header .wrap {
@@ -241,8 +235,8 @@ a:hover {
 .nav-cta {
   color: var(--bg) !important;
   background: var(--ink);
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
+  padding: 0.42rem 0.8rem;
+  border-radius: var(--radius);
   box-shadow: none !important;
   font-weight: 600;
   font-size: 0.95rem;
@@ -261,11 +255,11 @@ a:hover {
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--muted);
 }
 
 .display {
@@ -320,10 +314,10 @@ p:last-child {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.75rem 1.15rem;
-  border-radius: 999px;
+  padding: 0.7rem 1.05rem;
+  border-radius: var(--radius);
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
   border: 1px solid transparent;
   transition: background var(--ease), color var(--ease), border-color var(--ease);
@@ -378,10 +372,10 @@ p:last-child {
 
 .hero-meta span::before {
   content: "";
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  background: var(--accent);
+  width: 0.7rem;
+  height: 1px;
+  border-radius: 0;
+  background: var(--line);
 }
 
 /* Sections */
@@ -440,13 +434,12 @@ p:last-child {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: var(--shadow);
-  transition: transform var(--ease), border-color var(--ease);
+  box-shadow: none;
+  transition: border-color var(--ease);
 }
 
 .work-item:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--line));
+  border-color: var(--ink);
   color: inherit;
 }
 
@@ -504,13 +497,14 @@ p:last-child {
 
 .tag {
   font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--ink-2);
-  background: var(--bg-2);
-  border-radius: 999px;
-  padding: 0.28rem 0.6rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.22rem 0.5rem;
 }
 
 .work-more {
@@ -534,12 +528,12 @@ p:last-child {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  box-shadow: var(--shadow);
-  transition: transform var(--ease);
+  box-shadow: none;
+  transition: border-color var(--ease);
 }
 
 .work-card:hover {
-  transform: translateY(-3px);
+  border-color: var(--ink);
   color: inherit;
 }
 
@@ -636,9 +630,9 @@ p:last-child {
 
 .skill-pills span {
   border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: 999px;
-  padding: 0.35rem 0.75rem;
+  background: transparent;
+  border-radius: var(--radius);
+  padding: 0.3rem 0.65rem;
   font-size: 0.88rem;
   color: var(--ink-2);
 }
@@ -1339,8 +1333,7 @@ p:last-child {
   }
 
   body.nav-open .site-header::before {
-    background: var(--bg);
-    backdrop-filter: none;
+    content: none;
   }
 
   .nav-links {
