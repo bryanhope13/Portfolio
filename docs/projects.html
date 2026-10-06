@@ -9,7 +9,7 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -17,144 +17,115 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-        <div class="wrap">
-            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
-            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-                <span class="nav-toggle-bars"></span>
-            </button>
-            <nav id="site-nav" class="nav-panel" data-nav-panel>
-                <ul class="nav-links">
-                    <li><a href="projects.html" aria-current="page">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
-                </ul>
-            </nav>
-        </div>
+        <a class="wordmark" href="index.html"><span>Bryan</span> Hope</a>
+        <p class="where">UX · Indianapolis</p>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+            <span class="nav-toggle-bars"></span>
+        </button>
+        <nav id="site-nav" class="nav-panel" data-nav-panel>
+            <ul class="nav-links">
+                <li><a href="projects.html" aria-current="page">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main id="main">
-        <section class="page-hero">
-            <div class="wrap">
-                <p class="eyebrow">Work</p>
-                <h1 class="display">Work shaped by research and real constraints.</h1>
-                <p class="lede">Class work, capstone, and product studies — who each one was for, what I learned, and what I would do next.</p>
+        <section class="intro intro--page">
+            <h1>Work shaped by research and real constraints.</h1>
+            <div class="intro-copy">
+                <p>Class work, capstone, and product studies — who each one was for, what I learned, and what I would do next.</p>
             </div>
         </section>
 
-        <section class="section tight">
-            <div class="wrap work-grid">
-                <a class="work-card work-card--parkspotter" href="parkspotter.html">
-                    <img src="disney.png" alt="ParkSpotter guest home over a nighttime castle, with report, rewards, and staff entry points." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Capstone</span>
-                            <span class="tag">Research</span>
-                        </div>
-                        <h3>ParkSpotter</h3>
-                        <p>Helping theme park guests report issues in the moment, and giving staff a queue they can actually work.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+        <section class="ledger">
+            <a class="strip" href="parkspotter.html">
+                <div class="strip-copy">
+                    <span>01</span>
+                    <h2>ParkSpotter</h2>
+                    <p>Helping theme park guests report issues in the moment, and giving staff a queue they can actually work.</p>
+                    <small>Capstone · Research</small>
+                </div>
+                <img src="disney.png" alt="ParkSpotter guest home over a nighttime castle, with report, rewards, and staff entry points." />
+            </a>
 
-                <a class="work-card work-card--mark work-card--dignity" href="DataDignity.html">
-                    <img src="dignity-mark.png" width="1600" height="1000" alt="Data Dignity mark: a white padlock on blue." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Inclusive design</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <h3>Data Dignity</h3>
-                        <p>A calm personal data hub for Jordan — snapshot first, then one small privacy decision, without the alarm.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip strip--dignity" href="DataDignity.html">
+                <div class="strip-copy">
+                    <span>02</span>
+                    <h2>Data Dignity</h2>
+                    <p>A calm personal data hub for Jordan — snapshot first, then one small privacy decision, without the alarm.</p>
+                    <small>Inclusive design · Mobile</small>
+                </div>
+                <img src="dignity-mark.png" width="1600" height="1000" alt="Data Dignity mark: a white padlock on blue." />
+            </a>
 
-                <a class="work-card work-card--mark work-card--spotify" href="Spotify.html">
-                    <img src="spotify-mark.png" width="1600" height="1000" alt="Spotify Social Hub mark: a listener silhouette with headphones on Spotify green." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Redesign</span>
-                            <span class="tag">Social UX</span>
-                        </div>
-                        <h3>Spotify Social Hub</h3>
-                        <p>A fifth tab for posting a song, commenting in-thread, and dropping a track onto a friend’s playlist — without leaving Spotify.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip strip--spotify" href="Spotify.html">
+                <div class="strip-copy">
+                    <span>03</span>
+                    <h2>Spotify Social Hub</h2>
+                    <p>A fifth tab for posting a song, commenting in-thread, and dropping a track onto a friend’s playlist — without leaving Spotify.</p>
+                    <small>Redesign · Social UX</small>
+                </div>
+                <img src="spotify-mark.png" width="1600" height="1000" alt="Spotify Social Hub mark: a listener silhouette with headphones on Spotify green." />
+            </a>
 
-                <a class="work-card work-card--mark work-card--gympal" href="IUGymPal.html">
-                    <img src="gympal-fill.png" width="1600" height="1000" alt="IU GymPal mark: the crimson IU trident over a barbell." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <h3>IU GymPal</h3>
-                        <p>A campus fitness companion for IU students who want today’s plan, a form check, and a history that isn’t homework.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip strip--gympal" href="IUGymPal.html">
+                <div class="strip-copy">
+                    <span>04</span>
+                    <h2>IU GymPal</h2>
+                    <p>A campus fitness companion for IU students who want today’s plan, a form check, and a history that isn’t homework.</p>
+                    <small>Research · Mobile</small>
+                </div>
+                <img src="gympal-fill.png" width="1600" height="1000" alt="IU GymPal mark: the crimson IU trident over a barbell." />
+            </a>
 
-                <a class="work-card work-card--caregiver" href="CaregiverHub.html">
-                    <img src="caregiver-hub-home.png" alt="Mom’s CareHub home with today’s overview, assigned tasks, and an unassigned dinner." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Mobile</span>
-                        </div>
-                        <h3>Caregiver Hub</h3>
-                        <p>A shared care board for families — today’s tasks, who is free, and who can see the record — instead of texts and sticky notes.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip" href="CaregiverHub.html">
+                <div class="strip-copy">
+                    <span>05</span>
+                    <h2>Caregiver Hub</h2>
+                    <p>A shared care board for families — today’s tasks, who is free, and who can see the record — instead of texts and sticky notes.</p>
+                    <small>Research · Mobile</small>
+                </div>
+                <img src="caregiver-hub-home.png" alt="Mom’s CareHub home with today’s overview, assigned tasks, and an unassigned dinner." />
+            </a>
 
-                <a class="work-card" href="SoakHome.html">
-                    <img src="Soak.png" alt="Soak brand mark over lavender bath water and a fizzing bath bomb." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Visual design</span>
-                            <span class="tag">E-commerce</span>
-                        </div>
-                        <h3>Soak</h3>
-                        <p>A bath bomb storefront that has to feel like water through a screen — identity, journey, and a checkout we kept short on purpose.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip" href="SoakHome.html">
+                <div class="strip-copy">
+                    <span>06</span>
+                    <h2>Soak</h2>
+                    <p>A bath bomb storefront that has to feel like water through a screen — identity, journey, and a checkout we kept short on purpose.</p>
+                    <small>Visual design · E-commerce</small>
+                </div>
+                <img src="Soak.png" alt="Soak brand mark over lavender bath water and a fizzing bath bomb." />
+            </a>
 
-                <a class="work-card work-card--kitchen" href="KitchenHub.html">
-                    <img src="kitchen-hub-dashboard.png" alt="Kitchen Hub dashboard with weather, calendar, oven control, and a dismiss-alert confirmation." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Display UX</span>
-                        </div>
-                        <h3>Kitchen Hub</h3>
-                        <p>A zone display for a smart home — weather, calendar, and an oven alert you can turn off, dismiss, or snooze — instead of another pile of apps.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
+            <a class="strip strip--kitchen" href="KitchenHub.html">
+                <div class="strip-copy">
+                    <span>07</span>
+                    <h2>Kitchen Hub</h2>
+                    <p>A zone display for a smart home — weather, calendar, and an oven alert you can turn off, dismiss, or snooze — instead of another pile of apps.</p>
+                    <small>Research · Display UX</small>
+                </div>
+                <img src="kitchen-hub-dashboard.png" alt="Kitchen Hub dashboard with weather, calendar, oven control, and a dismiss-alert confirmation." />
+            </a>
 
-                <a class="work-card work-card--armask" href="FirefighterAR.html">
-                    <img src="ar-mask-hud.png" alt="Firefighter AR Mask HUD with fire, exit, weak floor, teammate, and person overlays in Rescue mode." />
-                    <div class="work-copy">
-                        <div class="tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">AR / HUD</span>
-                        </div>
-                        <h3>Firefighter AR Mask</h3>
-                        <p>A visor HUD for near-zero visibility — thermal overlays, pulse and oxygen, and a green exit path — instead of navigating a fire by feel.</p>
-                        <span class="work-more">Read case study →</span>
-                    </div>
-                </a>
-            </div>
+            <a class="strip strip--armask" href="FirefighterAR.html">
+                <div class="strip-copy">
+                    <span>08</span>
+                    <h2>Firefighter AR Mask</h2>
+                    <p>A visor HUD for near-zero visibility — thermal overlays, pulse and oxygen, and a green exit path — instead of navigating a fire by feel.</p>
+                    <small>Research · AR / HUD</small>
+                </div>
+                <img src="ar-mask-hud.png" alt="Firefighter AR Mask HUD with fire, exit, weak floor, teammate, and person overlays in Rescue mode." />
+            </a>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="wrap">
             <div class="footer-cta">
-                <h2 class="display">Happy to walk through a project in more detail.</h2>
                 <p>I’m happy to walk through Figma files, research notes, or a prototype live.</p>
                 <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
                 <img class="signature" src="bryan-signature.png" width="642" height="187" alt="Handwritten signature of Bryan Hope" />
