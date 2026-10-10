@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodge Hall Interactive Map — Bryan Hope</title>
+    <meta name="description" content="Hodge Hall Interactive Map case study: an I310 Multimedia project. Group 10 built a clickable map of Kelley’s Hodge Hall, a virtual walkthrough, and a site themed to existing Indiana University pages." />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
+            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                <span class="nav-toggle-bars"></span>
+            </button>
+            <nav id="site-nav" class="nav-panel" data-nav-panel>
+                <ul class="nav-links">
+                    <li><a href="projects.html" aria-current="page">Work</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <header class="case-hero">
+            <div class="wrap">
+                <a class="back" href="projects.html">← All work</a>
+                <p class="eyebrow">I310 Multimedia · Group 10</p>
+                <h1 class="display">Hodge Hall Interactive Map</h1>
+                <p class="lede">A campus map will get you to 10th Street. It will not tell you which door, which lounge, which room. Group 10 built a clickable plan of Hodge Hall and a virtual walkthrough, themed to the Indiana University pages people already use.</p>
+                <ul class="case-toc">
+                    <li><a href="#problem">Problem</a></li>
+                    <li><a href="#product">Product</a></li>
+                    <li><a href="#walkthrough">Walkthrough</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#outcome">Outcome</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <figure class="figure">
+            <img src="hodge-hall-map.png" width="1600" height="1000" alt="Interactive floor plan of Hodge Hall on East 10th Street, with labeled rooms and clickable icons." />
+            <figcaption>The map — Hodge Hall as a floor plan you can click, not a PDF you squint at.</figcaption>
+        </figure>
+
+        <dl class="meta wrap">
+            <div>
+                <dt>My role</dt>
+                <dd>I310 Group 10</dd>
+            </div>
+            <div>
+                <dt>Team</dt>
+                <dd>Alvi, Jussa, Hope, Murray</dd>
+            </div>
+            <div>
+                <dt>Course</dt>
+                <dd>I310 Multimedia</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Live site + slides</dd>
+            </div>
+        </dl>
+
+        <section class="abt" aria-label="And, but, therefore">
+            <article>
+                <span>And</span>
+                <p>Hodge Hall is the Kelley School of Business undergraduate center — 1309 E. 10th Street, Bloomington. Students, visitors, and staff are supposed to find their way through it.</p>
+            </article>
+            <article>
+                <span>But</span>
+                <p>A campus pin stops at the door. The interior is still rooms, landings, and lounges you have not walked yet.</p>
+            </article>
+            <article>
+                <span>Therefore</span>
+                <p>An interactive map you click for more information, and a virtual walkthrough of the building, dressed like the IU and Kelley pages already on the other side of the tab.</p>
+            </article>
+        </section>
+
+        <article class="prose" id="problem">
+            <h2>The problem</h2>
+            <p>I310 Multimedia asked for a finished multimedia piece, not a mock. Our brief was wayfinding for Hodge Hall: let someone navigate the building with ease, give them a virtual walkthrough, and make the whole thing feel like it belongs next to existing Indiana University pages.</p>
+            <p>Zoheb Alvi, Alykhan Jussa, Jack Murray, and I were Group 10. The audience is anyone who needs the inside of Kelley’s building — a first visit, a room number, a sense of the floors — without waiting for a tour guide.</p>
+        </article>
+
+        <article class="prose" id="product">
+            <h2>The product</h2>
+            <p>The live site opens on the Kelley wordmark and a title: Hodge Hall Interactive Map, virtual tour experience. A theme toggle sits in the header. Two actions sit over the plan: Start Virtual Tour, Return to Map.</p>
+            <p>The map is an embedded Mappedin floor plan of Hodge Hall on East 10th Street. Rooms are labeled. Icons are clickable. The instruction on the page is the whole interaction model: use the interactive map to explore; click rooms or icons for more information. We restyled the embed toward IU crimson so the controls match the rest of the page, and we swapped the default map branding for a Hodge Hall mark.</p>
+        </article>
+
+        <ol class="insights wrap-wide">
+            <li>
+                <b>01</b>
+                <div>
+                    <strong>The plan is the product. The tour is a mode.</strong>
+                    <p>You land on the map. Virtual tour is a button, not a separate site. Return to Map is always sitting next to Start, so the stills do not trap you.</p>
+                </div>
+            </li>
+            <li>
+                <b>02</b>
+                <div>
+                    <strong>Click the room, do not hunt a directory.</strong>
+                    <p>The floor plan carries room labels and icons. Information is on the object, which is what “navigate the building with ease” had to mean in a browser.</p>
+                </div>
+            </li>
+            <li>
+                <b>03</b>
+                <div>
+                    <strong>IU chrome is the theming brief.</strong>
+                    <p>Crimson buttons, Kelley logo, Kelley contact, and footer links to the Kelley site, contact, and diversity pages. The map is new. The skin is not supposed to be.</p>
+                </div>
+            </li>
+            <li>
+                <b>04</b>
+                <div>
+                    <strong>Dark mode is a page setting, not a second design.</strong>
+                    <p>The same header, map, and footer invert. Multimedia includes the hour someone opens this on a dim laptop.</p>
+                </div>
+            </li>
+        </ol>
+
+        <article class="prose" id="walkthrough">
+            <h2>The walkthrough</h2>
+            <p>Start Virtual Tour hides the plan and steps through ten interior stills, from the main entrance through labeled floors and rooms — lobby, landings, a study area, a lounge, conference space, study pods, a terrace, a library stop, an observation deck. Arrow keys or on-screen chevrons move you. The copy on the page is: use the arrows to navigate through Hodge Hall, or turn to look around at each location.</p>
+            <p>The stills are photographs of the building, not diagrams. A hallway with a fire cabinet. Double wood doors. A lounge with Kelley crimson, benches, and a computer alcove. That is the other half of wayfinding: once you have a room number, you still need to recognize the place when you get there.</p>
+        </article>
+
+        <div class="figure-grid">
+            <figure>
+                <img src="hodge-hall-entrance.png" width="1600" height="1125" alt="Hodge Hall corridor with a polished floor, handrails, a fire cabinet, and wood double doors at the end of the hall." />
+                <figcaption>Main entrance still — the first stop in the virtual tour.</figcaption>
+            </figure>
+            <figure>
+                <img src="hodge-hall-lounge.png" width="1600" height="1137" alt="Hodge Hall lounge with a student on a bench, a Kelley appreciation banner, and a crimson computer alcove down the hall." />
+                <figcaption>Lounge still — the interior the map is trying to get you to.</figcaption>
+            </figure>
+        </div>
+
+        <article class="prose" id="process">
+            <h2>How we got there</h2>
+            <p>The stack is a single page. Mappedin holds the interactive plan. Ten photographs sit behind the tour. CSS variables carry IU red, white, and gray in light and dark. The footer states the assignment in plain language: an interactive virtual tour of Hodge Hall, I310 Multimedia at Indiana University, Group 10.</p>
+            <p>Theming was a constraint, not decoration. Kelley’s site, contact page, and diversity page are linked as they exist. The contact block is the school’s address on 10th Street. We were not inventing a Kelley that is not there.</p>
+        </article>
+
+        <ol class="process wrap">
+            <li>
+                <span>Brief</span>
+                <strong>Navigate the building</strong>
+                <p>Interactive map, virtual walkthrough, IU theming. That was the whole prompt.</p>
+            </li>
+            <li>
+                <span>Map</span>
+                <strong>Clickable floor plan</strong>
+                <p>Mappedin embed of Hodge Hall. Rooms and icons, crimson controls, Hodge Hall mark.</p>
+            </li>
+            <li>
+                <span>Tour</span>
+                <strong>Ten interior stills</strong>
+                <p>Entrance to observation deck. Start, return, arrows, keyboard.</p>
+            </li>
+            <li>
+                <span>Theme</span>
+                <strong>Kelley chrome</strong>
+                <p>Logo, crimson, dark mode, footer that points at real Kelley pages.</p>
+            </li>
+        </ol>
+
+        <article class="prose" id="outcome">
+            <h2>What shipped</h2>
+            <p>A live site. Not a Figma file waiting on a developer. The map, the tour, the Kelley header, and the Group 10 names are on the public page, with the slide deck and the GitHub repo beside it.</p>
+            <p>If I kept going I would tighten the tour labels to the same room language as the floor plan, and I would make sure the embed and the stills always load as one piece. Wayfinding fails when the map and the hallway disagree on what to call the place you are standing.</p>
+        </article>
+
+        <dl class="outcome-stats wrap">
+            <div>
+                <dt>Studio</dt>
+                <dd>I310 · Group 10</dd>
+            </div>
+            <div>
+                <dt>Map</dt>
+                <dd>Mappedin floor plan</dd>
+            </div>
+            <div>
+                <dt>Walkthrough</dt>
+                <dd>10 interior stills</dd>
+            </div>
+            <div>
+                <dt>Output</dt>
+                <dd>Live Netlify site</dd>
+            </div>
+        </dl>
+
+        <article class="prose">
+            <h2>What I learned</h2>
+            <p>Wayfinding in a browser is two jobs. One is finding the room. The other is recognizing the room when you arrive. A clickable plan without the stills is a directory. Stills without the plan are a slideshow. The product is the switch between them.</p>
+            <p>Theming to existing IU pages was the other lesson. Crimson and a Kelley footer are how you tell someone this is campus infrastructure, not a class demo that wandered onto the internet. I would still sit a first-year in the map with one task — “get me to this room” — before calling the labels done.</p>
+            <div class="btn-row">
+                <a class="btn btn-primary" href="https://hodgehallinteractive.netlify.app/" target="_blank" rel="noopener noreferrer">View live site</a>
+                <a class="btn btn-ghost" href="https://docs.google.com/presentation/d/10URB4Pj1F6qDtBiX8K06syvTlrgftm75f4PfzNC7aSw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slide deck</a>
+                <a class="btn btn-ghost" href="https://github.com/zalvi22/Hodge-Hall-Interactive-Map" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+        </article>
+
+        <nav class="next-case" aria-label="Next project">
+            <a href="FirefighterAR.html"><span>Previous</span>← Firefighter AR Mask</a>
+            <a href="parkspotter.html"><span>Next</span>ParkSpotter →</a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-cta">
+                <h2 class="display">Happy to walk through the live map.</h2>
+                <p>Built with Zoheb Alvi, Alykhan Jussa, and Jack Murray for I310 Multimedia.</p>
+                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+                <img class="signature" src="bryan-signature.png" width="642" height="187" alt="Handwritten signature of Bryan Hope" />
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bryan Hope</p>
+                <nav aria-label="Footer">
+                    <a href="projects.html">Work</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

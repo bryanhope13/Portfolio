@@ -584,6 +584,11 @@ p:last-child {
   background: #f3f1ec;
 }
 
+.work-card--hodge img {
+  object-position: center;
+  background: #e8eee6;
+}
+
 .work-card .work-copy {
   flex: 1;
 }
