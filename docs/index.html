@@ -9,96 +9,55 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="page-home">
     <a class="skip-link" href="#main">Skip to content</a>
+    <a class="wordmark" href="index.html">Bryan Hope</a>
 
-    <header class="site-header">
-        <div class="wrap">
-            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
-            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-                <span class="nav-toggle-bars"></span>
-            </button>
-            <nav id="site-nav" class="nav-panel" data-nav-panel>
-                <ul class="nav-links">
-                    <li><a href="projects.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
-                </ul>
-            </nav>
+    <nav class="dock" id="site-nav" aria-label="Site">
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a>
+    </nav>
+
+    <main id="main" class="stage">
+        <div class="stage-index">
+            <p class="kicker">UX designer · Indianapolis · MS HCI, IU Indianapolis</p>
+            <p class="stage-line">I make complex systems feel calm, honest, and usable.</p>
+            <ol class="stage-list">
+                <li>
+                    <a class="is-active" href="parkspotter.html" data-preview="disney.png" data-alt="ParkSpotter guest home over a nighttime castle, with report, rewards, and staff entry points.">
+                        <span class="idx">01</span>
+                        <span class="name">ParkSpotter</span>
+                        <span class="kind">Capstone</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DataDignity.html" data-preview="dignity-mark.png" data-alt="Data Dignity mark: a white padlock on blue.">
+                        <span class="idx">02</span>
+                        <span class="name">Data Dignity</span>
+                        <span class="kind">Inclusive design</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Spotify.html" data-preview="spotify-mark.png" data-alt="Spotify Social Hub mark: a listener silhouette with headphones on Spotify green.">
+                        <span class="idx">03</span>
+                        <span class="name">Spotify Social Hub</span>
+                        <span class="kind">Product redesign</span>
+                    </a>
+                </li>
+            </ol>
+            <p class="stage-more"><a href="projects.html">Nine studies →</a></p>
         </div>
-    </header>
-
-    <main id="main">
-        <p class="reel-kicker wrap">UX designer · Indianapolis · MS HCI, IU Indianapolis</p>
-
-        <section class="reel" aria-label="Selected work">
-            <a class="slide" href="parkspotter.html">
-                <img src="disney.png" alt="ParkSpotter guest home over a nighttime castle, with report, rewards, and staff entry points." />
-                <div class="plaque">
-                    <p class="plaque-kicker">Capstone</p>
-                    <h2>ParkSpotter</h2>
-                    <p>A live reporting tool so theme park guests can flag cleanliness and maintenance issues on a map — and staff can act before the experience falls apart.</p>
-                </div>
-            </a>
-
-            <a class="slide" href="DataDignity.html">
-                <img src="dignity-mark.png" width="1600" height="1000" alt="Data Dignity mark: a white padlock on blue." />
-                <div class="plaque">
-                    <p class="plaque-kicker">Inclusive design</p>
-                    <h2>Data Dignity</h2>
-                    <p>A personal data hub for a teen with ADHD: see where data lives, who can see it, and take one two-minute action — without the alarm.</p>
-                </div>
-            </a>
-
-            <a class="slide" href="Spotify.html">
-                <img src="spotify-mark.png" width="1600" height="1000" alt="Spotify Social Hub mark: a listener silhouette with headphones on Spotify green." />
-                <div class="plaque">
-                    <p class="plaque-kicker">Product redesign</p>
-                    <h2>Spotify Social Hub</h2>
-                    <p>A native sharing layer for Spotify: post a song, talk on the track, and write into a playlist — without handing the moment to another app.</p>
-                </div>
-            </a>
-        </section>
-
-        <aside class="dock wrap">
-            <img class="dock-portrait" src="Bryan.jpg" alt="Portrait of Bryan Hope in a white shirt and dark tie, smiling." />
-            <div class="dock-copy">
-                <p class="dock-name">Bryan Hope</p>
-                <p>I make complex systems feel calm, honest, and usable. HCI graduate student. Open to internships and entry-level UX roles.</p>
-                <p class="dock-links">
-                    <a href="projects.html">All work</a>
-                    <a href="about.html">About</a>
-                    <a href="resume.html">Resume</a>
-                    <a href="mailto:bryananthonyhope@gmail.com">Email</a>
-                </p>
-            </div>
-        </aside>
+        <div class="stage-still" data-stage>
+            <img src="disney.png" alt="ParkSpotter guest home over a nighttime castle, with report, rewards, and staff entry points." />
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="wrap">
-            <div class="footer-cta">
-                <h2 class="display">I’d be glad to hear from you.</h2>
-                <p>I read every email.</p>
-                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
-                <img class="signature" src="bryan-signature.png" width="642" height="187" alt="Handwritten signature of Bryan Hope" />
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Bryan Hope</p>
-                <nav aria-label="Footer">
-                    <a href="projects.html">Work</a>
-                    <a href="about.html">About</a>
-                    <a href="resume.html">Resume</a>
-                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 
