@@ -461,6 +461,7 @@ p:last-child {
   text-align: right;
   margin-top: 0;
   align-self: center;
+  max-width: 16rem;
 }
 
 /* About — full-bleed portrait split */
