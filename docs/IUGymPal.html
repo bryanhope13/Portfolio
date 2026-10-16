@@ -9,37 +9,29 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="page-case">
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-        <div class="wrap">
-            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
-            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-                <span class="nav-toggle-bars"></span>
-            </button>
-            <nav id="site-nav" class="nav-panel" data-nav-panel>
-                <ul class="nav-links">
-                    <li><a href="projects.html" aria-current="page">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <a class="wordmark" href="index.html">Bryan Hope</a>
+
+    <nav class="dock" id="site-nav" aria-label="Site">
+        <a href="projects.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a>
+    </nav>
 
     <main id="main">
         <header class="case-hero">
             <div class="wrap">
                 <a class="back" href="projects.html">← All work</a>
-                <p class="eyebrow">I300 Human-Computer Interaction · Group 5</p>
+                <p class="eyebrow">IU class project · I300 Human-Computer Interaction · Group 5</p>
                 <h1 class="display">IU GymPal</h1>
-                <p class="lede">Campus rec apps often assume you already know the machines. GymPal is an AI-assisted companion for IU students who want a plan, a form check, and a reason to come back tomorrow.</p>
+                <p class="lede">A class project for I300 Human-Computer Interaction. Campus rec apps often assume you already know the machines. GymPal is an AI-assisted companion for IU students who want a plan, a form check, and a reason to come back tomorrow.</p>
                 <ul class="case-toc">
                     <li><a href="#problem">Problem</a></li>
                     <li><a href="#research">Research</a></li>
@@ -63,6 +55,10 @@
 
         <dl class="meta wrap">
             <div>
+                <dt>Course</dt>
+                <dd>I300 Human-Computer Interaction</dd>
+            </div>
+            <div>
                 <dt>My role</dt>
                 <dd>Past workout data, research, UI</dd>
             </div>
@@ -71,12 +67,8 @@
                 <dd>Delgado, Hope, Loucks, Shelley</dd>
             </div>
             <div>
-                <dt>Research</dt>
-                <dd>20+ IU student interviews</dd>
-            </div>
-            <div>
                 <dt>Output</dt>
-                <dd>Hi-fi Figma prototype</dd>
+                <dd>Class prototype in Figma</dd>
             </div>
         </dl>
 
@@ -325,8 +317,8 @@
         </article>
 
         <nav class="next-case" aria-label="Next project">
-            <a href="Spotify.html"><span>Previous</span>← Spotify Social Hub</a>
-            <a href="SoakHome.html"><span>Next</span>Soak →</a>
+            <a href="parkspotter.html"><span>Previous</span>← ParkSpotter</a>
+            <a href="CaregiverHub.html"><span>Next</span>Caregiver Hub →</a>
         </nav>
     </main>
 

@@ -9,29 +9,20 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="page-resume">
     <a class="skip-link" href="#main">Skip to content</a>
+    <a class="wordmark" href="index.html">Bryan Hope</a>
 
-    <header class="site-header">
-        <div class="wrap">
-            <a class="wordmark" href="index.html">Bryan <em>Hope</em></a>
-            <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-                <span class="nav-toggle-bars"></span>
-            </button>
-            <nav id="site-nav" class="nav-panel" data-nav-panel>
-                <ul class="nav-links">
-                    <li><a href="projects.html">Work</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="resume.html" aria-current="page">Resume</a></li>
-                    <li><a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="dock" id="site-nav" aria-label="Site">
+        <a href="projects.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html" aria-current="page">Resume</a>
+        <a class="nav-cta" href="mailto:bryananthonyhope@gmail.com">Let’s talk</a>
+    </nav>
 
     <main id="main">
         <section class="resume-top wrap">
@@ -226,23 +217,11 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="wrap">
-            <div class="footer-cta">
-                <h2 class="display">If this looks like a fit, I’d like to hear from you.</h2>
-                <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
-                <img class="signature" src="bryan-signature.png" width="642" height="187" alt="Handwritten signature of Bryan Hope" />
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Bryan Hope</p>
-                <nav aria-label="Footer">
-                    <a href="projects.html">Work</a>
-                    <a href="about.html">About</a>
-                    <a href="https://linkedin.com/in/bryan-hope">LinkedIn</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
+    <div class="colophon wrap">
+        <img class="signature" src="bryan-signature.png" width="642" height="187" alt="Handwritten signature of Bryan Hope" />
+        <a class="footer-mail" href="mailto:bryananthonyhope@gmail.com">bryananthonyhope@gmail.com</a>
+        <p>© 2026 Bryan Hope</p>
+    </div>
     <script src="script.js"></script>
 </body>
 
