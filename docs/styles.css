@@ -444,9 +444,23 @@ p:last-child {
 }
 
 .work-media {
+  position: relative;
   min-height: 16rem;
   overflow: hidden;
   background: var(--bg-2);
+}
+
+/* Image fills the media column without setting the card's height,
+   so tall screenshots don't stretch the card. */
+.work-media img {
+  position: absolute;
+  inset: 0;
+}
+
+/* Phone screenshots: show the whole screen, centered, instead of cropping. */
+.work-item--phone .work-media img {
+  object-fit: contain;
+  padding: 1.25rem 0;
 }
 
 .work-item img,
