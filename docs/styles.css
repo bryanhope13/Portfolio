@@ -457,10 +457,10 @@ p:last-child {
   inset: 0;
 }
 
-/* Phone screenshots: show the whole screen, centered, instead of cropping. */
+/* Phone screenshots: fill the space, cropped to the middle of the screen. */
 .work-item--phone .work-media img {
-  object-fit: contain;
-  padding: 1.25rem 0;
+  object-fit: cover;
+  object-position: center 44%;
 }
 
 .work-item img,
