@@ -1141,6 +1141,7 @@ p:last-child {
 
 .contact-line {
   color: var(--ink-2);
+  overflow-wrap: anywhere;
 }
 
 .contact-line a {
