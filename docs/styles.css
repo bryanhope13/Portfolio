@@ -457,10 +457,8 @@ p:last-child {
   inset: 0;
 }
 
-/* Phone screenshots: fill the space, cropped to the middle of the screen. */
-.work-item--phone .work-media img {
-  object-fit: cover;
-  object-position: center 44%;
+.work-item--caregiver .work-media {
+  background: #fff;
 }
 
 .work-item img,
@@ -573,7 +571,8 @@ p:last-child {
 }
 
 .work-card--caregiver img {
-  object-position: top;
+  object-position: center;
+  background: #fff;
 }
 
 .work-card--spotify img {
