@@ -417,6 +417,42 @@ p:last-child {
   margin: 0;
 }
 
+/* Experience strip (home) */
+
+.experience-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+
+.experience-list li {
+  padding: 1.5rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.experience-list h3 {
+  margin: 0.2rem 0 0.6rem;
+}
+
+.experience-list p {
+  margin: 0;
+}
+
+.experience-role,
+.experience-date {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.experience-date {
+  margin-top: 0.9rem !important;
+}
+
 /* Featured work */
 
 .work-list {
@@ -478,6 +514,16 @@ p:last-child {
 
 .work-item--dignity .work-media {
   background: #3a7ca5;
+}
+
+.work-item--gympal .work-media {
+  background: #fff;
+}
+
+.work-item--gympal .work-media img {
+  object-fit: contain;
+  padding: 1.25rem 0;
+  background: #fff;
 }
 
 .work-item--spotify .work-media {
