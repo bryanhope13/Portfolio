@@ -614,6 +614,11 @@ p:last-child {
 
 .work-card--parkspotter img {
   object-position: center;
+  background: #2b4f7e;
+}
+
+.work-item--parkspotter .work-media {
+  background: #2b4f7e;
 }
 
 .work-card--caregiver img {
@@ -1136,6 +1141,7 @@ p:last-child {
 
 .contact-line {
   color: var(--ink-2);
+  overflow-wrap: anywhere;
 }
 
 .contact-line a {
