@@ -613,12 +613,11 @@ p:last-child {
 }
 
 .work-card--parkspotter img {
-  object-position: center;
-  background: #2b4f7e;
+  object-position: center top;
 }
 
-.work-item--parkspotter .work-media {
-  background: #2b4f7e;
+.work-item--parkspotter .work-media img {
+  object-position: center 55%;
 }
 
 .work-card--caregiver img {
