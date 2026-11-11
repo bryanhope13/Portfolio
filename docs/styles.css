@@ -1487,6 +1487,127 @@ p:last-child {
   font-size: 0.9rem;
 }
 
+/* Data Dignity mood board (rebuilt as live text) */
+
+.moodboard .mood {
+  background: #d4def7;
+  border-radius: var(--radius);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  display: grid;
+  gap: 1.25rem;
+  color: #1f2a3c;
+}
+
+.mood-words {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2rem;
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #3b7ca6;
+}
+
+.mood-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.25rem;
+}
+
+.mood-panel {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: calc(var(--radius) * 0.75);
+  padding: 1.1rem 1.25rem;
+}
+
+.mood-panel h3 {
+  margin: 0 0 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4c5564;
+}
+
+.mood-palette {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.mood-palette li {
+  display: grid;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.mood-chip {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(31, 42, 60, 0.12);
+  margin-bottom: 0.3rem;
+}
+
+.mood-palette code {
+  font-size: 0.78rem;
+  color: #4c5564;
+}
+
+.mood-type p {
+  margin: 0 0 0.45rem;
+}
+
+.mood-type .t-h1 { font-size: 1.75rem; font-weight: 600; line-height: 1.1; }
+.mood-type .t-h2 { font-size: 1.35rem; font-weight: 600; }
+.mood-type .t-h3 { font-size: 1.1rem; font-weight: 600; }
+.mood-type .t-body { font-size: 0.95rem; }
+.mood-type .t-small { font-size: 0.8rem; color: #4c5564; }
+.mood-type .t-label { font-size: 0.95rem; font-weight: 600; }
+
+.mood-refs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(9.5rem, 40%), 1fr));
+  gap: 1rem;
+}
+
+.mood-refs li {
+  display: grid;
+  gap: 0.45rem;
+  align-content: start;
+  font-size: 0.82rem;
+  color: #4c5564;
+}
+
+.mood-refs img {
+  width: 100%;
+  height: 8.5rem;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(31, 42, 60, 0.1);
+  padding: 0.35rem;
+}
+
+.figure.moodboard figcaption a {
+  color: inherit;
+}
+
+@media (max-width: 720px) {
+  .mood-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .work-item,
   .about-band {
