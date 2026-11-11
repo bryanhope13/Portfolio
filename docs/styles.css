@@ -879,6 +879,16 @@ p:last-child {
   box-shadow: var(--shadow);
 }
 
+/* Phone mockups: no box, the phone sits on the page background */
+.figure img.device,
+.figure-grid img.device {
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+}
+
 .figure-grid figcaption {
   margin-top: 0.7rem;
   color: var(--muted);
