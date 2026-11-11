@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261111" />
+    <link rel="stylesheet" href="styles.css?v=20261111b" />
 </head>
 
 <body>
@@ -253,9 +253,52 @@
             <p>The dashboard sits on an 8-point grid. Text is sized for a phone, targets are large enough to hit, the layout reads top to bottom for a screen reader. Interaction patterns stay boring on purpose: a card, a toggle, a sheet. Revoke is the one place I slowed the user down on purpose.</p>
         </article>
 
-        <figure class="figure">
-            <img src="dignity-mood.png" alt="Mood board for Data Dignity with the words Control, Dignity, and Visualize, color swatches, type samples, and reference dashboards." loading="lazy" />
-            <figcaption>Mood — privacy that looks like a tool you would actually open.</figcaption>
+        <figure class="figure moodboard">
+            <div class="mood">
+                <ul class="mood-words" aria-label="Keywords">
+                    <li>Control</li>
+                    <li>Dignity</li>
+                    <li>Visualize</li>
+                </ul>
+                <div class="mood-row">
+                    <section class="mood-panel" aria-label="Color palette">
+                        <h3>Palette</h3>
+                        <ul class="mood-palette">
+                        <li><span class="mood-chip" style="background:#397cb0"></span><b>Primary blue</b><code>#397CB0</code></li>
+                        <li><span class="mood-chip" style="background:#283857"></span><b>Navy</b><code>#283857</code></li>
+                        <li><span class="mood-chip" style="background:#aeb8d3"></span><b>Mist</b><code>#AEB8D3</code></li>
+                        <li><span class="mood-chip" style="background:#d0cab2"></span><b>Sand</b><code>#D0CAB2</code></li>
+                        <li><span class="mood-chip" style="background:#6f9b8c"></span><b>Sage</b><code>#6F9B8C</code></li>
+                        <li><span class="mood-chip" style="background:#c46d75"></span><b>Rose</b><code>#C46D75</code></li>
+                        <li><span class="mood-chip" style="background:#918ed2"></span><b>Lavender</b><code>#918ED2</code></li>
+                        <li><span class="mood-chip" style="background:#4c5564"></span><b>Slate</b><code>#4C5564</code></li>
+                        <li><span class="mood-chip" style="background:#f6f7f9"></span><b>Paper</b><code>#F6F7F9</code></li>
+                        </ul>
+                    </section>
+                    <section class="mood-panel mood-type" aria-label="Typography">
+                        <h3>Typography</h3>
+                        <p class="t-h1">Heading 1</p>
+                        <p class="t-h2">Heading 2</p>
+                        <p class="t-h3">Heading 3</p>
+                        <p class="t-body">The quick brown fox jumps over the lazy dog.</p>
+                        <p class="t-small">Small text</p>
+                        <p class="t-label">Medium label</p>
+                    </section>
+                </div>
+                <section class="mood-panel" aria-label="Reference screens">
+                    <h3>References</h3>
+                    <ul class="mood-refs">
+                        <li><img src="dignity-mood-dash.png" alt="Reference: Privacy dashboard with permission rings." loading="lazy" /><span>Privacy dashboard with permission rings</span></li>
+                        <li><img src="dignity-mood-trend.png" alt="Reference: Activity over time." loading="lazy" /><span>Activity over time</span></li>
+                        <li><img src="dignity-mood-category.png" alt="Reference: Breakdown by category." loading="lazy" /><span>Breakdown by category</span></li>
+                        <li><img src="dignity-mood-tracker.png" alt="Reference: Phone and app usage tracker." loading="lazy" /><span>Phone and app usage tracker</span></li>
+                        <li><img src="dignity-mood-usage.png" alt="Reference: Daily usage summary." loading="lazy" /><span>Daily usage summary</span></li>
+                        <li><img src="dignity-mood-charts.png" alt="Reference: Bar, donut, and line chart styles." loading="lazy" /><span>Bar, donut, and line chart styles</span></li>
+                        <li><img src="dignity-mood-hub.png" alt="Reference: “Where’s your data?” hub." loading="lazy" /><span>“Where’s your data?” hub</span></li>
+                    </ul>
+                </section>
+            </div>
+            <figcaption>Mood — privacy that looks like a tool you would actually open. <a href="dignity-mood.png" target="_blank" rel="noopener">See the original board ↗</a></figcaption>
         </figure>
 
         <ol class="process wrap">
