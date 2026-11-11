@@ -1408,6 +1408,17 @@ p:last-child {
   border-radius: calc(var(--radius) / 2);
 }
 
+.process-media--device {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+
+.process-media--device img {
+  border-radius: 0;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+}
+
 .process-strip--short .process-media {
   height: 13rem;
 }
