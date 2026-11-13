@@ -1678,6 +1678,126 @@ p:last-child {
   text-align: center;
 }
 
+/* Slide deck (Data Dignity presentation) */
+
+.deck {
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  max-width: 64rem;
+}
+
+.deck-viewport {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #2f6e9b;
+}
+
+.deck-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.deck-track::-webkit-scrollbar {
+  display: none;
+}
+
+.deck-track:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.deck-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 16 / 9;
+}
+
+.deck-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.deck-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.deck-btn {
+  min-width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.deck-btn:hover:not(:disabled) {
+  border-color: var(--ink);
+}
+
+.deck-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.deck-count {
+  min-width: 4.5rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.deck-fs {
+  margin-left: 0.5rem;
+}
+
+.deck figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.deck:fullscreen {
+  max-width: none;
+  margin: 0;
+  padding: 1.5rem;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.deck:fullscreen .deck-viewport {
+  border: 0;
+  width: min(100%, calc((100vh - 7rem) * 16 / 9));
+  margin: 0 auto;
+}
+
+.deck:fullscreen figcaption {
+  display: none;
+}
+
+.deck-after {
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 900px) {
   .work-item,
   .about-band {
