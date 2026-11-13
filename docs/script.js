@@ -97,3 +97,53 @@
     });
   });
 })();
+
+// Slide deck: arrows, keyboard, swipe (native scroll-snap), counter, full screen.
+(() => {
+  document.querySelectorAll("[data-deck]").forEach((deck) => {
+    const track = deck.querySelector("[data-deck-track]");
+    const slides = [...track.children];
+    const prev = deck.querySelector("[data-deck-prev]");
+    const next = deck.querySelector("[data-deck-next]");
+    const count = deck.querySelector("[data-deck-count]");
+    const fs = deck.querySelector("[data-deck-fullscreen]");
+    let index = 0;
+
+    const update = () => {
+      index = Math.round(track.scrollLeft / track.clientWidth);
+      count.textContent = `${index + 1} / ${slides.length}`;
+      prev.disabled = index === 0;
+      next.disabled = index === slides.length - 1;
+      // Warm up the next slide so it's ready when the visitor clicks.
+      const ahead = slides[index + 1]?.querySelector("img");
+      if (ahead) ahead.loading = "eager";
+    };
+    const go = (i) => {
+      const target = Math.max(0, Math.min(slides.length - 1, i));
+      track.scrollTo({ left: target * track.clientWidth });
+    };
+
+    prev.addEventListener("click", () => go(index - 1));
+    next.addEventListener("click", () => go(index + 1));
+    track.addEventListener("scroll", () => window.requestAnimationFrame(update), { passive: true });
+    window.addEventListener("resize", () => go(index));
+    deck.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight") { event.preventDefault(); go(index + 1); }
+      if (event.key === "ArrowLeft") { event.preventDefault(); go(index - 1); }
+    });
+
+    if (fs && deck.requestFullscreen) {
+      fs.addEventListener("click", () => {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else deck.requestFullscreen();
+      });
+      document.addEventListener("fullscreenchange", () => {
+        fs.setAttribute("aria-label", document.fullscreenElement ? "Exit full screen" : "View full screen");
+        window.setTimeout(() => go(index), 50);
+      });
+    } else if (fs) {
+      fs.hidden = true;
+    }
+    update();
+  });
+})();
