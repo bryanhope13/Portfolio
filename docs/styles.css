@@ -7,7 +7,7 @@
   --surface: #fbfaf7;
   --ink: #1b2328;
   --ink-2: #3e484e;
-  --muted: #667178;
+  --muted: #5b666d;
   --line: #d4d2cb;
   --accent: #2c6a62;
   --accent-hover: #1f514b;
@@ -1796,6 +1796,54 @@ p:last-child {
 
 .deck-after {
   margin-bottom: 3rem;
+}
+
+/* At a glance summary (case studies) */
+
+.glance {
+  margin-top: 2rem;
+}
+
+.glance-title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.glance-list {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.glance-list > div {
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.glance-list dt {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.glance-list dd {
+  margin: 0;
+  color: var(--ink-2, var(--ink));
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .glance-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 900px) {
